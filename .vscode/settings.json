@@ -1,0 +1,22 @@
+{
+  "cSpell.words": [
+    "Parens",
+    "Yast",
+    "frontmatter",
+    "gifs",
+    "gitmoji",
+    "guanghechen",
+    "pinst",
+    "postpublish",
+    "potrace",
+    "prebuild",
+    "styl",
+    "svgs",
+    "teamsupercell",
+    "yozora"
+  ],
+  "files.associations": {
+    ".prettierrc": "yaml"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

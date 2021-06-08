@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "extends": ["@guanghechen", "@guanghechen/jsx", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*tsx"],
+      "extends": [
+        "@guanghechen",
+        "@guanghechen/jsx",
+        "@guanghechen/ts",
+        "prettier"
+      ]
+    },
+    {
+      "files": ["**/__test__/*.spec.ts", "**/__test__/*.spec.tsx"],
+      "extends": [
+        "@guanghechen",
+        "@guanghechen/jsx",
+        "@guanghechen/ts",
+        "plugin:jest/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ]
+}

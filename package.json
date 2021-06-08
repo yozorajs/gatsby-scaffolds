@@ -1,0 +1,99 @@
+{
+  "name": "@yozora/gatsby-scaffolds",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "guanghechen",
+    "url": "https://github.com/guanghechen/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yozorajs/gatsby-scaffolds.git"
+  },
+  "homepage": "https://github.com/yozorajs/gatsby-scaffolds/#readme",
+  "engines": {
+    "node": ">= 14.15.0"
+  },
+  "scripts": {
+    ":publish": "yarn test && lerna publish",
+    ":publish-recover": "git stash && lerna publish from-package",
+    ":workspace:link": "lerna exec 'yarn link' --concurrency 1",
+    ":workspace:unlink": "lerna exec 'yarn unlink' --concurrency 1",
+    ":upgrade": "yarn upgrade-interactive --latest && run-s clean format build test",
+    "build": "lerna run build --concurrency 1",
+    "clean": "lerna clean --yes && yarn install",
+    "format": "run-s format:lint:fix format:prettier",
+    "format:prettier": "prettier . --write",
+    "format:lint:fix": "eslint . --fix",
+    "new:ts-package": "node ./packages/template-ts-package/cli.js",
+    "new:tsx-package": "node ./packages/template-tsx-package/cli.js",
+    "prepublishOnly": "pinst --disable",
+    "postinstall": "run-p postinstall:**",
+    "postinstall:main": "yarn update:lock",
+    "postinstall:dev": "is-ci || husky install",
+    "postpublish": "pinst --enable",
+    "rebuild": "run-s clean build",
+    "test": "lerna run test --concurrency 4",
+    "test:coverage": "lerna run test --concurrency 4 -- --coverage",
+    "test:update": "lerna run test --concurrency 4 -- -u",
+    "update:changelog": "gitmoji-changelog update",
+    "update:lock": "yarn-deduplicate"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.14.3",
+    "@guanghechen/eslint-config": "^1.5.1",
+    "@guanghechen/eslint-config-jsx": "^1.5.1",
+    "@guanghechen/eslint-config-ts": "^1.5.1",
+    "@guanghechen/jest-config": "^1.5.1",
+    "@guanghechen/rollup-config": "^1.5.1",
+    "@types/fs-extra": "^9.0.11",
+    "@types/jest": "26.0.23",
+    "@types/node": "15.6.2",
+    "@types/react": "^17.0.9",
+    "@yozora/ast": "^1.0.0-alpha.22",
+    "@yozora/ast-util": "^1.0.0-alpha.22",
+    "@yozora/character": "^1.0.0-alpha.22",
+    "@yozora/core-parser": "^1.0.0-alpha.22",
+    "@yozora/html-markdown": "^1.0.0-alpha.1",
+    "cross-env": "7.0.3",
+    "eslint": "7.27.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-prettier": "3.4.0",
+    "fs-extra": "^10.0.0",
+    "gatsby": "^3.6.2",
+    "gatsby-plugin-sharp": "^3.6.0",
+    "gitmoji-changelog": "2.2.0",
+    "graphql": "^15.5.0",
+    "husky": "6.0.0",
+    "is-ci": "3.0.0",
+    "jest": "27.0.3",
+    "lerna": "4.0.0",
+    "lint-staged": "11.0.0",
+    "npm-run-all": "4.1.5",
+    "pinst": "2.1.6",
+    "postcss": "8.3.0",
+    "prettier": "2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "3.0.2",
+    "rollup": "2.50.5",
+    "ts-jest": "27.0.2",
+    "ts-node": "10.0.0",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "4.3.2",
+    "yarn-deduplicate": "3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,eslintrc}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.settings.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "paths": {}
+  },
+  "exclude": ["**/__test__/fixtures"]
+}
