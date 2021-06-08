@@ -1,0 +1,55 @@
+{
+  "name": "@yozora/gatsby-images",
+  "version": "0.0.0",
+  "description": "Transform markdown files to Yozora AST",
+  "author": {
+    "name": "guanghechen",
+    "url": "https://github.com/guanghechen/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yozorajs/gatsby-scaffolds.git",
+    "directory": "packages/gatsby-images"
+  },
+  "homepage": "https://github.com/yozorajs/gatsby-scaffolds/tree/main/packages/gatsby-images#readme",
+  "keywords": [
+    "gatsby",
+    "markdown",
+    "gfm",
+    "yozora",
+    "images"
+  ],
+  "main": "lib/cjs/index.js",
+  "types": "lib/types/index.d.ts",
+  "source": "src/index.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 14.15.0"
+  },
+  "files": [
+    "lib/",
+    "gatsby-node.js",
+    "package.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js",
+    "prebuild": "rimraf lib/",
+    "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "gatsby-core-utils": "^2.6.0",
+    "query-string": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@yozora/ast": "^1.0.0-alpha.22",
+    "@yozora/ast-util": "^1.0.0-alpha.22",
+    "@yozora/gatsby-transformer": "^0.0.0",
+    "gatsby": "^3.0.0-next.0",
+    "gatsby-plugin-sharp": "^3.0.0-next.0"
+  }
+}

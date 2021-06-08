@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "module": "CommonJS",
     "paths": {
+      "@yozora/gatsby-images": ["./packages/gatsby-images"],
       "@yozora/gatsby-transformer": ["./packages/gatsby-transformer"]
     }
   },
