@@ -3,7 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "CommonJS",
-    "paths": {}
+    "paths": {
+      "@yozora/gatsby-transformer": ["./packages/gatsby-transformer"]
+    }
   },
   "exclude": ["**/__test__/fixtures"]
 }
