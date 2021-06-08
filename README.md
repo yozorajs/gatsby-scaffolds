@@ -50,8 +50,10 @@ A monorepo contains plugins / tools for using yozora within gatsby.
 
 ## Overview
 
-Package                               | Description
-:------------------------------------:|:--------------------------
+Package                       | Description
+:----------------------------:|:--------------------------
+[@yozora/gatsby-images]       | Processing images referenced in markdown files
+[@yozora/gatsby-transformer]  | Transform markdown files with [Yozora][yozora-repo] into AST
 
 ## License
 
@@ -59,4 +61,7 @@ gatsby-scaffolds is [MIT licensed](https://github.com/yozorajs/gatsby-scaffolds/
 
 
 [homepage]: https://github.com/yozorajs/gatsby-scaffolds
+[yozora-repo]: https://github.com/yozorajs/yozora
 [gatsby]: https://github.com/gatsbyjs/gatsby
+[@yozora/gatsby-images]: ./packages/gatsby-images
+[@yozora/gatsby-transformer]: ./packages/gatsby-transformer
