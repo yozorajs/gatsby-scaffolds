@@ -41,6 +41,7 @@
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
   },
   "dependencies": {
+    "@yozora/gatsby-transformer": "^1.0.0-alpha.0",
     "chalk": "^4.1.1",
     "gatsby-core-utils": "^2.6.0",
     "query-string": "^7.0.0"
@@ -48,7 +49,6 @@
   "peerDependencies": {
     "@yozora/ast": "^1.0.0-alpha.22",
     "@yozora/ast-util": "^1.0.0-alpha.22",
-    "@yozora/gatsby-transformer": "^0.0.0",
     "gatsby": "^3.0.0-next.0",
     "gatsby-plugin-sharp": "^3.0.0-next.0"
   }
