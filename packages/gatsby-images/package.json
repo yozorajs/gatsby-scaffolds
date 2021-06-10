@@ -28,6 +28,8 @@
   },
   "files": [
     "lib/",
+    "!lib/**/*.js.map",
+    "!lib/**/*.d.ts.map",
     "gatsby-node.js",
     "package.json",
     "CHANGELOG.md",
