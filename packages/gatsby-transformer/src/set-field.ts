@@ -13,6 +13,7 @@ import {
   calcDefinitionMap,
   calcFootnoteDefinitionMap,
   calcHeadingToc,
+  searchNode,
   shallowCloneAst,
   traverseAST,
 } from '@yozora/ast-util'
@@ -183,10 +184,24 @@ export async function setFieldsOnGraphQLNodeType(
   ): Promise<Root> {
     if (excerptSeparator != null) {
       const separator = excerptSeparator.trim()
-      return shallowCloneAst(fullAst, node => {
+
+      const childIndexList: number[] | null = searchNode(fullAst, node => {
         const { value } = node as YastLiteral
         return value != null && value.trim() === separator
       })
+
+      if (childIndexList != null) {
+        const excerptAst = { ...fullAst }
+        let node: YastParent = excerptAst
+        for (const childIndex of childIndexList) {
+          // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+          const nextNode = { ...node.children[childIndex] } as YastParent
+          node.children = node.children.slice(0, childIndex)
+          node.children.push(nextNode)
+          node = nextNode
+        }
+        return excerptAst
+      }
     }
 
     if (fullAst.children.length <= 0) return fullAst
