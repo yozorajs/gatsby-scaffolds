@@ -144,7 +144,7 @@ export async function setFieldsOnGraphQLNodeType(
       }
 
       // Resolve ast urls.
-      resolveAstUrls(ast, (url: string): Promise<string | null> => {
+      await resolveAstUrls(ast, (url: string): Promise<string | null> => {
         if (/^[/](?![/])/.test(url)) {
           return Promise.resolve(resolveUrl(urlPrefix, slug, url))
         } else {
