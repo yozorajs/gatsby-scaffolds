@@ -1,5 +1,37 @@
 # Changelog
 
+<a name="1.0.0-alpha.3"></a>
+## 1.0.0-alpha.3 (2021-06-13)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[3840002](https://github.com/yozorajs/gatsby-scaffolds/commit/3840002aa6965ecd0de95757ab2d3ce76c4d0bbd)]
+
+### Fixed
+
+- 🐛 fix(gatsby-transformer): resources url is not be resolved correctly in any time [[1c0fb10](https://github.com/yozorajs/gatsby-scaffolds/commit/1c0fb10cdb8d203232e89593e441d8bb78042e02)]
+
+### Miscellaneous
+
+- 🔨 chore: donot publish sourcemaps [[f14802d](https://github.com/yozorajs/gatsby-scaffolds/commit/f14802d2270484146dc0398187af02656ff4894b)]
+
+
+<a name="1.0.0-alpha.2"></a>
+## 1.0.0-alpha.2 (2021-06-10)
+
+### Changed
+
+- ⬆️ chore: ugprade dependencies [[2c5ad4e](https://github.com/yozorajs/gatsby-scaffolds/commit/2c5ad4e31b61383693b8989aaca0871576109190)]
+
+### Fixed
+
+- 🐛 fix: auto trunc contents for excerptAST when the separator not found [[580419e](https://github.com/yozorajs/gatsby-scaffolds/commit/580419e3c822ef03b0a780c339e617634110953e)]
+
+### Miscellaneous
+
+- 📝 docs: add CHANGELOG [[a93eec3](https://github.com/yozorajs/gatsby-scaffolds/commit/a93eec3c0b724a03ee78ef4a0194333689ae1da6)]
+
+
 <a name="1.0.0-alpha.1"></a>
 ## 1.0.0-alpha.1 (2021-06-08)
 
