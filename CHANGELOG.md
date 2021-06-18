@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.0-alpha.4"></a>
+## 1.0.0-alpha.4 (2021-06-18)
+
+### Added
+
+- ✨ feat(gatsby-transformer): support &#x60;sourcefile&#x60; and &#x60;sourceline&#x60; meta options of yozora Code node [[f0e2ebe](https://github.com/yozorajs/gatsby-scaffolds/commit/f0e2ebea0ec3f2c8c3d0d718d44367a68bd88851)]
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[5141e7f](https://github.com/yozorajs/gatsby-scaffolds/commit/5141e7ff03cb2b289f79202c4b3dcfe65f7aea8e)]
+- 🔧 chore: don&#x27;t run &#x27;yarn-deduplicate&#x27; in ci environment [[2815329](https://github.com/yozorajs/gatsby-scaffolds/commit/28153298fb9513e3b1e7745458797db6ed4a69d7)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[8f894e2](https://github.com/yozorajs/gatsby-scaffolds/commit/8f894e2e3ea5cc484786e868108bb85430f7986b)]
+
+
 <a name="1.0.0-alpha.3"></a>
 ## 1.0.0-alpha.3 (2021-06-13)
 
