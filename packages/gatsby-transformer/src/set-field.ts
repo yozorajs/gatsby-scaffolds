@@ -1,6 +1,13 @@
 import { isFunction } from '@guanghechen/option-helper'
-import { FootnoteReferenceType, HtmlType, TextType } from '@yozora/ast'
+import { collectIntervals } from '@guanghechen/parse-lineno'
+import {
+  CodeType,
+  FootnoteReferenceType,
+  HtmlType,
+  TextType,
+} from '@yozora/ast'
 import type {
+  Code,
   Definition,
   FootnoteDefinition,
   HeadingToc,
@@ -21,6 +28,7 @@ import { stripChineseCharacters } from '@yozora/character'
 import renderMarkdown, { defaultRendererMap } from '@yozora/html-markdown'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
+import fs from 'fs-extra'
 import type { Node, SetFieldsOnGraphQLNodeTypeArgs } from 'gatsby'
 import path from 'path'
 import type { TransformerYozoraOptions } from './types'
@@ -159,6 +167,47 @@ export async function setFieldsOnGraphQLNodeType(
           text.value = stripChineseCharacters(text.value)
         })
       }
+
+      // load source files
+      const sourcefileRegex = /(?:^|\b)sourcefile="([^"]+)"/
+      const sourcelineRegex = /(?:^|\b)sourceline="([^"]+)"/
+      traverseAST(ast, [CodeType], (node): void => {
+        const { meta } = node as Code
+        if (meta == null) return
+
+        const sourcefileMatch = sourcefileRegex.exec(meta!)
+        if (sourcefileMatch == null) return
+
+        const filepath = path.join(absoluteDirPath, sourcefileMatch[1])
+        try {
+          if (fs.existsSync(filepath)) {
+            const content = fs.readFileSync(filepath, 'utf-8')
+            let value: string = content
+
+            const sourcelineMatch = sourcelineRegex.exec(meta!)
+            if (sourcelineMatch != null) {
+              const lineIntervals: Array<[number, number]> = collectIntervals(
+                sourcelineMatch[1],
+              )
+              if (lineIntervals.length > 0) {
+                const lines: string[] = content.split(/\r|\n|\n\r/g)
+                const requiredLines: string[] = []
+                for (const [x, y] of lineIntervals) {
+                  if (x < 0) continue
+                  if (x >= lines.length) break
+                  for (let i = x - 1; i < y; ++i) requiredLines.push(lines[i])
+                }
+                value = requiredLines.join('\n')
+              }
+            }
+            // eslint-disable-next-line no-param-reassign
+            ;(node as Code).value = value
+          }
+        } catch (error) {
+          console.warn('[Try to resolve source code file]:', filepath, error)
+        }
+      })
+
       return ast
     })()
     astPromiseMap.set(cacheKey, astPromise)

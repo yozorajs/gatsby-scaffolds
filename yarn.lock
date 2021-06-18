@@ -1321,6 +1321,11 @@
     title-case "^3.0.2"
     upper-case "^2.0.1"
 
+"@guanghechen/parse-lineno@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.npmjs.org/@guanghechen/parse-lineno/-/parse-lineno-1.5.5.tgz#70646f24b0cee685d5018291510bcec43d7b818a"
+  integrity sha512-ymks9RK2VNdSDR8AD+v/7cb6ilFLeW5H58n6vb+skWD8bJ1gPidU2xUSVHFbOUOdvYkw8g+JCvavIUJfBGD5kg==
+
 "@guanghechen/rollup-config@^1.5.5":
   version "1.5.5"
   resolved "https://registry.npmjs.org/@guanghechen/rollup-config/-/rollup-config-1.5.5.tgz#e3e9ecd87795db20428e1366b1ebd63a777bea07"

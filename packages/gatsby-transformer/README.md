@@ -186,6 +186,23 @@ Name                        | Required  | Default
     ```
 
 
+## Features
+
+* Code (Yozora Code node) support `sourcefile` and `sourceline` meta options, for example: 
+
+  ````
+  ```cpp sourcefile="./solution.cpp" sourceline="2-8"
+  ```
+  ````
+
+  In the above code, `sourcefile` specifies the source file location, then 
+  `@yozora/gatsby-transformer` will read the `solution.cpp` under that directory
+  where the current markdown file is located. If this file (`solution.cpp`)
+  exists, it will read the contents of the file. `sourceline` specifies which
+  lines will be intercepted (in the above example, intercept lines `2-8` and `10`),
+  these lines will be concat and used as the value of the Code node. 
+
+
 ## FAQ
 
 * How to deal with images referenced in markdown files, like [gatsby-remark-images][] does?
