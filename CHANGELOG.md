@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.0-alpha.5"></a>
+## 1.0.0-alpha.5 (2021-06-21)
+
+### Changed
+
+- ⬆️ chore: ugprade devDependencies [[8725fe3](https://github.com/yozorajs/gatsby-scaffolds/commit/8725fe3b575ce56d1d6958fdf3c5f2f0b969e22d)]
+
+### Miscellaneous
+
+- 🚧 improve: [breaking] change graphql schema of categories and tags [[7cb2c7f](https://github.com/yozorajs/gatsby-scaffolds/commit/7cb2c7fce7a2cb9c68f27d3b5756514efabc69ca)]
+- ⚰️ improve(gatsby-transformer): remove unused field &#x27;access&#x27; [[9943cef](https://github.com/yozorajs/gatsby-scaffolds/commit/9943cef082161dbd47bd8e00e3b2f896f045822d)]
+- 📝 docs: update CHANGELOG [[c4a28dc](https://github.com/yozorajs/gatsby-scaffolds/commit/c4a28dcfc1e95411b4f96f6718e22fcb0970fb10)]
+
+
 <a name="1.0.0-alpha.4"></a>
 ## 1.0.0-alpha.4 (2021-06-18)
 
