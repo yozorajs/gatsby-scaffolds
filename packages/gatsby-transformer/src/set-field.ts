@@ -387,7 +387,7 @@ export async function setFieldsOnGraphQLNodeType(
       },
     },
     timeToRead: {
-      type: `String`,
+      type: 'String',
       args: {
         formatString: {
           type: 'String',
@@ -404,15 +404,15 @@ export async function setFieldsOnGraphQLNodeType(
       },
     },
     tags: {
-      type: '[MarkdownYozoraTag]!',
+      type: '[String]!',
       async resolve(markdownNode: Node): Promise<string[]> {
         const { tags = [] } = (markdownNode.frontmatter ?? {}) as any
         return tags.map(normalizeTagOrCategory)
       },
     },
     categories: {
-      type: '[[MarkdownYozoraCategoryItem]]!',
-      async resolve(markdownNode: Node): Promise<string[]> {
+      type: '[[String]]!',
+      async resolve(markdownNode: Node): Promise<string[][]> {
         const { categories = [] } = (markdownNode.frontmatter ?? {}) as any
         return categories.map((category: string[]) =>
           category.map(normalizeTagOrCategory),

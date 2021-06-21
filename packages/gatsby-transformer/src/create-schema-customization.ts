@@ -23,16 +23,6 @@ const typeDefs = `
     children: JSON!
   }
 
-  type MarkdownYozoraTag {
-    title: String!
-    identifier: String!
-  }
-
-  type MarkdownYozoraCategoryItem {
-    title: String!
-    identifier: String!
-  }
-
   type MarkdownYozora implements Node @infer @childOf(mimeTypes: ["text/markdown", "text/x-markdown"]) {
     id: ID!
     title: String!
@@ -41,8 +31,8 @@ const typeDefs = `
     createAt: String!
     updateAt: String!
     timeToRead: String!
-    tags: [MarkdownYozoraTag]!
-    categories: [[MarkdownYozoraCategoryItem]]!
+    tags: [String]!
+    categories: [[String]]!
     toc: MarkdownYozoraToc!
     ast: JSON!
     html: String!
