@@ -314,16 +314,6 @@ export async function setFieldsOnGraphQLNodeType(
   }
 
   const result = {
-    access: {
-      type: 'String',
-      async resolve(markdownNode: Node): Promise<string> {
-        const { access } = (markdownNode.frontmatter ?? {}) as Record<
-          string,
-          string
-        >
-        return access ?? 'public'
-      },
-    },
     title: {
       type: 'String',
       async resolve(markdownNode: Node): Promise<string> {

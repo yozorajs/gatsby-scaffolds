@@ -35,7 +35,6 @@ const typeDefs = `
 
   type MarkdownYozora implements Node @infer @childOf(mimeTypes: ["text/markdown", "text/x-markdown"]) {
     id: ID!
-    access: String!
     title: String!
     description: String!
     createAtISO: String!
