@@ -2,6 +2,7 @@ import { isFunction } from '@guanghechen/option-helper'
 import { collectIntervals } from '@guanghechen/parse-lineno'
 import {
   CodeType,
+  FootnoteDefinitionType,
   FootnoteReferenceType,
   HtmlType,
   TextType,
@@ -13,6 +14,7 @@ import type {
   HeadingToc,
   Root,
   Text,
+  YastAssociation,
   YastLiteral,
   YastParent,
 } from '@yozora/ast'
@@ -159,6 +161,18 @@ export async function setFieldsOnGraphQLNodeType(
           return serveStaticFile(path.join(absoluteDirPath, url))
         }
       })
+
+      // Resolve footnote definitions
+      traverseAST(
+        ast,
+        [FootnoteReferenceType, FootnoteDefinitionType],
+        (node): void => {
+          const o = node as unknown as YastAssociation
+          if (/^\d+$/.test(o.identifier)) {
+            o.identifier = footnoteIdentifierPrefix + o.identifier
+          }
+        },
+      )
 
       // Remove line end between two chinese characters.
       if (shouldStripChineseCharacters) {
