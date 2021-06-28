@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="1.0.0-alpha.7"></a>
+## 1.0.0-alpha.7 (2021-06-28)
+
+### Changed
+
+- 🎨 improve(gatsby-transfomer): resolve identifiers of footnote definitions [[d0920c0](https://github.com/yozorajs/gatsby-scaffolds/commit/d0920c08a1025fb116f8c7315661e59592b379fe)]
+- ⬆️ chore: upgrade dependencies [[8b78950](https://github.com/yozorajs/gatsby-scaffolds/commit/8b789508684bb4d9187a700c0da0951f1a44777e)]
+- ⬆️ chore: upgrade dev dependencies [[6b346f9](https://github.com/yozorajs/gatsby-scaffolds/commit/6b346f909feeb3bf60f65993c2ee744704444269)]
+
+
+<a name="1.0.0-alpha.6"></a>
+## 1.0.0-alpha.6 (2021-06-25)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[d3759e5](https://github.com/yozorajs/gatsby-scaffolds/commit/d3759e521dd0852c4ac2acf92e90723b560e41ed)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[dcecd9c](https://github.com/yozorajs/gatsby-scaffolds/commit/dcecd9cde42e7dde2a578c5856bcafb2d22b197b)]
+
+
 <a name="1.0.0-alpha.5"></a>
 ## 1.0.0-alpha.5 (2021-06-21)
 
