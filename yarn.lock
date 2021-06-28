@@ -3192,10 +3192,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@15.12.4":
-  version "15.12.4"
-  resolved "https://registry.npmjs.org/@types/node/-/node-15.12.4.tgz#e1cf817d70a1e118e81922c4ff6683ce9d422e26"
-  integrity sha512-zrNj1+yqYF4WskCMOHwN+w9iuD12+dGm0rQ35HLl9/Ouuq52cEtd0CH9qMgrdNmi5ejC1/V7vKEXYubB+65DkA==
+"@types/node@*", "@types/node@15.12.5":
+  version "15.12.5"
+  resolved "https://registry.npmjs.org/@types/node/-/node-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
+  integrity sha512-se3yX7UHv5Bscf8f1ERKvQOD6sTyycH3hdaoozvaLxgUiY5lIGEeH37AD0G0Qi9kPqihPn0HOfd2yaIEN9VwEg==
 
 "@types/node@^14.14.10":
   version "14.17.3"
@@ -3541,42 +3541,42 @@
   resolved "https://registry.npmjs.org/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@yozora/ast-util@^1.0.0-alpha.26":
-  version "1.0.0-alpha.26"
-  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.0.0-alpha.26.tgz#b0115471f7e26294b3a50cf1ee0d035d3d7e4d3e"
-  integrity sha512-icT2MBd35tjmgb/4WBu70wOtFlBYu2/am/uYlmfJbMsafMQslDkNY5S9UrdGEyofCobXwlZeSdHQjilSuh0K3Q==
+"@yozora/ast-util@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.0.0-alpha.27.tgz#0e8df01a7f86070eabcf030a49414737ee7e1faf"
+  integrity sha512-EgiqYRm0BBtpEsDqeOAbLAjMWzvBQly0jR1tdgXUTbjIejnk9yKnBhwe5Pbfe4NqBo4+PyUluEPDyDn2OK/RGg==
   dependencies:
-    "@yozora/ast" "^1.0.0-alpha.26"
-    "@yozora/character" "^1.0.0-alpha.26"
+    "@yozora/ast" "^1.0.0-alpha.27"
+    "@yozora/character" "^1.0.0-alpha.27"
 
-"@yozora/ast@^1.0.0-alpha.26":
-  version "1.0.0-alpha.26"
-  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.0.0-alpha.26.tgz#abb19a7ad67e43c2fc800879cc0d3f8caa27a214"
-  integrity sha512-bdnZsKgXZAuMY49P/FtgT5xUpI8jkAACXTu/I0sbWf9aV7adbfquQnvucQaiZ/OonP4nhf8VEXZUUjSQgLoFyA==
+"@yozora/ast@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.0.0-alpha.27.tgz#1769a56449efb65a9e22b3a0403cce1381e25a8d"
+  integrity sha512-BocOoawXWhUSSrMVULlQrzYUIfGunTokAlUgGld4M47ugfyZSOVbFm4QUdtHMJHxKU13i6zEuxqMRXMSToL4Mg==
 
-"@yozora/character@^1.0.0-alpha.26":
-  version "1.0.0-alpha.26"
-  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.0.0-alpha.26.tgz#9133238b60a12666066bb107b24400a8eb1440bf"
-  integrity sha512-ETn0XOLUhMaeG0uNjKLRM7wiPdff7IymA6hpFTJH+kV9RtEM0AepS9iQTg+JC0rPCMeT6TDWLBc+ZrL4akd0OA==
+"@yozora/character@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.0.0-alpha.27.tgz#c11b8e0a169c4a70bf1b5efce441fb3f62cf8ce9"
+  integrity sha512-hG9pXxuYnOkw5Od1ZztAAxU2PU57/I6eLZM6f6jv+OK/oEe2REuSUCoKj58Pyz+BTRMHtHvmSMiYCF3KrqeqfQ==
 
-"@yozora/core-parser@^1.0.0-alpha.26":
-  version "1.0.0-alpha.26"
-  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.0.0-alpha.26.tgz#14248211a4307e9f8f766f90aa2555cacb2d2bef"
-  integrity sha512-OWJkQsGW4klCeXP9iq972HCVb0VRC6rc6pSW+9ULzdlu2SVKFHOdwczZCGjxnB1iDIhkO1sxw4GhQKuHQD+zXw==
+"@yozora/core-parser@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.0.0-alpha.27.tgz#189387151c438d921a8afeb8d41c4d0a9535435b"
+  integrity sha512-Ow6Pa+3DS1r5flf4es5ayrxSH2Yqe6Ep06RLrkAulNy3B6+GoHw+wD4JzeufMgIhtxGPxXsir+AhMm8XuiHn+w==
   dependencies:
-    "@yozora/ast" "^1.0.0-alpha.26"
-    "@yozora/ast-util" "^1.0.0-alpha.26"
-    "@yozora/character" "^1.0.0-alpha.26"
-    "@yozora/core-tokenizer" "^1.0.0-alpha.26"
-    tiny-invariant "^1.1.0"
+    "@yozora/ast" "^1.0.0-alpha.27"
+    "@yozora/ast-util" "^1.0.0-alpha.27"
+    "@yozora/character" "^1.0.0-alpha.27"
+    "@yozora/core-tokenizer" "^1.0.0-alpha.27"
+    "@yozora/invariant" "^1.0.0-alpha.27"
 
-"@yozora/core-tokenizer@^1.0.0-alpha.26":
-  version "1.0.0-alpha.26"
-  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.0.0-alpha.26.tgz#1c59763cf70f630015f18c288ec625c02301e3b7"
-  integrity sha512-la74njmgJDhbtWk2xOEuF+3WvCC8KaFkJj3ldtEcjuSat2FO4XM+7vt2v1MLUzGjxDtA+POiyXdQ9wNDTp832g==
+"@yozora/core-tokenizer@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.0.0-alpha.27.tgz#6cbe92607aebc5df01b632c6eadb6a2ad6780caa"
+  integrity sha512-duCUZo8ffAL9H6qg4H3bhEJIOM/dKlqMaNor6k220QNQa2keFgz8pCEpCpXTmyhrAwVH/rA/N3qpgjCA8mE09Q==
   dependencies:
-    "@yozora/ast" "^1.0.0-alpha.26"
-    "@yozora/character" "^1.0.0-alpha.26"
+    "@yozora/ast" "^1.0.0-alpha.27"
+    "@yozora/character" "^1.0.0-alpha.27"
 
 "@yozora/html-admonition@^1.0.0-alpha.1":
   version "1.0.0-alpha.1"
@@ -3693,6 +3693,11 @@
   version "1.0.0-alpha.1"
   resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-1.0.0-alpha.1.tgz#aa8af57f07f2644b35522b302e37652c82022026"
   integrity sha512-HWWf7KxSP8aq8KwlUi/ZkuWohoD6AHXaX9PnGxn/ZQxNp1R1vfStnmlBYtp+iMhbMFIHmauKn5OniciZZ+HgtA==
+
+"@yozora/invariant@^1.0.0-alpha.27":
+  version "1.0.0-alpha.27"
+  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-1.0.0-alpha.27.tgz#574995e62f0676e9b87fdf8941eb6a3c4d8c29f6"
+  integrity sha512-OBAd+/ADpcCl+p/NT010DfUfItR9efZCBOS8BIt71Auh4eRYhAgrY7EFdfiFJc23Qd0dANziJR0FA/94AD7N/A==
 
 JSONStream@^1.0.4, JSONStream@^1.3.4:
   version "1.3.5"
@@ -8802,10 +8807,10 @@ github-from-package@0.0.0:
   resolved "https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
-gitmoji-changelog@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/gitmoji-changelog/-/gitmoji-changelog-2.2.0.tgz#1cdc6ef69e96eaafdd310dbd0a3bbb882b2e4ba9"
-  integrity sha512-jr+YmOPihMNKv8w9BFCamaaf6MgekGuI2LXpg9VSUPbjI1zs14iy6fd+MX3ShK7+w0aQGUXW31Im+Zm7fYR4mQ==
+gitmoji-changelog@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/gitmoji-changelog/-/gitmoji-changelog-2.2.1.tgz#c1e6c7f3419c3a80aa8e09a1bf9b2eb222b2a8e4"
+  integrity sha512-cfSjiK3EaIAXuJvRzucYN9DljrRlkw+EPWxWCaW9Bhev8+3ssFXDhAK2uCsAXMcW3Lko98yKtwl+28GPkgPtzQ==
   dependencies:
     "@gitmoji-changelog/core" "^2.1.0"
     "@gitmoji-changelog/markdown" "^2.1.0"
@@ -8817,6 +8822,7 @@ gitmoji-changelog@2.2.0:
     lodash "^4.17.11"
     pom-parser "^1.2.0"
     rc "^1.2.8"
+    read-pkg-up "^7.0.1"
     semver "^5.6.0"
     semver-compare "^1.0.0"
     simple-git "^1.113.0"
@@ -14528,10 +14534,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.3.1, prettier@^2.0.5:
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
-  integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
+prettier@2.3.2, prettier@^2.0.5:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
+  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
 
 pretty-error@^2.1.1:
   version "2.1.2"
@@ -17099,11 +17105,6 @@ tiny-emitter@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
-
-tiny-invariant@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
-  integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
 
 tinycolor2@^1.4.1:
   version "1.4.2"
