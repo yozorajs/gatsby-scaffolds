@@ -203,15 +203,37 @@ export async function setFieldsOnGraphQLNodeType(
               const lineIntervals: Array<[number, number]> = collectIntervals(
                 sourcelineMatch[1],
               )
+
+              let commonIndent = Number.MAX_SAFE_INTEGER
+              const indentRegex = /^\s*/
               if (lineIntervals.length > 0) {
                 const lines: string[] = content.split(/\r|\n|\n\r/g)
                 const requiredLines: string[] = []
                 for (const [x, y] of lineIntervals) {
                   if (x < 0) continue
                   if (x >= lines.length) break
-                  for (let i = x - 1; i < y; ++i) requiredLines.push(lines[i])
+                  for (let i = x - 1; i < y; ++i) {
+                    if (commonIndent > 0) {
+                      const indent = indentRegex.exec(lines[i])![0].length
+                      if (indent < lines[i].length && indent < commonIndent) {
+                        commonIndent = indent
+                      }
+                    }
+                    requiredLines.push(lines[i])
+                  }
                 }
-                value = requiredLines.join('\n')
+
+                // Trim common indents.
+                if (
+                  commonIndent < Number.MAX_SAFE_INTEGER &&
+                  commonIndent > 0
+                ) {
+                  value = requiredLines
+                    .map(x => x.slice(commonIndent))
+                    .join('\n')
+                } else {
+                  value = requiredLines.join('\n')
+                }
               }
             }
             // eslint-disable-next-line no-param-reassign
