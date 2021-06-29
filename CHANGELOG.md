@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="1.0.0-alpha.8"></a>
+## 1.0.0-alpha.8 (2021-06-29)
+
+### Fixed
+
+- 🐛 fix(gatsby-transformer): source url may be encoded [[39a7854](https://github.com/yozorajs/gatsby-scaffolds/commit/39a7854d3987e9f2a6bc174c30c80a12d303865d)]
+
+### Miscellaneous
+
+-  improve(gatsby-transformer): trim common indent when load value of YastCode from local sourcefiles [[9393f31](https://github.com/yozorajs/gatsby-scaffolds/commit/9393f31bf1780325355ac96d2127afae16a0a1bb)]
+- 📝 docs: update CHANGELOG [[2c4580e](https://github.com/yozorajs/gatsby-scaffolds/commit/2c4580e2284bebc95178a8ab5f3237d206460767)]
+
+
 <a name="1.0.0-alpha.7"></a>
 ## 1.0.0-alpha.7 (2021-06-28)
 
