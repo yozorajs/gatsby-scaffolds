@@ -66,7 +66,12 @@ export function resolveUrl(
 export async function serveStaticFile(
   absoluteFilepath: string,
 ): Promise<string | null> {
-  if (!fs.existsSync(absoluteFilepath)) return null
+  if (!fs.existsSync(absoluteFilepath)) {
+    // The url maybe encoded...
+    // eslint-disable-next-line no-param-reassign
+    absoluteFilepath = decodeURIComponent(absoluteFilepath)
+    if (!fs.existsSync(absoluteFilepath)) return null
+  }
 
   const finger: string = await calcFingerOfFile(absoluteFilepath)
   const urlPath = '/static/' + finger + '/' + path.basename(absoluteFilepath)
