@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.0-alpha.9"></a>
+## 1.0.0-alpha.9 (2021-06-30)
+
+### Changed
+
+- ⬆️ chore: upgrade dependnecies [[52d5133](https://github.com/yozorajs/gatsby-scaffolds/commit/52d5133abc4275311a80aaf37e2415619c506370)]
+
+### Fixed
+
+- 🐛 fix(gatsby-transformer): fix error &#x27;[Error: EISDIR: illegal operation on a directory, read]&#x27; [[4ac48b4](https://github.com/yozorajs/gatsby-scaffolds/commit/4ac48b491b1639192c780e0ec35607cb451a5c2a)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[89987ac](https://github.com/yozorajs/gatsby-scaffolds/commit/89987ac41abac5b0db73d3e2c75686d49ebb4960)]
+
+
 <a name="1.0.0-alpha.8"></a>
 ## 1.0.0-alpha.8 (2021-06-29)
 
