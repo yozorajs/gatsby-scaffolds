@@ -73,6 +73,9 @@ export async function serveStaticFile(
     if (!fs.existsSync(absoluteFilepath)) return null
   }
 
+  // Only source files could be proceed.
+  if (!fs.statSync(absoluteFilepath).isFile()) return null
+
   const finger: string = await calcFingerOfFile(absoluteFilepath)
   const urlPath = '/static/' + finger + '/' + path.basename(absoluteFilepath)
   const publicStaticDir = path.join(process.cwd(), 'public')
