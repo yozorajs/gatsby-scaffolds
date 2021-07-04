@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.0-alpha.10"></a>
+## 1.0.0-alpha.10 (2021-07-04)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[9abab1f](https://github.com/yozorajs/gatsby-scaffolds/commit/9abab1f3d63e7402a64665853a1fdb9b6569f20e)]
+
+### Fixed
+
+- 🐛 fix(gatsby-transformer): the value of tags and categories may be null [[fc512f8](https://github.com/yozorajs/gatsby-scaffolds/commit/fc512f8305778fdfc96cd32435baa5a1fbdd0686)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[cf9f1d5](https://github.com/yozorajs/gatsby-scaffolds/commit/cf9f1d512765c89020fccadf626c096de8b7998d)]
+
+
 <a name="1.0.0-alpha.9"></a>
 ## 1.0.0-alpha.9 (2021-06-30)
 
