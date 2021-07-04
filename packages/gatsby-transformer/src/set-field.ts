@@ -442,14 +442,15 @@ export async function setFieldsOnGraphQLNodeType(
     tags: {
       type: '[String]!',
       async resolve(markdownNode: Node): Promise<string[]> {
-        const { tags = [] } = (markdownNode.frontmatter ?? {}) as any
+        const tags = ((markdownNode.frontmatter ?? {}) as any).tags ?? []
         return tags.map(normalizeTagOrCategory)
       },
     },
     categories: {
       type: '[[String]]!',
       async resolve(markdownNode: Node): Promise<string[][]> {
-        const { categories = [] } = (markdownNode.frontmatter ?? {}) as any
+        const categories =
+          ((markdownNode.frontmatter ?? {}) as any).categories ?? []
         return categories.map((category: string[]) =>
           category.map(normalizeTagOrCategory),
         )
