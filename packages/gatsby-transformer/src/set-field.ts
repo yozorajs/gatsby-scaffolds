@@ -569,6 +569,13 @@ export async function setFieldsOnGraphQLNodeType(
         return footnoteDefinitionMap
       },
     },
+    frontmatter2: {
+      type: 'MarkdownYozoraFrontmatter2',
+      async resolve(markdownNode: Node) {
+        const { aplayer } = markdownNode.frontmatter as any
+        return { aplayer }
+      },
+    },
   }
   return result
 }

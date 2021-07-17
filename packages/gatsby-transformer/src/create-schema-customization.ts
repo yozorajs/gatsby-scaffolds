@@ -23,6 +23,10 @@ const typeDefs = `
     children: JSON!
   }
 
+  type MarkdownYozoraFrontmatter2 {
+    aplayer: JSON
+  }
+
   type MarkdownYozora implements Node @infer @childOf(mimeTypes: ["text/markdown", "text/x-markdown"]) {
     id: ID!
     title: String!
@@ -40,6 +44,7 @@ const typeDefs = `
     excerptAst: JSON!
     definitionMap: JSON!
     footnoteDefinitionMap: JSON!
+    frontmatter2: MarkdownYozoraFrontmatter2!
   }
 `
 
