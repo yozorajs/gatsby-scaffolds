@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.0-alpha.11"></a>
+## 1.0.0-alpha.11 (2021-07-17)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[5d8b053](https://github.com/yozorajs/gatsby-scaffolds/commit/5d8b053861f2ae539b62019f3d78079bbcd2846b)]
+
+### Miscellaneous
+
+-  improve(gatsby-transformer): resolve aplayer urls [[d697c6e](https://github.com/yozorajs/gatsby-scaffolds/commit/d697c6e1b3ef3aeaf8896902ce95a5d499f79d1b)]
+-  feat(@yozora/gatsby-transformer): supply new graphql field &#x27;frontmatter2&#x27; [[c644c29](https://github.com/yozorajs/gatsby-scaffolds/commit/c644c29af298d67b1f96d226bc7e28f27c275017)]
+- 📝 docs: update CHANGELOG [[8480438](https://github.com/yozorajs/gatsby-scaffolds/commit/8480438f78174451f1dd185cde80a0cca458b79f)]
+
+
 <a name="1.0.0-alpha.10"></a>
 ## 1.0.0-alpha.10 (2021-07-04)
 
