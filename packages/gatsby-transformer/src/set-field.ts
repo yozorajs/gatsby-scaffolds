@@ -572,7 +572,30 @@ export async function setFieldsOnGraphQLNodeType(
     frontmatter2: {
       type: 'MarkdownYozoraFrontmatter2',
       async resolve(markdownNode: Node) {
+        const absoluteDirPath = path.dirname(
+          markdownNode.absolutePath as string,
+        )
+        const serve = async (_url: string | null): Promise<string | null> => {
+          if (_url == null) return _url
+
+          const url = _url.trim()
+          if (!/^\./.test(url)) return url
+
+          const filepath: string = path.join(absoluteDirPath, url)
+          return await serveStaticFile(filepath)
+        }
+
         const { aplayer } = markdownNode.frontmatter as any
+        if (aplayer != null && aplayer.audio != null) {
+          const audioList = Array.isArray(aplayer.audio)
+            ? aplayer.audio
+            : [aplayer.audio]
+          for (const audio of audioList) {
+            if (audio.cover != null) audio.cover = await serve(audio.cover)
+            if (audio.url != null) audio.url = await serve(audio.url)
+            if (audio.lrc != null) audio.lrc = await serve(audio.lrc)
+          }
+        }
         return { aplayer }
       },
     },
