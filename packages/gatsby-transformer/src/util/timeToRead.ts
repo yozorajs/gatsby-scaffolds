@@ -9,7 +9,10 @@ import { traverseAST } from '@yozora/ast-util'
  * @returns
  */
 const wordRegex = /[-a-zA-Z0-9]+|\p{Script=Han}/gu
-export function timeToRead(ast: Root, wordsPerMinute = 80): number {
+export function timeToRead(ast: Root, wordsPerMinute?: number): number {
+  // eslint-disable-next-line no-param-reassign
+  if (wordsPerMinute == null) wordsPerMinute = 140
+
   let wordCount = 0
   traverseAST(ast, null, o => {
     const { value } = o as YastLiteral

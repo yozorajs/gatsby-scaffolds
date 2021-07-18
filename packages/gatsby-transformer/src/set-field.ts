@@ -413,7 +413,7 @@ export async function setFieldsOnGraphQLNodeType(
       },
       async resolve(
         markdownNode: Node,
-        { formatString }: GetCreateAtOptions,
+        { formatString }: GetUpdateAtOptions,
       ): Promise<string> {
         const { updateAt, createAt, date } = (markdownNode.frontmatter ??
           {}) as any
@@ -429,11 +429,20 @@ export async function setFieldsOnGraphQLNodeType(
           type: 'String',
           defaultValue: null,
         },
+        wordsPerMinute: {
+          type: 'Int',
+          defaultValue: null,
+        },
       },
       async resolve(
         markdownNode: Node,
-        { formatString }: GetCreateAtOptions,
+        { formatString, wordsPerMinute }: GetTimeToReadOptions,
       ): Promise<string> {
+        const { time2Read } = markdownNode.frontmatter as any
+        if (time2Read != null) {
+          return dayjs.duration(time2Read * 1000).format(formatString)
+        }
+
         const ast = await getAst(markdownNode)
         const seconds = timeToRead(ast, wordsPerMinute)
         return dayjs.duration(seconds * 1000).format(formatString)
@@ -628,4 +637,9 @@ interface GetCreateAtOptions {
 
 interface GetUpdateAtOptions {
   formatString?: string
+}
+
+interface GetTimeToReadOptions {
+  formatString?: string
+  wordsPerMinute?: number
 }
