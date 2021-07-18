@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.0-alpha.13"></a>
+## 1.0.0-alpha.13 (2021-07-18)
+
+### Miscellaneous
+
+-  improve(gatsby-transformer): support wechatThumbnail [[644cbcc](https://github.com/yozorajs/gatsby-scaffolds/commit/644cbcccab71835d81d034c2b2c3cd2507cba782)]
+
+
+<a name="1.0.0-alpha.12"></a>
+## 1.0.0-alpha.12 (2021-07-18)
+
+### Miscellaneous
+
+-  improve(gatsby-transformer): change the default wordsPerMinute from 80 to 140 &amp; support custom wordsPerMinute and readToTime [[5bea04b](https://github.com/yozorajs/gatsby-scaffolds/commit/5bea04b1b91da4b3734a5648158ad83f2b068dd5)]
+- 📝 docs: update CHANGELOG [[be6349a](https://github.com/yozorajs/gatsby-scaffolds/commit/be6349aa35223bf82123e4b975d91598b2f8def2)]
+
+
 <a name="1.0.0-alpha.11"></a>
 ## 1.0.0-alpha.11 (2021-07-17)
 
