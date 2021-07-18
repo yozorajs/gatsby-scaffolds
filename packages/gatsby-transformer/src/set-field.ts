@@ -580,7 +580,7 @@ export async function setFieldsOnGraphQLNodeType(
     },
     frontmatter2: {
       type: 'MarkdownYozoraFrontmatter2',
-      async resolve(markdownNode: Node) {
+      async resolve(markdownNode: Node): Promise<MarkdownYozoraFrontmatter2> {
         const absoluteDirPath = path.dirname(
           markdownNode.absolutePath as string,
         )
@@ -594,7 +594,8 @@ export async function setFieldsOnGraphQLNodeType(
           return await serveStaticFile(filepath)
         }
 
-        const { aplayer } = markdownNode.frontmatter as any
+        const result: MarkdownYozoraFrontmatter2 = {}
+        const { aplayer, wechatThumbnail } = markdownNode.frontmatter as any
         if (aplayer != null && aplayer.audio != null) {
           const audioList = Array.isArray(aplayer.audio)
             ? aplayer.audio
@@ -604,8 +605,12 @@ export async function setFieldsOnGraphQLNodeType(
             if (audio.url != null) audio.url = await serve(audio.url)
             if (audio.lrc != null) audio.lrc = await serve(audio.lrc)
           }
+          result.aplayer = aplayer
         }
-        return { aplayer }
+
+        if (wechatThumbnail)
+          result.wechatThumbnail = await serve(wechatThumbnail)
+        return result
       },
     },
   }
@@ -642,4 +647,9 @@ interface GetUpdateAtOptions {
 interface GetTimeToReadOptions {
   formatString?: string
   wordsPerMinute?: number
+}
+
+interface MarkdownYozoraFrontmatter2 {
+  aplayer?: any | null
+  wechatThumbnail?: string | null
 }

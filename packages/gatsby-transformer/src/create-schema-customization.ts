@@ -25,6 +25,7 @@ const typeDefs = `
 
   type MarkdownYozoraFrontmatter2 {
     aplayer: JSON
+    wechatThumbnail: String
   }
 
   type MarkdownYozora implements Node @infer @childOf(mimeTypes: ["text/markdown", "text/x-markdown"]) {
