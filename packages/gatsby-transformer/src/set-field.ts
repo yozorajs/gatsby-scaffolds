@@ -72,7 +72,7 @@ export async function setFieldsOnGraphQLNodeType(
     presetDefinitions,
     presetFootnoteDefinitions,
     shouldStripChineseCharacters = false,
-    wordsPerMinute,
+    wordsPerMinute: _defaultWordsPerMinute,
     frontmatter = {},
     plugins = [],
   } = options
@@ -436,7 +436,10 @@ export async function setFieldsOnGraphQLNodeType(
       },
       async resolve(
         markdownNode: Node,
-        { formatString, wordsPerMinute }: GetTimeToReadOptions,
+        {
+          formatString,
+          wordsPerMinute = _defaultWordsPerMinute,
+        }: GetTimeToReadOptions,
       ): Promise<string> {
         const { time2Read } = markdownNode.frontmatter as any
         if (time2Read != null) {

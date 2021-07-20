@@ -1,5 +1,5 @@
 import type { Root, YastLiteral } from '@yozora/ast'
-import { InlineMathType, MathType } from '@yozora/ast'
+import { CodeType, InlineMathType, MathType } from '@yozora/ast'
 import { traverseAST } from '@yozora/ast-util'
 
 /**
@@ -22,6 +22,9 @@ export function timeToRead(ast: Root, wordsPerMinute?: number): number {
         break
       case MathType:
         wordCount += value.length / 3
+        break
+      case CodeType:
+        wordCount += Math.min(value.length, 50) / 5
         break
       default:
         if (value != null) {
