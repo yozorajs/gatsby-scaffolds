@@ -1072,10 +1072,10 @@
     ts-node "^9"
     tslib "^2"
 
-"@eslint/eslintrc@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.2.tgz#f63d0ef06f5c0c57d76c4ab5f63d3835c51b0179"
-  integrity sha512-8nmGq/4ycLpIwzvhI4tNDmQztZ8sp+hI7cyG8i1nQDhkAbRzHpXPidRAHlNvCZQpJTKw5ItIpMw9RSToGF00mg==
+"@eslint/eslintrc@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
+  integrity sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==
   dependencies:
     ajv "^6.12.4"
     debug "^4.1.1"
@@ -3550,42 +3550,42 @@
   resolved "https://registry.npmjs.org/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@yozora/ast-util@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.0.0-beta.0.tgz#3bffd891ba5fe2e2d8c2d95b3c8c40b9cc9deef5"
-  integrity sha512-xXTF3IFO6wbjdZs4K29Oq+OQ7LyZLcpogarYmBedcpulxq4/Bz7lV47AvEX/EVBguGDHj5C/kEFusN0sAPkHuQ==
+"@yozora/ast-util@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.0.0.tgz#0ad2495698097d26e2596d3cc30064799f5c430a"
+  integrity sha512-x7ydSuI2zxjvoRnYyjRGawVcSfSozqoKOQjzR4j3TawcEKGc+6BylJuc8CfWZrvhPwWqkdPrW9kkSwYxXYM8fA==
   dependencies:
-    "@yozora/ast" "^1.0.0-beta.0"
-    "@yozora/character" "^1.0.0-beta.0"
+    "@yozora/ast" "^1.0.0"
+    "@yozora/character" "^1.0.0"
 
-"@yozora/ast@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.0.0-beta.0.tgz#8e1515d73c1ec6aaddaf5b5d9a0350c8d44570a4"
-  integrity sha512-jswZhSjWUyckPe1UnHK8JaDDmj/Rh4UMkcxsF9mgHjT852LG76ZNJgQkHPcqwaS91360tkqjaQX/mKZGKZshoQ==
+"@yozora/ast@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.0.0.tgz#c3a91dd0f420e82459d9707477de1d11f36b2ccc"
+  integrity sha512-9398oroy7DHjtX3XrRTkYPoGt7Si266Y7qh4i48f39E7+w5U36z9wDjfhY5gsUU0QkPkZrk19/As0nKb2ynpLA==
 
-"@yozora/character@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.0.0-beta.0.tgz#3d9e4854bc1cbcde6eb902b27dca50e149f18f20"
-  integrity sha512-WQnh/KQB6La1A0Z4un1i7GI0yXZhIluGmPVDJlYpWP4NWJ36/rdSITmONWUEMbMHO/vlpF2y0/0RTQTKw1St/A==
+"@yozora/character@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.0.0.tgz#216bf261387a7022be850d8ab379aeef83ff8bd5"
+  integrity sha512-AZBUKaxd9rTw542/+kCZIRgj3lZEztv+pnCK5/a3KdhlxatuUtQpbfU/B0xk9ivd4E1eSM7T8C6kZq3xStcLUw==
 
-"@yozora/core-parser@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.0.0-beta.0.tgz#46c3683c7342187489591027a5ab185ba3a16672"
-  integrity sha512-mfnOpPxiABLHVmtBf2hlx2UpEXIpAnQyJZvc3NLC8bDjwf4m7cKHlZVeFrTXD3OS/5Aj+BYyZxrt3TqM2fL4UQ==
+"@yozora/core-parser@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.0.0.tgz#3e42bdc9d144e25d77879f4cb08e3e20173a349f"
+  integrity sha512-upYbBcg/Ko1YJ1Sq0Tht90dWGkz28VnNMXzPhy17HdIG8fmnBEMD+jyEs2JC2aQ7zyq/9DaKr85O5QCrIOrkCA==
   dependencies:
-    "@yozora/ast" "^1.0.0-beta.0"
-    "@yozora/ast-util" "^1.0.0-beta.0"
-    "@yozora/character" "^1.0.0-beta.0"
-    "@yozora/core-tokenizer" "^1.0.0-beta.0"
-    "@yozora/invariant" "^1.0.0-beta.0"
+    "@yozora/ast" "^1.0.0"
+    "@yozora/ast-util" "^1.0.0"
+    "@yozora/character" "^1.0.0"
+    "@yozora/core-tokenizer" "^1.0.0"
+    "@yozora/invariant" "^1.0.0"
 
-"@yozora/core-tokenizer@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.0.0-beta.0.tgz#c6dd70420b2b8a64234f6971eb1d43bda04bad0d"
-  integrity sha512-4RsObpMkfFSq6b9/EnRogUWgnvtwUn8SbaaPHGI7ZMBOWeJssk4R4NGBplzGx+OOiqiP5dTcqgQQj2D+31+/oQ==
+"@yozora/core-tokenizer@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.0.0.tgz#29841e0526710c3c8cc5803da643032a52c66fee"
+  integrity sha512-vW/aGDoNUqzxjorwmzm/gAYgYNxABbQ1Y2zQBs3hffwFnH26ZDcNmjmgLhSQ5N/aV8QqvwxYDvZO2gbqMSW8LA==
   dependencies:
-    "@yozora/ast" "^1.0.0-beta.0"
-    "@yozora/character" "^1.0.0-beta.0"
+    "@yozora/ast" "^1.0.0"
+    "@yozora/character" "^1.0.0"
 
 "@yozora/html-admonition@^1.0.0-alpha.1":
   version "1.0.0-alpha.1"
@@ -3703,10 +3703,10 @@
   resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-1.0.0-alpha.1.tgz#aa8af57f07f2644b35522b302e37652c82022026"
   integrity sha512-HWWf7KxSP8aq8KwlUi/ZkuWohoD6AHXaX9PnGxn/ZQxNp1R1vfStnmlBYtp+iMhbMFIHmauKn5OniciZZ+HgtA==
 
-"@yozora/invariant@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-1.0.0-beta.0.tgz#5e6ae5b34ad19ee10cbcbb6a21c7f0e7624be84d"
-  integrity sha512-LTkpIdo1MxGlSjF0h80Q3n+PuA4YEgnFEGoviR2J2vSUKJ4LTmomuWxvWA2oXx2Y1ceFLNUrgDGhTDPZvRCbGA==
+"@yozora/invariant@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-1.0.0.tgz#517bfe02d3be32cc070283f0e28e20b30d2fbdc0"
+  integrity sha512-EetToJk2g44RDrDWv5DeOh+mA6R4AA/YEh41U3V382FugH5AgcPFuBhbXFI/nyPueQP5sJSrQ+gOvKC47hc+Jg==
 
 JSONStream@^1.0.4, JSONStream@^1.3.4:
   version "1.3.5"
@@ -7288,13 +7288,13 @@ eslint-webpack-plugin@^2.5.3:
     normalize-path "^3.0.0"
     schema-utils "^3.0.0"
 
-eslint@7.30.0, eslint@^7.20.0:
-  version "7.30.0"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-7.30.0.tgz#6d34ab51aaa56112fd97166226c9a97f505474f8"
-  integrity sha512-VLqz80i3as3NdloY44BQSJpFw534L9Oh+6zJOUaViV4JPd+DaHwutqP7tcpkW3YiXbK6s05RZl7yl7cQn+lijg==
+eslint@7.31.0, eslint@^7.20.0:
+  version "7.31.0"
+  resolved "https://registry.npmjs.org/eslint/-/eslint-7.31.0.tgz#f972b539424bf2604907a970860732c5d99d3aca"
+  integrity sha512-vafgJpSh2ia8tnTkNUkwxGmnumgckLh5aAbLa1xRmIn9+owi8qBNGKL+B881kNKNTy7FFqTEkpNkUvmw0n6PkA==
   dependencies:
     "@babel/code-frame" "7.12.11"
-    "@eslint/eslintrc" "^0.4.2"
+    "@eslint/eslintrc" "^0.4.3"
     "@humanwhocodes/config-array" "^0.5.0"
     ajv "^6.10.0"
     chalk "^4.0.0"
