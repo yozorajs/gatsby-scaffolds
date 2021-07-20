@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="1.0.0-alpha.14"></a>
+## 1.0.0-alpha.14 (2021-07-20)
+
+### Changed
+
+- ⬆️ chore: upgrade dependenceis [[aa5bfc8](https://github.com/yozorajs/gatsby-scaffolds/commit/aa5bfc84b5e0ad12f1bc832e36c1f295de89e4d8)]
+
+### Miscellaneous
+
+-  improve(gatsby-transformer): tweak the algorithm used to calculate the time required to read [[895a6a2](https://github.com/yozorajs/gatsby-scaffolds/commit/895a6a212d0f533aac6d32270301bb253b79d695)]
+- 📝 docs: update CHANGELOG [[58cc50a](https://github.com/yozorajs/gatsby-scaffolds/commit/58cc50aca49dd2c1e6e2b6c6babe61bb6163640f)]
+
+
 <a name="1.0.0-alpha.13"></a>
 ## 1.0.0-alpha.13 (2021-07-18)
 
