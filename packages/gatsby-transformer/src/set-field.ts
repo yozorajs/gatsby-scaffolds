@@ -2,6 +2,7 @@ import { isFunction } from '@guanghechen/option-helper'
 import { collectIntervals } from '@guanghechen/parse-lineno'
 import {
   CodeType,
+  EcmaImportType,
   FootnoteDefinitionType,
   FootnoteReferenceType,
   HtmlType,
@@ -10,6 +11,7 @@ import {
 import type {
   Code,
   Definition,
+  EcmaImport,
   FootnoteDefinition,
   HeadingToc,
   Root,
@@ -22,6 +24,7 @@ import {
   calcDefinitionMap,
   calcFootnoteDefinitionMap,
   calcHeadingToc,
+  collectNodes,
   searchNode,
   shallowCloneAst,
   traverseAST,
@@ -33,6 +36,7 @@ import duration from 'dayjs/plugin/duration'
 import fs from 'fs-extra'
 import type { Node, SetFieldsOnGraphQLNodeTypeArgs } from 'gatsby'
 import path from 'path'
+import { resolve } from 'path/posix'
 import type { TransformerYozoraOptions } from './types'
 import env from './util/env'
 import { normalizeTagOrCategory } from './util/string'
@@ -541,6 +545,15 @@ export async function setFieldsOnGraphQLNodeType(
           excerptSeparator: frontmatter.excerpt_separator,
         })
         return astToHTML(ast, preferReferences)
+      },
+    },
+    ecmaImports: {
+      type: 'JSON',
+      args: {},
+      async resolve(markdownNode: Node): Promise<EcmaImport[]> {
+        const ast = await getAst(markdownNode)
+        const ecmaImports = collectNodes(ast, [EcmaImportType])
+        return ecmaImports as EcmaImport[]
       },
     },
     definitionMap: {

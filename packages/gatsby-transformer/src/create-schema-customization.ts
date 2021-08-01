@@ -45,6 +45,7 @@ const typeDefs = `
     excerptAst: JSON!
     definitionMap: JSON!
     footnoteDefinitionMap: JSON!
+    ecmaImports: JSON!
     frontmatter2: MarkdownYozoraFrontmatter2!
   }
 `
