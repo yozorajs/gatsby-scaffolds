@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="1.0.0-alpha.15"></a>
+## 1.0.0-alpha.15 (2021-08-01)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[a0e21b0](https://github.com/yozorajs/gatsby-scaffolds/commit/a0e21b0eba9237bf524349a85f68c4b2b0b729e3)]
+
+### Miscellaneous
+
+-  feat: support new field &#x27;ecmaImports&#x27; [[69675e5](https://github.com/yozorajs/gatsby-scaffolds/commit/69675e596a6d4ad2c624c0d872a536772f6d3da4)]
+- 📝 docs: update CHANGELOG [[789a6ac](https://github.com/yozorajs/gatsby-scaffolds/commit/789a6ac66d6dd014af2edf295f6a3fbdbcfee10c)]
+
+
 <a name="1.0.0-alpha.14"></a>
 ## 1.0.0-alpha.14 (2021-07-20)
 
