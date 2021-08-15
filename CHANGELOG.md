@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="1.0.0-alpha.16"></a>
+## 1.0.0-alpha.16 (2021-08-15)
+
+### Changed
+
+- 👽 feat: update due to the ugprade of yozora [[d3c5340](https://github.com/yozorajs/gatsby-scaffolds/commit/d3c5340a1c68fc909892a3b01277f36c28e4b3ee)]
+- ⬆️ chore: ugprade dependencies [[4037565](https://github.com/yozorajs/gatsby-scaffolds/commit/4037565b3c63f38a11a030fadbb4b00f7bb3999b)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[45c79b3](https://github.com/yozorajs/gatsby-scaffolds/commit/45c79b38752daed8743761d50297d3c875b02188)]
+
+
 <a name="1.0.0-alpha.15"></a>
 ## 1.0.0-alpha.15 (2021-08-01)
 
