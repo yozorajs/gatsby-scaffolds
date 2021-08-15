@@ -22,12 +22,12 @@ import type {
 } from '@yozora/ast'
 import {
   calcDefinitionMap,
+  calcExcerptAst,
   calcFootnoteDefinitionMap,
   calcHeadingToc,
   collectNodes,
   searchNode,
-  shallowCloneAst,
-  traverseAST,
+  traverseAst,
 } from '@yozora/ast-util'
 import { stripChineseCharacters } from '@yozora/character'
 import renderMarkdown, { defaultRendererMap } from '@yozora/html-markdown'
@@ -36,7 +36,6 @@ import duration from 'dayjs/plugin/duration'
 import fs from 'fs-extra'
 import type { Node, SetFieldsOnGraphQLNodeTypeArgs } from 'gatsby'
 import path from 'path'
-import { resolve } from 'path/posix'
 import type { TransformerYozoraOptions } from './types'
 import env from './util/env'
 import { normalizeTagOrCategory } from './util/string'
@@ -81,6 +80,20 @@ export async function setFieldsOnGraphQLNodeType(
     plugins = [],
   } = options
 
+  // Calc cache key of Yozora Ast.
+  const calcAstCacheKey = (markdownNode: Node): string =>
+    'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
+
+  /**
+   * Update ast.
+   * @param markdownNode
+   * @returns
+   */
+  function setAst(markdownNode: Node, ast: Root): Promise<void> {
+    const cacheKey = calcAstCacheKey(markdownNode)
+    return api.cache.set(cacheKey, ast)
+  }
+
   /**
    * Calc Yast Root from markdownNode.
    *
@@ -88,8 +101,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @returns
    */
   async function getAst(markdownNode: Node): Promise<Root> {
-    const cacheKey =
-      'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
+    const cacheKey = calcAstCacheKey(markdownNode)
 
     // Check from cache.
     const cachedAST = await api.cache.get(cacheKey)
@@ -167,7 +179,7 @@ export async function setFieldsOnGraphQLNodeType(
       })
 
       // Resolve footnote definitions
-      traverseAST(
+      traverseAst(
         ast,
         [FootnoteReferenceType, FootnoteDefinitionType],
         (node): void => {
@@ -180,7 +192,7 @@ export async function setFieldsOnGraphQLNodeType(
 
       // Remove line end between two chinese characters.
       if (shouldStripChineseCharacters) {
-        traverseAST(ast, [TextType], node => {
+        traverseAst(ast, [TextType], node => {
           const text = node as Text
           text.value = stripChineseCharacters(text.value)
         })
@@ -189,7 +201,7 @@ export async function setFieldsOnGraphQLNodeType(
       // load source files
       const sourcefileRegex = /(?:^|\b)sourcefile="([^"]+)"/
       const sourcelineRegex = /(?:^|\b)sourceline="([^"]+)"/
-      traverseAST(ast, [CodeType], (node): void => {
+      traverseAst(ast, [CodeType], (node): void => {
         const { meta } = node as Code
         if (meta == null) return
 
@@ -296,37 +308,7 @@ export async function setFieldsOnGraphQLNodeType(
     if (fullAst.children.length <= 0) return fullAst
 
     // Try to truncate excerpt.
-    let totalExcerptLengthSoFar = 0
-    let parentOfLastLiteralNode: YastParent | null = null as YastParent | null
-    let indexOfLastLiteralNode = 0
-    const excerptAst = shallowCloneAst(fullAst, (node, parent, index) => {
-      if (totalExcerptLengthSoFar >= pruneLength) return true
-      const { value } = node as YastLiteral
-      if (value != null) {
-        parentOfLastLiteralNode = parent
-        indexOfLastLiteralNode = index
-        totalExcerptLengthSoFar += value.length
-      }
-      return false
-    })
-
-    if (
-      parentOfLastLiteralNode != null &&
-      parentOfLastLiteralNode!.type === 'text' &&
-      totalExcerptLengthSoFar > pruneLength
-    ) {
-      // Try truncate last LiteralNode
-      const parent = parentOfLastLiteralNode!
-      parent.children = parent.children.map((node, i) => {
-        if (i !== indexOfLastLiteralNode) return node
-        return {
-          ...node,
-          value: (node as YastLiteral).value.slice(
-            totalExcerptLengthSoFar - pruneLength,
-          ),
-        }
-      })
-    }
+    const excerptAst = calcExcerptAst(fullAst, pruneLength)
     return excerptAst
   }
 
@@ -336,15 +318,25 @@ export async function setFieldsOnGraphQLNodeType(
    * @param preferReferences
    * @returns
    */
-  function astToHTML(ast: Root, preferReferences: boolean): string {
-    const definitionMap = calcDefinitionMap(ast, undefined, presetDefinitions)
-    const footnoteDefinitionMap = calcFootnoteDefinitionMap(
-      ast,
+  function astToHTML(
+    markdownNode: Node,
+    _ast: Root,
+    preferReferences: boolean,
+  ): string {
+    const { root, definitionMap } = calcDefinitionMap(
+      _ast,
+      undefined,
+      presetDefinitions,
+    )
+    const { root: ast, footnoteDefinitionMap } = calcFootnoteDefinitionMap(
+      root,
       undefined,
       presetFootnoteDefinitions,
       preferReferences,
       footnoteIdentifierPrefix,
     )
+
+    void setAst(markdownNode, ast)
     return renderMarkdown(
       ast,
       definitionMap,
@@ -500,7 +492,7 @@ export async function setFieldsOnGraphQLNodeType(
         { preferReferences }: GetHtmlOptions,
       ): Promise<string> {
         const ast = await getAst(markdownNode)
-        return astToHTML(ast, preferReferences)
+        return astToHTML(markdownNode, ast, preferReferences)
       },
     },
     excerptAst: {
@@ -544,7 +536,7 @@ export async function setFieldsOnGraphQLNodeType(
           pruneLength,
           excerptSeparator: frontmatter.excerpt_separator,
         })
-        return astToHTML(ast, preferReferences)
+        return astToHTML(markdownNode, ast, preferReferences)
       },
     },
     ecmaImports: {
@@ -563,11 +555,12 @@ export async function setFieldsOnGraphQLNodeType(
         markdownNode: Node,
       ): Promise<Record<string, Readonly<Definition>>> {
         const ast = await getAst(markdownNode)
-        const definitionMap = calcDefinitionMap(
+        const { root, definitionMap } = calcDefinitionMap(
           ast,
           undefined,
           presetDefinitions,
         )
+        void setAst(markdownNode, root)
         return definitionMap
       },
     },
@@ -584,13 +577,14 @@ export async function setFieldsOnGraphQLNodeType(
         { preferReferences }: GetFootnoteDefinitionsOptions,
       ): Promise<Record<string, FootnoteDefinition>> {
         const ast = await getAst(markdownNode)
-        const footnoteDefinitionMap = calcFootnoteDefinitionMap(
+        const { root, footnoteDefinitionMap } = calcFootnoteDefinitionMap(
           ast,
           undefined,
           presetFootnoteDefinitions,
           preferReferences,
           footnoteIdentifierPrefix,
         )
+        void setAst(markdownNode, root)
         return footnoteDefinitionMap
       },
     },

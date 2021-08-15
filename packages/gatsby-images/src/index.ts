@@ -1,6 +1,6 @@
 import type { Image, ImageReference, YastNode } from '@yozora/ast'
 import { ImageReferenceType, ImageType } from '@yozora/ast'
-import { calcDefinitionMap, traverseAST } from '@yozora/ast-util'
+import { calcDefinitionMap, traverseAst } from '@yozora/ast-util'
 import type { AstMutateApi } from '@yozora/gatsby-transformer'
 import chalk from 'chalk'
 import { slash } from 'gatsby-core-utils'
@@ -50,10 +50,10 @@ function mutateYozoraAst(
   pluginOptions: GatsbyYozoraImagesOptions = {},
 ): Promise<void> {
   const options = { ...defaultFluidArgs, pathPrefix, ...pluginOptions }
-  const definitionMap = calcDefinitionMap(markdownAST)
+  const { definitionMap } = calcDefinitionMap(markdownAST)
   const markdownImageNodes: ImageNode[] = []
 
-  traverseAST(markdownAST, [ImageReferenceType, ImageType], node =>
+  traverseAst(markdownAST, [ImageReferenceType, ImageType], node =>
     markdownImageNodes.push(node as unknown as ImageNode),
   )
 

@@ -1,6 +1,6 @@
 import type { Root, YastLiteral } from '@yozora/ast'
 import { CodeType, InlineMathType, MathType } from '@yozora/ast'
-import { traverseAST } from '@yozora/ast-util'
+import { traverseAst } from '@yozora/ast-util'
 
 /**
  * Estimate the time required to read.
@@ -14,7 +14,7 @@ export function timeToRead(ast: Root, wordsPerMinute?: number): number {
   if (wordsPerMinute == null) wordsPerMinute = 140
 
   let wordCount = 0
-  traverseAST(ast, null, o => {
+  traverseAst(ast, null, o => {
     const { value } = o as YastLiteral
     switch (o.type) {
       case InlineMathType:
