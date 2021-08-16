@@ -2,6 +2,7 @@ import { isFunction } from '@guanghechen/option-helper'
 import { collectIntervals } from '@guanghechen/parse-lineno'
 import {
   CodeType,
+  DefinitionType,
   EcmaImportType,
   FootnoteDefinitionType,
   FootnoteReferenceType,
@@ -27,6 +28,7 @@ import {
   calcHeadingToc,
   collectNodes,
   searchNode,
+  shallowMutateAstInPreorder,
   traverseAst,
 } from '@yozora/ast-util'
 import { stripChineseCharacters } from '@yozora/character'
@@ -274,14 +276,32 @@ export async function setFieldsOnGraphQLNodeType(
   }
 
   /**
+   * Strip ast.
+   * @param ast
+   * @param shouldStrip
+   * @returns
+   */
+  function stripAst(ast: Root, shouldStrip: boolean): Root {
+    return shouldStrip
+      ? shallowMutateAstInPreorder(
+          ast,
+          [DefinitionType, FootnoteDefinitionType],
+          () => null,
+        )
+      : ast
+  }
+
+  /**
    * Calc Yozora Markdown AST of excerpt content.
    * @param fullAst
-   * @param param1
+   * @param pruneLength
+   * @param excerptSeparator
    * @returns
    */
   function getExcerptAst(
     fullAst: Root,
-    { pruneLength, excerptSeparator }: GetExcerptAstOptions,
+    pruneLength: number,
+    excerptSeparator?: string,
   ): Root {
     if (excerptSeparator != null) {
       const separator = excerptSeparator.trim()
@@ -472,9 +492,18 @@ export async function setFieldsOnGraphQLNodeType(
     },
     ast: {
       type: 'JSON',
-      async resolve(markdownNode: Node): Promise<Root> {
+      args: {
+        shouldStrip: {
+          type: 'Boolean',
+          defaultValue: false,
+        },
+      },
+      async resolve(
+        markdownNode: Node,
+        { shouldStrip }: GetAstOptions,
+      ): Promise<Root> {
         const ast = await getAst(markdownNode)
-        return ast
+        return stripAst(ast, shouldStrip)
       },
     },
     html: {
@@ -500,16 +529,22 @@ export async function setFieldsOnGraphQLNodeType(
           type: 'Int',
           defaultValue: 140,
         },
+        shouldStrip: {
+          type: 'Boolean',
+          defaultValue: false,
+        },
       },
       async resolve(
         markdownNode: Node,
-        { pruneLength }: GetExcerptAstOptions,
+        { pruneLength, shouldStrip }: GetExcerptAstOptions,
       ): Promise<Root> {
         const fullAst = await getAst(markdownNode)
-        const excerptAst = getExcerptAst(fullAst, {
+        const ast = stripAst(fullAst, shouldStrip)
+        const excerptAst = getExcerptAst(
+          ast,
           pruneLength,
-          excerptSeparator: frontmatter.excerpt_separator,
-        })
+          frontmatter.excerpt_separator,
+        )
         return excerptAst
       },
     },
@@ -530,11 +565,12 @@ export async function setFieldsOnGraphQLNodeType(
         { preferReferences, pruneLength }: GetExcerptOptions,
       ): Promise<string> {
         const fullAst = await getAst(markdownNode)
-        const ast = getExcerptAst(fullAst, {
+        const excerptAst = getExcerptAst(
+          fullAst,
           pruneLength,
-          excerptSeparator: frontmatter.excerpt_separator,
-        })
-        return astToHTML(markdownNode, ast, preferReferences)
+          frontmatter.excerpt_separator,
+        )
+        return astToHTML(markdownNode, excerptAst, preferReferences)
       },
     },
     ecmaImports: {
@@ -629,6 +665,13 @@ interface GetHtmlOptions {
   preferReferences: boolean
 }
 
+interface GetAstOptions {
+  /**
+   * Whether if to remove the definitions and footnote definitions.
+   */
+  shouldStrip: boolean
+}
+
 interface GetExcerptOptions {
   preferReferences: boolean
   pruneLength: number
@@ -637,6 +680,13 @@ interface GetExcerptOptions {
 
 interface GetExcerptAstOptions {
   pruneLength: number
+  /**
+   * Whether if to remove the definitions and footnote definitions.
+   */
+  shouldStrip: boolean
+  /**
+   *
+   */
   excerptSeparator?: string
 }
 
