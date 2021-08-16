@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.0-alpha.17"></a>
+## 1.0.0-alpha.17 (2021-08-16)
+
+### Changed
+
+- ⬆️ chore: upgrade peerDependencies [[8a90865](https://github.com/yozorajs/gatsby-scaffolds/commit/8a90865a7e51507ab919f3bbfe8093d7cc2e78e7)]
+- ⬆️ chore: upgrade dependencies and peerDependencies [[30ecf01](https://github.com/yozorajs/gatsby-scaffolds/commit/30ecf01c0f2766da574eaa3fcbe75226186b81ab)]
+
+### Miscellaneous
+
+- 🚧 improve(gatsby-transformer): support &#x60;strip&#x60; options to getting the ast [[fde7977](https://github.com/yozorajs/gatsby-scaffolds/commit/fde79779e2b91ac3ec19184b12dda219102835b1)]
+- 📝 docs: update CHANGELOG [[761b198](https://github.com/yozorajs/gatsby-scaffolds/commit/761b198b20033d53c33496f762ff08040af1f13e)]
+
+
 <a name="1.0.0-alpha.16"></a>
 ## 1.0.0-alpha.16 (2021-08-15)
 
