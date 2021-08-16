@@ -279,10 +279,10 @@ export async function setFieldsOnGraphQLNodeType(
    * @param param1
    * @returns
    */
-  async function getExcerptAst(
+  function getExcerptAst(
     fullAst: Root,
     { pruneLength, excerptSeparator }: GetExcerptAstOptions,
-  ): Promise<Root> {
+  ): Root {
     if (excerptSeparator != null) {
       const separator = excerptSeparator.trim()
 
@@ -304,8 +304,6 @@ export async function setFieldsOnGraphQLNodeType(
         return excerptAst
       }
     }
-
-    if (fullAst.children.length <= 0) return fullAst
 
     // Try to truncate excerpt.
     const excerptAst = calcExcerptAst(fullAst, pruneLength)
@@ -508,7 +506,7 @@ export async function setFieldsOnGraphQLNodeType(
         { pruneLength }: GetExcerptAstOptions,
       ): Promise<Root> {
         const fullAst = await getAst(markdownNode)
-        const excerptAst = await getExcerptAst(fullAst, {
+        const excerptAst = getExcerptAst(fullAst, {
           pruneLength,
           excerptSeparator: frontmatter.excerpt_separator,
         })
@@ -532,7 +530,7 @@ export async function setFieldsOnGraphQLNodeType(
         { preferReferences, pruneLength }: GetExcerptOptions,
       ): Promise<string> {
         const fullAst = await getAst(markdownNode)
-        const ast = await getExcerptAst(fullAst, {
+        const ast = getExcerptAst(fullAst, {
           pruneLength,
           excerptSeparator: frontmatter.excerpt_separator,
         })
