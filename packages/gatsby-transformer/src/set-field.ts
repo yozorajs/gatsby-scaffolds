@@ -82,28 +82,15 @@ export async function setFieldsOnGraphQLNodeType(
     plugins = [],
   } = options
 
-  // Calc cache key of Yozora Ast.
-  const calcAstCacheKey = (markdownNode: Node): string =>
-    'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
-
-  /**
-   * Update ast.
-   * @param markdownNode
-   * @returns
-   */
-  function setAst(markdownNode: Node, ast: Root): Promise<void> {
-    const cacheKey = calcAstCacheKey(markdownNode)
-    return api.cache.set(cacheKey, ast)
-  }
-
   /**
    * Calc Yast Root from markdownNode.
    *
    * @param markdownNode
    * @returns
    */
-  async function getAst(markdownNode: Node): Promise<Root> {
-    const cacheKey = calcAstCacheKey(markdownNode)
+  async function _getAst(markdownNode: Node): Promise<Root> {
+    const cacheKey =
+      'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
 
     // Check from cache.
     const cachedAST = await api.cache.get(cacheKey)
@@ -276,6 +263,29 @@ export async function setFieldsOnGraphQLNodeType(
   }
 
   /**
+   * Calc Yast Root from markdownNode.
+   *
+   * @param markdownNode
+   * @param preferReferences
+   * @returns
+   */
+  async function getAst(
+    markdownNode: Node,
+    preferReferences: boolean,
+  ): Promise<Root> {
+    const ast = await _getAst(markdownNode)
+    return preferReferences
+      ? calcFootnoteDefinitionMap(
+          ast,
+          undefined,
+          presetFootnoteDefinitions,
+          true,
+          footnoteIdentifierPrefix,
+        ).root
+      : ast
+  }
+
+  /**
    * Strip ast.
    * @param ast
    * @param shouldStrip
@@ -333,14 +343,9 @@ export async function setFieldsOnGraphQLNodeType(
   /**
    * Render Yozora ast into html string.
    * @param ast
-   * @param preferReferences
    * @returns
    */
-  function astToHTML(
-    markdownNode: Node,
-    _ast: Root,
-    preferReferences: boolean,
-  ): string {
+  function astToHTML(_ast: Root): string {
     const { root, definitionMap } = calcDefinitionMap(
       _ast,
       undefined,
@@ -350,11 +355,10 @@ export async function setFieldsOnGraphQLNodeType(
       root,
       undefined,
       presetFootnoteDefinitions,
-      preferReferences,
+      false,
       footnoteIdentifierPrefix,
     )
 
-    void setAst(markdownNode, ast)
     return renderMarkdown(
       ast,
       definitionMap,
@@ -460,7 +464,7 @@ export async function setFieldsOnGraphQLNodeType(
           return dayjs.duration(time2Read * 1000).format(formatString)
         }
 
-        const ast = await getAst(markdownNode)
+        const ast = await getAst(markdownNode, false)
         const seconds = timeToRead(ast, wordsPerMinute)
         return dayjs.duration(seconds * 1000).format(formatString)
       },
@@ -485,7 +489,7 @@ export async function setFieldsOnGraphQLNodeType(
     toc: {
       type: 'MarkdownYozoraToc!',
       async resolve(markdownNode: Node): Promise<HeadingToc> {
-        const ast = await getAst(markdownNode)
+        const ast = await getAst(markdownNode, false)
         const toc = calcHeadingToc(ast, headingIdentifierPrefix)
         return toc
       },
@@ -497,12 +501,16 @@ export async function setFieldsOnGraphQLNodeType(
           type: 'Boolean',
           defaultValue: false,
         },
+        preferReferences: {
+          type: 'Boolean',
+          defaultValue: preferFootnoteReferences,
+        },
       },
       async resolve(
         markdownNode: Node,
-        { shouldStrip }: GetAstOptions,
+        { shouldStrip, preferReferences }: GetAstOptions,
       ): Promise<Root> {
-        const ast = await getAst(markdownNode)
+        const ast = await getAst(markdownNode, preferReferences)
         return stripAst(ast, shouldStrip)
       },
     },
@@ -518,8 +526,8 @@ export async function setFieldsOnGraphQLNodeType(
         markdownNode: Node,
         { preferReferences }: GetHtmlOptions,
       ): Promise<string> {
-        const ast = await getAst(markdownNode)
-        return astToHTML(markdownNode, ast, preferReferences)
+        const fullAst = await getAst(markdownNode, preferReferences)
+        return astToHTML(fullAst)
       },
     },
     excerptAst: {
@@ -533,12 +541,16 @@ export async function setFieldsOnGraphQLNodeType(
           type: 'Boolean',
           defaultValue: false,
         },
+        preferReferences: {
+          type: 'Boolean',
+          defaultValue: preferFootnoteReferences,
+        },
       },
       async resolve(
         markdownNode: Node,
-        { pruneLength, shouldStrip }: GetExcerptAstOptions,
+        { pruneLength, shouldStrip, preferReferences }: GetExcerptAstOptions,
       ): Promise<Root> {
-        const fullAst = await getAst(markdownNode)
+        const fullAst = await getAst(markdownNode, preferReferences)
         const ast = stripAst(fullAst, shouldStrip)
         const excerptAst = getExcerptAst(
           ast,
@@ -564,20 +576,20 @@ export async function setFieldsOnGraphQLNodeType(
         markdownNode: Node,
         { preferReferences, pruneLength }: GetExcerptOptions,
       ): Promise<string> {
-        const fullAst = await getAst(markdownNode)
+        const fullAst = await getAst(markdownNode, preferReferences)
         const excerptAst = getExcerptAst(
           fullAst,
           pruneLength,
           frontmatter.excerpt_separator,
         )
-        return astToHTML(markdownNode, excerptAst, preferReferences)
+        return astToHTML(excerptAst)
       },
     },
     ecmaImports: {
       type: 'JSON',
       args: {},
       async resolve(markdownNode: Node): Promise<EcmaImport[]> {
-        const ast = await getAst(markdownNode)
+        const ast = await getAst(markdownNode, false)
         const ecmaImports = collectNodes(ast, [EcmaImportType])
         return ecmaImports as EcmaImport[]
       },
@@ -588,13 +600,12 @@ export async function setFieldsOnGraphQLNodeType(
       async resolve(
         markdownNode: Node,
       ): Promise<Record<string, Readonly<Definition>>> {
-        const ast = await getAst(markdownNode)
-        const { root, definitionMap } = calcDefinitionMap(
+        const ast = await getAst(markdownNode, false)
+        const { definitionMap } = calcDefinitionMap(
           ast,
           undefined,
           presetDefinitions,
         )
-        void setAst(markdownNode, root)
         return definitionMap
       },
     },
@@ -610,15 +621,14 @@ export async function setFieldsOnGraphQLNodeType(
         markdownNode: Node,
         { preferReferences }: GetFootnoteDefinitionsOptions,
       ): Promise<Record<string, FootnoteDefinition>> {
-        const ast = await getAst(markdownNode)
-        const { root, footnoteDefinitionMap } = calcFootnoteDefinitionMap(
+        const ast = await getAst(markdownNode, preferReferences)
+        const { footnoteDefinitionMap } = calcFootnoteDefinitionMap(
           ast,
           undefined,
           presetFootnoteDefinitions,
           preferReferences,
           footnoteIdentifierPrefix,
         )
-        void setAst(markdownNode, root)
         return footnoteDefinitionMap
       },
     },
@@ -670,6 +680,10 @@ interface GetAstOptions {
    * Whether if to remove the definitions and footnote definitions.
    */
   shouldStrip: boolean
+  /**
+   *
+   */
+  preferReferences: boolean
 }
 
 interface GetExcerptOptions {
@@ -684,6 +698,10 @@ interface GetExcerptAstOptions {
    * Whether if to remove the definitions and footnote definitions.
    */
   shouldStrip: boolean
+  /**
+   *
+   */
+  preferReferences: boolean
   /**
    *
    */
