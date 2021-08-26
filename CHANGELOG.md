@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.0-alpha.18"></a>
+## 1.0.0-alpha.18 (2021-08-26)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[e9d28fa](https://github.com/yozorajs/gatsby-scaffolds/commit/e9d28fa8d2103c8b02f5678e5da5190057721c9b)]
+
+### Fixed
+
+- 🐛 fix: replace footnote to footnoteReference if the preferReference (or preferFootnoteReference) specified [[28faad8](https://github.com/yozorajs/gatsby-scaffolds/commit/28faad8df941e206b7805018b2114af41a570872)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[3e7782c](https://github.com/yozorajs/gatsby-scaffolds/commit/3e7782cf9fa53acafbb73add13636a6b66e0159a)]
+
+
 <a name="1.0.0-alpha.17"></a>
 ## 1.0.0-alpha.17 (2021-08-16)
 
