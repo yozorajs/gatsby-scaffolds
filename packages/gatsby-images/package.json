@@ -45,12 +45,12 @@
   "dependencies": {
     "@yozora/gatsby-transformer": "^1.0.0-alpha.17",
     "chalk": "^4.1.2",
-    "gatsby-core-utils": "^2.11.0",
+    "gatsby-core-utils": "^2.12.0",
     "query-string": "^7.0.1"
   },
   "peerDependencies": {
-    "@yozora/ast": "^1.2.0-alpha.1",
-    "@yozora/ast-util": "^1.2.0-alpha.1",
+    "@yozora/ast": "^1.2.0",
+    "@yozora/ast-util": "^1.2.0",
     "gatsby": "^3.0.0-next.0",
     "gatsby-plugin-sharp": "^3.0.0-next.0"
   }

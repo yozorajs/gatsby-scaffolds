@@ -42,18 +42,18 @@
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
   },
   "dependencies": {
-    "@guanghechen/option-helper": "^1.8.2",
-    "@guanghechen/parse-lineno": "^1.8.2",
+    "@guanghechen/option-helper": "^1.8.3",
+    "@guanghechen/parse-lineno": "^1.8.3",
     "@types/fs-extra": "^9.0.12",
     "dayjs": "^1.10.6",
     "fs-extra": "^10.0.0",
     "gray-matter": "^4.0.3"
   },
   "peerDependencies": {
-    "@yozora/ast": "^1.2.0-alpha.1",
-    "@yozora/ast-util": "^1.2.0-alpha.1",
-    "@yozora/character": "^1.2.0-alpha.1",
-    "@yozora/html-markdown": "^1.0.0-alpha.2",
+    "@yozora/ast": "^1.2.0",
+    "@yozora/ast-util": "^1.2.0",
+    "@yozora/character": "^1.2.0",
+    "@yozora/html-markdown": "^1.0.0-alpha.3",
     "gatsby": "^3.0.0-next.0"
   }
 }
