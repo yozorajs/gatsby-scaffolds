@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="1.0.0-alpha.19"></a>
+## 1.0.0-alpha.19 (2021-09-04)
+
+### Changed
+
+- ⬆️ chore: upgrade yozora [[14a5d8f](https://github.com/yozorajs/gatsby-scaffolds/commit/14a5d8f00bb15f60be5668b60ac475a77c59d059)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[0b037a5](https://github.com/yozorajs/gatsby-scaffolds/commit/0b037a53783001677ca4e9f8816e553a66d0fab8)]
+
+
 <a name="1.0.0-alpha.18"></a>
 ## 1.0.0-alpha.18 (2021-08-26)
 
