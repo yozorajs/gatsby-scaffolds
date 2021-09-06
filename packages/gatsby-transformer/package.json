@@ -50,9 +50,9 @@
     "gray-matter": "^4.0.3"
   },
   "peerDependencies": {
-    "@yozora/ast": "^1.2.1",
-    "@yozora/ast-util": "^1.2.1",
-    "@yozora/character": "^1.2.1",
+    "@yozora/ast": "^1.2.2",
+    "@yozora/ast-util": "^1.2.2",
+    "@yozora/character": "^1.2.2",
     "@yozora/html-markdown": "^1.0.0-alpha.3",
     "gatsby": "^3.0.0-next.0"
   }

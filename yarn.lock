@@ -57,17 +57,17 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@7.15.4", "@babel/core@^7.1.0", "@babel/core@^7.14.8", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
-  version "7.15.4"
-  resolved "https://registry.npmjs.org/@babel/core/-/core-7.15.4.tgz#a70d06c58ae1fce39c23f8efd79f9d5eb8b2f397"
-  integrity sha512-Lkcv9I4a8bgUI8LJOLM6IKv6hnz1KOju6KM1lceqVMKlKKqNRopYd2Pc9MgIurqvMJ6BooemrnJz8jlIiQIpsA==
+"@babel/core@7.15.5", "@babel/core@^7.1.0", "@babel/core@^7.14.8", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
+  version "7.15.5"
+  resolved "https://registry.npmjs.org/@babel/core/-/core-7.15.5.tgz#f8ed9ace730722544609f90c9bb49162dc3bf5b9"
+  integrity sha512-pYgXxiwAgQpgM1bNkZsDEq85f0ggXMA5L7c+o3tskGMh2BunCI9QUwB9Z4jpvXUOuMdyGKiGKQiRe11VS6Jzvg==
   dependencies:
     "@babel/code-frame" "^7.14.5"
     "@babel/generator" "^7.15.4"
     "@babel/helper-compilation-targets" "^7.15.4"
     "@babel/helper-module-transforms" "^7.15.4"
     "@babel/helpers" "^7.15.4"
-    "@babel/parser" "^7.15.4"
+    "@babel/parser" "^7.15.5"
     "@babel/template" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     "@babel/types" "^7.15.4"
@@ -308,10 +308,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.14.9", "@babel/parser@^7.15.4", "@babel/parser@^7.7.2":
-  version "7.15.4"
-  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.15.4.tgz#02f2931b822512d3aad17d475ae83da74a255a84"
-  integrity sha512-xmzz+7fRpjrvDUj+GV7zfz/R3gSK2cOxGlazaXooxspCr539cbTXJKvBJzSVI2pPhcRGquoOtaIkKCsHQUiO3w==
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.14.9", "@babel/parser@^7.15.4", "@babel/parser@^7.15.5", "@babel/parser@^7.7.2":
+  version "7.15.5"
+  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.15.5.tgz#d33a58ca69facc05b26adfe4abebfed56c1c2dac"
+  integrity sha512-2hQstc6I7T6tQsWzlboMh3SgMRPaS4H6H7cPQsJkdzTzEGqQrpLDsE2BGASU5sBPoEQyHzeqU6C8uKbFeEk6sg==
 
 "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@^7.14.5":
   version "7.14.5"
@@ -3256,10 +3256,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.19":
-  version "17.0.19"
-  resolved "https://registry.npmjs.org/@types/react/-/react-17.0.19.tgz#8f2a85e8180a43b57966b237d26a29481dacc991"
-  integrity sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==
+"@types/react@*", "@types/react@^17.0.20":
+  version "17.0.20"
+  resolved "https://registry.npmjs.org/@types/react/-/react-17.0.20.tgz#a4284b184d47975c71658cd69e759b6bd37c3b8c"
+  integrity sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -3551,42 +3551,42 @@
   resolved "https://registry.npmjs.org/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@yozora/ast-util@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.2.1.tgz#626baccde19273505c34e3b092682894defc1287"
-  integrity sha512-ZQYSdhgpKy0fTPsW1HctULEezV5ahfV2gRJHZ881x3JoRYUeweWzrzeRgyCQbWth86XtCstc4fhfv8Mtyazteg==
+"@yozora/ast-util@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-1.2.2.tgz#39be93910d6f164d33ff5ab16a4f68fc314018a8"
+  integrity sha512-u/iBCpE5xZpDHXeashAIX0QkWGknAY9luybsMCAepZqt/hhvt1ccTGJ8gMhynwnQfN+Z0JRkVaB/SC+2Koa7IA==
   dependencies:
-    "@yozora/ast" "^1.2.1"
-    "@yozora/character" "^1.2.1"
+    "@yozora/ast" "^1.2.2"
+    "@yozora/character" "^1.2.2"
 
-"@yozora/ast@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.2.1.tgz#2f6ed97134efd8ef2af51c0cc01f1b6f1af25d59"
-  integrity sha512-GuGEoUNby14LTMSDtprSzcixIgBnFU3tYodQnhAWqcTVbMX0zSaCJ1H0dsh+rhEClIFusEb5UMfidgAczAeVIw==
+"@yozora/ast@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-1.2.2.tgz#505fdb6be16ec0fb1c95097c1db99c98390f11a2"
+  integrity sha512-f48BmhfB4krbgJMQ01q2oVadFHYsRh9sq1jehc/o8lnXxiY4vmsb4pW2ZRVIzIs3RXzBX/6vXZ29dAm+J0OP4g==
 
-"@yozora/character@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.2.1.tgz#c0f7d9a171dedf1541257988b4bac27aaa011d23"
-  integrity sha512-CcM3D6u+8IM2omLLXxv++dKhwOtHfRd0iXR0cgm8K1wHsBAtVqSeb4AfxL5UQPCKVYD3++v9nNceb5bc4L3Wvw==
+"@yozora/character@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/character/-/character-1.2.2.tgz#44326308d8d9356a401caa8bbf4a7633f9379092"
+  integrity sha512-sELdC406E8GzDjL8uE1PpzKy4lg4Sy51Jmj8D4bE5kC/U+46eFwLzCs8RLmGZlXKwBEr14LZ8zIl926REaNEzQ==
 
-"@yozora/core-parser@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.2.1.tgz#ce7221187e15443c9235552088007f7ec69f0f23"
-  integrity sha512-w0FpqeyCKFqCRCoZvFYiw2D2ttlhR2lcMKDB9TdCBsGLmQ+SdqLL1A7+xF122mPcF/ROvPbc8w8TJ2nWyoGfZg==
+"@yozora/core-parser@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-1.2.2.tgz#2e9d1278dd8d12b537802ba9a24112ca0ef4dba1"
+  integrity sha512-bf4ge0oX/ECRuB9eqJ1f/6RUaF77RJX+ZkPtvZF61s2gu9Ix+7Aa8lv9cGmz19b5Vt77VC7V416J1gDjF6Ydag==
   dependencies:
-    "@yozora/ast" "^1.2.1"
-    "@yozora/ast-util" "^1.2.1"
-    "@yozora/character" "^1.2.1"
-    "@yozora/core-tokenizer" "^1.2.1"
-    "@yozora/invariant" "^1.2.1"
+    "@yozora/ast" "^1.2.2"
+    "@yozora/ast-util" "^1.2.2"
+    "@yozora/character" "^1.2.2"
+    "@yozora/core-tokenizer" "^1.2.2"
+    "@yozora/invariant" "^1.2.2"
 
-"@yozora/core-tokenizer@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.2.1.tgz#118499749675b192086e3d8e32a6a162fccf997e"
-  integrity sha512-fQZq8oshvE5QKK0aC0UhC1l0DMmq6QJem7J032dqWM8ZWS3oolFmZCGvmpTSMBBtNGCU/k31V5dlx2aYiAx+8Q==
+"@yozora/core-tokenizer@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-1.2.2.tgz#ec922fc651a439b375e71b0a80849f73588caf7b"
+  integrity sha512-dUvFO2wMaoDMXZ9BkIEPkX+74gJh40zJPqtVguxdzlF0cLbr8FD1at91+ukYMq2bZJhG35MyUoM0Z1JxnOxqVw==
   dependencies:
-    "@yozora/ast" "^1.2.1"
-    "@yozora/character" "^1.2.1"
+    "@yozora/ast" "^1.2.2"
+    "@yozora/character" "^1.2.2"
 
 "@yozora/html-admonition@^1.0.0-alpha.3":
   version "1.0.0-alpha.3"
@@ -3704,10 +3704,10 @@
   resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-1.0.0-alpha.3.tgz#e0630bbc7bcf143f58d8fd625605f5a294e6cf7b"
   integrity sha512-YeNYl67hR6GoKU7DNNkEMrfBLGPyL1LoxR9NllEfEhJwAPLC5lJDGk/AVGNBV/mN1HIfsScujgaWW8EsCV1Xqg==
 
-"@yozora/invariant@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-1.2.1.tgz#5d318c642de5c020365da35f34f47ed2bed7b4fd"
-  integrity sha512-GeZ3gzPRQWSkqDkT+gzJmdc+9m+tSHgZZduZb/XOSW3SqfjAyd7oImK87vrMhtQWd08pbpFOnV0RPG0bMOaLkA==
+"@yozora/invariant@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-1.2.2.tgz#e9b5d0c8015b9ce486ec17ceb55a57b96aefb0f4"
+  integrity sha512-uDlmkGgbB+Z55dS1pFiWkE9al+Hbq9qP7MiB/c8awtVJDCcmUt0ktfhJ1IshHFekbxzyz237tUjJBTzPoAG1Sg==
 
 JSONStream@^1.0.4, JSONStream@^1.3.4:
   version "1.3.5"
@@ -8543,10 +8543,10 @@ graphql-ws@^4.4.1:
   resolved "https://registry.npmjs.org/graphql-ws/-/graphql-ws-4.9.0.tgz#5cfd8bb490b35e86583d8322f5d5d099c26e365c"
   integrity sha512-sHkK9+lUm20/BGawNEWNtVAeJzhZeBg21VmvmLoT5NdGVeZWv5PdIhkcayQIAgjSyyQ17WMKmbDijIPG2On+Ag==
 
-graphql@^15.4.0, graphql@^15.5.2:
-  version "15.5.2"
-  resolved "https://registry.npmjs.org/graphql/-/graphql-15.5.2.tgz#efa19f8f2bf1a48eb7d5c85bf17e144ba8bb0480"
-  integrity sha512-dZjLPWNQqYv0dqV2RNbiFed0LtSp6yd4jchsDGnuhDKa9OQHJYCfovaOEvY91w9gqbYO7Se9LKDTl3xxYva/3w==
+graphql@^15.4.0, graphql@^15.5.3:
+  version "15.5.3"
+  resolved "https://registry.npmjs.org/graphql/-/graphql-15.5.3.tgz#c72349017d5c9f5446a897fe6908b3186db1da00"
+  integrity sha512-sM+jXaO5KinTui6lbK/7b7H/Knj9BpjGxZ+Ki35v7YbUJxxdBCUqNM0h3CRVU1ZF9t5lNiBzvBCSYPvIwxPOQA==
 
 gray-matter@^4.0.3:
   version "4.0.3"
