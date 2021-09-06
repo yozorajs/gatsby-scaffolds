@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="1.0.0-alpha.20"></a>
+## 1.0.0-alpha.20 (2021-09-06)
+
+### Changed
+
+- ⬆️ chore: ugprade yozora [[d76a588](https://github.com/yozorajs/gatsby-scaffolds/commit/d76a5884a9e3b229eeb212a1ed2a724803e74678)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[e65b5b4](https://github.com/yozorajs/gatsby-scaffolds/commit/e65b5b473b3b6ce8069cc8dd468e71dc96b70c20)]
+
+
 <a name="1.0.0-alpha.19"></a>
 ## 1.0.0-alpha.19 (2021-09-04)
 
