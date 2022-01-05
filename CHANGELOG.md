@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="2.0.0-alpha.0"></a>
+## 2.0.0-alpha.0 (2022-01-05)
+
+### Changed
+
+- 👽 fix: fix type errors [[bd5034c](https://github.com/yozorajs/gatsby-scaffolds/commit/bd5034c7605941147f62f585c3cadd66ed99f224)]
+- ⬆️ chore: upgrade dependencies [[746449b](https://github.com/yozorajs/gatsby-scaffolds/commit/746449b94a9f5cc3647c349aadf632a94bf4fe67)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[0920114](https://github.com/yozorajs/gatsby-scaffolds/commit/0920114904bfa4c2a245c77b6d6f9c0b32ce220a)]
+
+
 <a name="1.0.0-alpha.20"></a>
 ## 1.0.0-alpha.20 (2021-09-06)
 
