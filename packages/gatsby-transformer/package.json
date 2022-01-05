@@ -42,10 +42,10 @@
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
   },
   "dependencies": {
-    "@guanghechen/option-helper": "^1.8.3",
-    "@guanghechen/parse-lineno": "^1.8.3",
-    "@types/fs-extra": "^9.0.12",
-    "dayjs": "^1.10.6",
+    "@guanghechen/option-helper": "^1.8.5",
+    "@guanghechen/parse-lineno": "^1.8.5",
+    "@types/fs-extra": "^9.0.13",
+    "dayjs": "^1.10.7",
     "fs-extra": "^10.0.0",
     "gray-matter": "^4.0.3"
   },
