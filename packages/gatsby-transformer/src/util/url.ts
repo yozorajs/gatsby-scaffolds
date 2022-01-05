@@ -1,5 +1,5 @@
 import { isNonBlankString } from '@guanghechen/option-helper'
-import type { Root, YastNode, YastResource } from '@yozora/ast'
+import type { IRoot, IYastNode, IYastResource } from '@yozora/ast'
 import { DefinitionType, ImageType, LinkType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'
 import crypto from 'crypto'
@@ -13,12 +13,12 @@ import env from './env'
  * @param resolveUrl
  */
 export async function resolveAstUrls(
-  ast: Root,
+  ast: IRoot,
   resolveUrl: (url: string) => Promise<string | null>,
 ): Promise<void> {
   const promises: Array<Promise<void>> = []
   traverseAst(ast, [DefinitionType, LinkType, ImageType], node => {
-    const o = node as YastNode & YastResource
+    const o = node as IYastNode & IYastResource
     if (o.url != null) {
       const promise = resolveUrl(o.url).then(url => {
         o.url = url ?? o.url

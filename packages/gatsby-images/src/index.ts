@@ -1,4 +1,4 @@
-import type { Image, ImageReference, YastNode } from '@yozora/ast'
+import type { IImage, IImageReference, IYastNode } from '@yozora/ast'
 import { ImageReferenceType, ImageType } from '@yozora/ast'
 import { calcDefinitionMap, traverseAst } from '@yozora/ast-util'
 import type { AstMutateApi } from '@yozora/gatsby-transformer'
@@ -10,9 +10,9 @@ import { EMPTY_ALT } from './constant'
 import type { GatsbyYozoraImagesOptions, ResolvedImageData } from './types'
 import { getImageInfo, isRelativeUrl } from './util'
 
-type ImageNode = YastNode &
-  Omit<Image, 'type'> &
-  Omit<ImageReference, 'type'> &
+type ImageNode = IYastNode &
+  Omit<IImage, 'type'> &
+  Omit<IImageReference, 'type'> &
   Record<string, string>
 
 const defaultFluidArgs = {
@@ -158,7 +158,7 @@ function mutateYozoraAst(
 
   return Promise.all(markdownImageNodes.map(process))
     .then(nodes => nodes.filter((node): node is ImageNode => node != null))
-    .then((nodes: YastNode[]) => void nodes)
+    .then((nodes: IYastNode[]) => void nodes)
 }
 
 export default mutateYozoraAst

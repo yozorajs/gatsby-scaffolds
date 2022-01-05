@@ -74,14 +74,14 @@ export async function onCreateNode(
     createNode(markdownNode)
     createParentChildLink({ parent: node, child: markdownNode })
     return markdownNode
-  } catch (error) {
+  } catch (error: any) {
     reporter.panicOnBuild(
       'Error processing Markdown ' +
         (node.absolutePath
           ? `file ${node.absolutePath}`
           : `in node ${node.id}`) +
         ':\n\n' +
-        error.message,
+        error?.message ?? String(error),
     )
   }
 }

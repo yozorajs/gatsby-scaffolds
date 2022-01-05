@@ -1,4 +1,4 @@
-import type { Root, YastLiteral } from '@yozora/ast'
+import type { IRoot, IYastLiteral } from '@yozora/ast'
 import { CodeType, InlineMathType, MathType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'
 
@@ -9,13 +9,13 @@ import { traverseAst } from '@yozora/ast-util'
  * @returns
  */
 const wordRegex = /[-a-zA-Z0-9]+|\p{Script=Han}/gu
-export function timeToRead(ast: Root, wordsPerMinute?: number): number {
+export function timeToRead(ast: IRoot, wordsPerMinute?: number): number {
   // eslint-disable-next-line no-param-reassign
   if (wordsPerMinute == null) wordsPerMinute = 140
 
   let wordCount = 0
   traverseAst(ast, null, o => {
-    const { value } = o as YastLiteral
+    const { value } = o as IYastLiteral
     switch (o.type) {
       case InlineMathType:
         wordCount += value.length / 5
