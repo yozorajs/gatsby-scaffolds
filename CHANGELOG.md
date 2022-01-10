@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="2.0.0-alpha.1"></a>
+## 2.0.0-alpha.1 (2022-01-10)
+
+### Changed
+
+- 🔧 chore: update ci config [[916cbcc](https://github.com/yozorajs/gatsby-scaffolds/commit/916cbccf96709e2ab998cf943da28ea465d14221)]
+- ⬆️ chore: upgrade dependencies [[907177a](https://github.com/yozorajs/gatsby-scaffolds/commit/907177a59649645f21f028363d12c40753da7a8b)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[2a8542d](https://github.com/yozorajs/gatsby-scaffolds/commit/2a8542db4310860cca79fb9f37b301cd1763b5c6)]
+
+
 <a name="2.0.0-alpha.0"></a>
 ## 2.0.0-alpha.0 (2022-01-05)
 
