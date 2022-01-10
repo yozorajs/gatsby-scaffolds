@@ -3718,42 +3718,42 @@
   resolved "https://registry.npmjs.org/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@yozora/ast-util@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-2.0.0-alpha.0.tgz#db62bc4a3e660dc4f331200125c7b418b5ff095f"
-  integrity sha512-eIgn5f4uxmGVr914rehufF6+4yNxuAKEpo/uWqaD/RSJnWqnYUMAy/ybqywaHyUFe5tZ/VMHPoK3TX9VZcfWxg==
+"@yozora/ast-util@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/ast-util/-/ast-util-2.0.0-alpha.2.tgz#7ec0851380ed962e572574bffd4114ae0516d141"
+  integrity sha512-jufXSQ0nH5BNHOQfNDd1sQV38MSWuM5eOnODjjrsP63QmDFlzYnoK2pQGtZqX+2uIwCS7gJ4MQsnF40juDJdLw==
   dependencies:
-    "@yozora/ast" "^2.0.0-alpha.0"
-    "@yozora/character" "^2.0.0-alpha.0"
+    "@yozora/ast" "^2.0.0-alpha.2"
+    "@yozora/character" "^2.0.0-alpha.2"
 
-"@yozora/ast@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-2.0.0-alpha.0.tgz#a30c37cb4f86b321679a1f0af266a0e5e026122a"
-  integrity sha512-JPybEP/lpxmUX3jx2PrfoCa2SE0/Th2tPDyYwgWNQE34qPD1/5eBdqy6R+9Ms/NbffdBxIFgboijUt3s1qhzHw==
+"@yozora/ast@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/ast/-/ast-2.0.0-alpha.2.tgz#e40fa5abef6bc7e2df2a0518892ad32a8a044172"
+  integrity sha512-mm8K1GKl2AFOj8TJG1HxBguIMFa3aNjxUbvmV4KDCxrIPBNdafY5BBktay00cMW/1PM+zrmnbm6PnZ2zlpBObg==
 
-"@yozora/character@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/character/-/character-2.0.0-alpha.0.tgz#d144427f103290c3d85af8cdda04df57da5a4612"
-  integrity sha512-yWFwYuxxKQ++hZ6uTnmlgnjpNmZ1y0TghX+jjscudTinGtyEdQYqydztXjZ5WGAb1QmJlp1MqTevOZEL+e3AEQ==
+"@yozora/character@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/character/-/character-2.0.0-alpha.2.tgz#3bb1ab82f6950ca2e15524bb3f4641ce118e039d"
+  integrity sha512-s8EvHkRA4lRNwgjjvASy/SqblYHDeTLF8T0dkknoH0fOUyMHth/PUSrZCClSL0b9EHuJwfXreak0SENzF+UKjw==
 
-"@yozora/core-parser@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-2.0.0-alpha.0.tgz#4805bac98db263bf251c644dcbcb888e25f5d066"
-  integrity sha512-DPZs4OKZGPfSebSwxlYik7n5JhvAaxuU/NrQRz6sctRX71e6F79mMSAWEwD0B070+x5H2iJiRSw2OCw+3nZF4A==
+"@yozora/core-parser@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/core-parser/-/core-parser-2.0.0-alpha.2.tgz#eb3e3901e3cc55aaf6a529b903ef827309268855"
+  integrity sha512-n7r/cVMHmzbFEMZQ6NgrVxSPpHzkxAAgABkXWHw4R36L0cwJGvXFmzr++jNkbDWKC7LK3LBCVapsrF2SV1+Mxg==
   dependencies:
-    "@yozora/ast" "^2.0.0-alpha.0"
-    "@yozora/ast-util" "^2.0.0-alpha.0"
-    "@yozora/character" "^2.0.0-alpha.0"
-    "@yozora/core-tokenizer" "^2.0.0-alpha.0"
-    "@yozora/invariant" "^2.0.0-alpha.0"
+    "@yozora/ast" "^2.0.0-alpha.2"
+    "@yozora/ast-util" "^2.0.0-alpha.2"
+    "@yozora/character" "^2.0.0-alpha.2"
+    "@yozora/core-tokenizer" "^2.0.0-alpha.2"
+    "@yozora/invariant" "^2.0.0-alpha.2"
 
-"@yozora/core-tokenizer@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-2.0.0-alpha.0.tgz#10bb3e2509a066921fdc6fdd300681a773851fb5"
-  integrity sha512-ZziysmQVQeAKwDf5SXLrTfLoAZqX3Y+OfrwoSE5MXVKmQuJ0uztDncMKhxzK7YIjq927SVpqOEN3A/qVmYMnng==
+"@yozora/core-tokenizer@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/core-tokenizer/-/core-tokenizer-2.0.0-alpha.2.tgz#82ddf84ae210feb44d0017c21c920b1ef7b58910"
+  integrity sha512-THAYH7FFm5mYnPzxLTuFdKpAbvrHeDyukZMJeq6V4AxpJ9FrPOUExFbyAaGa6WIWZdxFe/jXrIKkxsC1ylidMw==
   dependencies:
-    "@yozora/ast" "^2.0.0-alpha.0"
-    "@yozora/character" "^2.0.0-alpha.0"
+    "@yozora/ast" "^2.0.0-alpha.2"
+    "@yozora/character" "^2.0.0-alpha.2"
 
 "@yozora/html-admonition@^2.0.0-alpha.0":
   version "2.0.0-alpha.0"
@@ -3883,10 +3883,10 @@
   resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-2.0.0-alpha.0.tgz#10e5e3fbc58f28cc5f706e3f8099e61b376d456e"
   integrity sha512-KdO7hoqgVC2fbBjdnv2oQaqwQZimQes8Oik4PxAKMgQ82nVTkHD5/5P3pK4sEcJEKG/GlR3bQzsiT3oVHiRFaA==
 
-"@yozora/invariant@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-2.0.0-alpha.0.tgz#e1b0be31873b7d8e9b5d00661f7cfb317651f181"
-  integrity sha512-wVOJnUqMw7zONyMGjrrB3uHd4bhytQcP4bMw0AJ2VaezAKFFc3EtKJNcmonzeXBBh/sut6LBw/eqfoz/zW4NdA==
+"@yozora/invariant@^2.0.0-alpha.2":
+  version "2.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@yozora/invariant/-/invariant-2.0.0-alpha.2.tgz#2c0f8fdeb9297f1c55bee63f7627e4b10a8da342"
+  integrity sha512-dqcLAFMWQI8LTdEgyEw/7MTbYU6BNL2FI5qgh6pCuN3PrRViA0+B2gH9bz0+flEXWF5eEwB3H+HSuB63q9eeIg==
 
 JSONStream@^1.0.4, JSONStream@^1.3.4:
   version "1.3.5"
@@ -10721,10 +10721,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lint-staged@12.1.5:
-  version "12.1.5"
-  resolved "https://registry.npmjs.org/lint-staged/-/lint-staged-12.1.5.tgz#e05582fc39aed5cb13b9dd1dfb8330407246d809"
-  integrity sha512-WyKb+0sNKDTd1LwwAfTBPp0XmdaKkAOEbg4oHE4Kq2+oQVchg/VAcjVQtSqZih1izNsTURjc2EkhG/syRQUXdA==
+lint-staged@12.1.7:
+  version "12.1.7"
+  resolved "https://registry.npmjs.org/lint-staged/-/lint-staged-12.1.7.tgz#fe9137992ac18a456422bb8484dd30be0140629f"
+  integrity sha512-bltv/ejiLWtowExpjU+s5z8j1Byjg9AlmaAjMmqNbIicY69u6sYIwXGg0dCn0TlkrrY2CphtHIXAkbZ+1VoWQQ==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -13469,10 +13469,10 @@ query-string@^6.13.8, query-string@^6.14.1:
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
 
-query-string@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/query-string/-/query-string-7.0.1.tgz#45bd149cf586aaa582dffc7ec7a8ad97dd02f75d"
-  integrity sha512-uIw3iRvHnk9to1blJCG3BTc+Ro56CBowJXKmNNAm3RulvPBzWLRqKSiiDk+IplJhsydwtuNMHi8UGQFcCLVfkA==
+query-string@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/query-string/-/query-string-7.1.0.tgz#96b88f27b39794f97b8c8ccd060bc900495078ef"
+  integrity sha512-wnJ8covk+S9isYR5JIXPt93kFUmI2fQ4R/8130fuq+qwLiGVTurg7Klodgfw4NSz/oe7xnyi09y3lSrogUeM3g==
   dependencies:
     decode-uri-component "^0.2.0"
     filter-obj "^1.1.0"
