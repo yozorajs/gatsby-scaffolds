@@ -3635,133 +3635,133 @@
     "@yozora/ast" "^2.0.0-alpha.3"
     "@yozora/character" "^2.0.0-alpha.3"
 
-"@yozora/html-admonition@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-admonition/-/html-admonition-2.0.0-alpha.0.tgz#746c4836def4eceda89ea47cb30bfb194d72030b"
-  integrity sha512-+d0hf33k4XMSRbw6Y6KHKHQTFHhK5+xWui/BbUNWlEzd/2Ug7n60C8Trg+kurN+bncQrMyxj2s4XzsRDAv9dbQ==
+"@yozora/html-admonition@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-admonition/-/html-admonition-2.0.0-alpha.1.tgz#53d283c0405c2c67d07471d24cc8d5d893a6efbc"
+  integrity sha512-lt8ZUsLhJ4haFp7RpzdqkIWsKO7HeIXw0CazuPrmCOvPf+uSUEZEyb5AEIkKSdL/Taztq2JUmF8bv5pcnXTecA==
 
-"@yozora/html-blockquote@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-blockquote/-/html-blockquote-2.0.0-alpha.0.tgz#0bd1e4303c520d0f83d758774e9854c32858b2bb"
-  integrity sha512-R/JREHHyo9l2emAJR/wVbMwfYA3fkKVTyPL4kKWwNJkNaLy9+cSVa+W7Nxl9pRQF+abp1ZIkzpgOeH2zHSkNZA==
+"@yozora/html-blockquote@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-blockquote/-/html-blockquote-2.0.0-alpha.1.tgz#cd2ec914ba7d9383d60cdaa3297f22aa1076c126"
+  integrity sha512-BvK3ahZVQJQJmH16rPUdfoCTKgNRmq9ahSlpnJpUn/w/3kL6yiG22TePJXaiECCSZhXuM1+uGE4KIrpaafdvOw==
 
-"@yozora/html-break@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-break/-/html-break-2.0.0-alpha.0.tgz#a18a5ab0fe7e59bfe1d8184b62f7cd1f647db6b9"
-  integrity sha512-oj89SYa6rYxaLSQzmIrUV6WBtCPzNZJ8v/6+ub6hR41CrZcg97SQZH5lj/S6ydkVsznShNdujDcaSqhZx5/29g==
+"@yozora/html-break@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-break/-/html-break-2.0.0-alpha.1.tgz#818ee3cd95d854abff70c9e195a34fd36ea15835"
+  integrity sha512-dgTsRZdR/22KGlPnYDXK1S1tbmMc0a2/fbzqQF3hFCFesD4Vk3CtaROzlklxFcdqsYT32tv8TfoRhNfvj4dzcw==
 
-"@yozora/html-code@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-code/-/html-code-2.0.0-alpha.0.tgz#c78fa614e91b457853a23b68ab139ef2929c05a2"
-  integrity sha512-BYuJR+FhpX++BzRkNlQB4ck79g8OK7NKs7wF/e29xiACbmYMqCuseRtSFoxQkvjLBizxL5ugYSMQr8kvE3QC7Q==
+"@yozora/html-code@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-code/-/html-code-2.0.0-alpha.1.tgz#fb6959d6dd37982538065585556bbf5ff346beca"
+  integrity sha512-8Gl5DlgQFD31vLIorpeZJvATkm2YMIDZbDvE2440hV4vhUzb2szGhOsK91kC6U3HyGgQL7W1IW+81cAAQJzGHg==
 
-"@yozora/html-delete@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-delete/-/html-delete-2.0.0-alpha.0.tgz#6654997d8c0e81891a3d24cc2bc2eab802ad16f5"
-  integrity sha512-9igrn+PfUiCFUgw0K44ZWpat9K5DqkP6RlNA6i/DR8Fe5RAO5RN/vqemniwJVZBELQxxTK0+q28uGqZvpXbOsg==
+"@yozora/html-delete@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-delete/-/html-delete-2.0.0-alpha.1.tgz#75fbbacbc32abbfb9c011a207ffb5afc0e9840ff"
+  integrity sha512-aEGAg8UNTZVC1iX/+OlxLMdFiO8cEOkkLglXsbUPq0zdaiPhum5DJeDeFnswp+C5ogqJ+jN2YwS1L8xKsSvqFQ==
 
-"@yozora/html-emphasis@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-emphasis/-/html-emphasis-2.0.0-alpha.0.tgz#9457b376ea3dee11b8320eec4eea7e53875b7d08"
-  integrity sha512-ML7fh+b9wAxObp5nCK5B3qcJ09Vuwa85hvuZ+gK162H+aM7h0F6tkkvgGnwPi6UZ7NVOE4LP5gaSSCDPfs0QkQ==
+"@yozora/html-emphasis@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-emphasis/-/html-emphasis-2.0.0-alpha.1.tgz#19701b7dfefd3c312fc376d34081de401c9cb221"
+  integrity sha512-rE3EEmxVVAv5Ojwj86KxsiQpgNQVpIR2l8/N6d1Mc3XizgQrKe3BdsK5D6OaW4jwuG4M1C0kJpiOR/ih01k5+Q==
 
-"@yozora/html-footnote-definition@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-footnote-definition/-/html-footnote-definition-2.0.0-alpha.0.tgz#b8e32ceb96647f28a9f10b822ff43db055a50835"
-  integrity sha512-NQHuYpNe1bZ2RdUDMkgB1eXibtr2vpHTwtst9N/9WdH0C56uECBeyYjx/Frs0t18UC7M9fO+opdUp2zQjRh9IA==
+"@yozora/html-footnote-definition@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-footnote-definition/-/html-footnote-definition-2.0.0-alpha.1.tgz#0c9c3f62192b1cc74adf24acdb269521f41dcb14"
+  integrity sha512-Nti6rScWnano28W+sCc2tQkW4O1EEyl3jPjqzHyhCY1uLiqLntoqTHkf2cLGQOAcKfCjAYMSN2k4r6D19ZFgMQ==
 
-"@yozora/html-footnote-reference@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-footnote-reference/-/html-footnote-reference-2.0.0-alpha.0.tgz#1e48c94fdd8cff5d49051599cd91291be993941a"
-  integrity sha512-8X4V5w/4ZeBD0ec08tGWndEXWJiz3NOIAgw/xgTNWBeQuUbwja9n0WQqx6HZohfc8fbtsJ6goSR1MSDSyjjO0Q==
+"@yozora/html-footnote-reference@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-footnote-reference/-/html-footnote-reference-2.0.0-alpha.1.tgz#184bfd316baed6d0dcb3402c93fb34de4c65804d"
+  integrity sha512-lH7+s+krxacdUaLZB6CbNy5Ehudj3+l4FQ/LRR0c7h6OvGk+KT8jnQehAEh6jMgUg9C2xwGqdMQJuoL3XF0aHw==
 
-"@yozora/html-heading@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-heading/-/html-heading-2.0.0-alpha.0.tgz#73e9c39738b1279797998c2af10ea65194f1fe83"
-  integrity sha512-JBZMIDVNgGNzqi8+dnwUOwGnkfzRL5ns0r4NHH2bjeiDnXK0JaOVbzudKz+s/cuL24Cl52MTrPq0hJf+DriWMw==
+"@yozora/html-heading@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-heading/-/html-heading-2.0.0-alpha.1.tgz#c2d393b5e79e931f332a41b224581ac3909c4089"
+  integrity sha512-aaherNq55jjcg4US66h4wxbF8uNOaGAfgdfK/0B2J6LeOwzE5/YQj1YyrLghoUDPBsjwP0O6+ZgJwEdkOfau9w==
 
-"@yozora/html-image@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-image/-/html-image-2.0.0-alpha.0.tgz#12df88d7c0a7ab399671b6f500545d1919e9435a"
-  integrity sha512-0vwQQMO9sf2QdBChlDNtJmQR70SGxGJ3xNo16FmOE/httrvIi1Ar/6b8lcGV1v5OLqdvdzwSlkWot2ZPeA34Fg==
+"@yozora/html-image@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-image/-/html-image-2.0.0-alpha.1.tgz#c3bd1f873b59d7bead12327a23a79d8983981b8f"
+  integrity sha512-d7JTJwaz6HFkEt2NbIVqmxpGXOt3z8XNwG9GLj+yLem+AQk5ECsc4CZrGBF/GJNQ9lXoK+oZpAf1e2Se3V9G9g==
 
-"@yozora/html-inline-code@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-inline-code/-/html-inline-code-2.0.0-alpha.0.tgz#164bc0ee54866ac9248e3352ba71f39bbda631f3"
-  integrity sha512-5xWFtVRre9Ej7HAj7qYb4JQiPEWLvNgcP4YeS+fK3IwyFZsBVy01eTTdp5MyKWoasQgLTS435piXrnrA5fAseA==
+"@yozora/html-inline-code@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-inline-code/-/html-inline-code-2.0.0-alpha.1.tgz#733cc1bab551a4f95835f5528b612cd2f23adf2c"
+  integrity sha512-QMXivsZPqI9SWSnqWhToko4zCH/gXWp6mmm+JFYQXmuXSSfnA+Rn1rCa1Pj+nOOoKA8zMGBnZX9nvXyuLMWxRw==
 
-"@yozora/html-inline-math@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-inline-math/-/html-inline-math-2.0.0-alpha.0.tgz#6a05799f5c75a00fe54e8e55d1040aca04897f23"
-  integrity sha512-lO9wzuuCusDPhYO+722tXoLkPYcOI41ymdHa3FtApZIXb+Qosst7IFjQ5s3rk6U9r7Jno6lV9ZvIMuzZnjMYPQ==
+"@yozora/html-inline-math@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-inline-math/-/html-inline-math-2.0.0-alpha.1.tgz#98a17891486a408c5a5d5388d6cfb0b397b45290"
+  integrity sha512-dMmsmfWc2uf34VnlVXb4icYN8V2lprZwWR1Jl7o4KgPo4MP4OVDRerBf+Q4hZsNJozJl9DI5ab43P91PxwKxNg==
 
-"@yozora/html-link@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-link/-/html-link-2.0.0-alpha.0.tgz#20f8ef2d6ba55dfa9796f7a56e96e00f8460e638"
-  integrity sha512-CiqzZ9G2uJ8TGnP7ebzZlKTUqZG9V4BfZkBFge4LWDPvVGwSbs71SVl6Hn1vjmO3ThZVvwkxO0o0++hVdAYlDw==
+"@yozora/html-link@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-link/-/html-link-2.0.0-alpha.1.tgz#56ad1b099198dee441809bc9bb0ea77d0723e9f7"
+  integrity sha512-Zf2nBr5/gi8tRgVY3/IeL6/LnLEJo8TW5jE5mcUPWQ1Bx8W3CYKq6RBVDIbb2W+TapJI5oZo6H7evkqz76mmmg==
 
-"@yozora/html-list@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-list/-/html-list-2.0.0-alpha.0.tgz#b7e0b6827a1f2a894cfbea17dd10d85b17e6ac29"
-  integrity sha512-8bwqzkr4aIi7uePJXyPicF0EDmv4zxaycnOCAKPTt3vL6qBeD4uZCWPpFagbyCY42+6BeMgddh3MRIZDf7gTwQ==
+"@yozora/html-list@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-list/-/html-list-2.0.0-alpha.1.tgz#23e85500b8270c6af782c7d6546b2d1cdfbf0e47"
+  integrity sha512-fkIds12Uk7rmLzWKCwFF7tV0wQaT9EV8OFlxoPu98De3TY+4oXiLikqsVTM9yLuHq5WzIILwAHCyzW7fTt9hUg==
 
-"@yozora/html-markdown@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-markdown/-/html-markdown-2.0.0-alpha.0.tgz#536c2a9a00ab355bff0426f42c32a48f390bf2d6"
-  integrity sha512-QH4wYTsI85S2/RqXwaAGJ9x/asUk6gCiKtOoG4BiaA00IN5PVNnm5x+v40c1Vh47luk9FWtbmJHwBMFfiF6RVA==
+"@yozora/html-markdown@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-markdown/-/html-markdown-2.0.0-alpha.1.tgz#fc424924fda2e33e5762a80c70bc1cacfd076873"
+  integrity sha512-5FWK+oKstlVGnqcyIgD+w7Mb/4EiUpn9P6UQdSEViaFxgOAWwWLFtpcvOv3CKzv3Rw8o9qbkpea/7Jo7Ynqu8A==
   dependencies:
-    "@yozora/html-admonition" "^2.0.0-alpha.0"
-    "@yozora/html-blockquote" "^2.0.0-alpha.0"
-    "@yozora/html-break" "^2.0.0-alpha.0"
-    "@yozora/html-code" "^2.0.0-alpha.0"
-    "@yozora/html-delete" "^2.0.0-alpha.0"
-    "@yozora/html-emphasis" "^2.0.0-alpha.0"
-    "@yozora/html-footnote-definition" "^2.0.0-alpha.0"
-    "@yozora/html-footnote-reference" "^2.0.0-alpha.0"
-    "@yozora/html-heading" "^2.0.0-alpha.0"
-    "@yozora/html-image" "^2.0.0-alpha.0"
-    "@yozora/html-inline-code" "^2.0.0-alpha.0"
-    "@yozora/html-inline-math" "^2.0.0-alpha.0"
-    "@yozora/html-link" "^2.0.0-alpha.0"
-    "@yozora/html-list" "^2.0.0-alpha.0"
-    "@yozora/html-math" "^2.0.0-alpha.0"
-    "@yozora/html-paragraph" "^2.0.0-alpha.0"
-    "@yozora/html-strong" "^2.0.0-alpha.0"
-    "@yozora/html-table" "^2.0.0-alpha.0"
-    "@yozora/html-text" "^2.0.0-alpha.0"
-    "@yozora/html-thematic-break" "^2.0.0-alpha.0"
-    prismjs "^1.25.0"
+    "@yozora/html-admonition" "^2.0.0-alpha.1"
+    "@yozora/html-blockquote" "^2.0.0-alpha.1"
+    "@yozora/html-break" "^2.0.0-alpha.1"
+    "@yozora/html-code" "^2.0.0-alpha.1"
+    "@yozora/html-delete" "^2.0.0-alpha.1"
+    "@yozora/html-emphasis" "^2.0.0-alpha.1"
+    "@yozora/html-footnote-definition" "^2.0.0-alpha.1"
+    "@yozora/html-footnote-reference" "^2.0.0-alpha.1"
+    "@yozora/html-heading" "^2.0.0-alpha.1"
+    "@yozora/html-image" "^2.0.0-alpha.1"
+    "@yozora/html-inline-code" "^2.0.0-alpha.1"
+    "@yozora/html-inline-math" "^2.0.0-alpha.1"
+    "@yozora/html-link" "^2.0.0-alpha.1"
+    "@yozora/html-list" "^2.0.0-alpha.1"
+    "@yozora/html-math" "^2.0.0-alpha.1"
+    "@yozora/html-paragraph" "^2.0.0-alpha.1"
+    "@yozora/html-strong" "^2.0.0-alpha.1"
+    "@yozora/html-table" "^2.0.0-alpha.1"
+    "@yozora/html-text" "^2.0.0-alpha.1"
+    "@yozora/html-thematic-break" "^2.0.0-alpha.1"
+    prismjs "^1.26.0"
     sanitize-html "^2.6.1"
 
-"@yozora/html-math@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-math/-/html-math-2.0.0-alpha.0.tgz#217e25c0f1d397b138020bb490112e3f77e6ad45"
-  integrity sha512-VPktSr8cRU2t8rH8xo8aBxYkjffjrDaTxnLo++M3GS8jKAM6R/BBFwsJzWSx1/DM+OltLWsr1RtskSJFRRnSNA==
+"@yozora/html-math@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-math/-/html-math-2.0.0-alpha.1.tgz#ca26be5bf04f859c6ad426b78396e7f47958972f"
+  integrity sha512-Xb7bHK0BTWeksokyGd5LaE908E4duPpDBa9noWLnwXK/GL2O4Kg5DH8Il+aN8zYpD/CzBI1g2piUZAdLavpAog==
 
-"@yozora/html-paragraph@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-paragraph/-/html-paragraph-2.0.0-alpha.0.tgz#7edabc748f038e7c8a83a4304c811429c0c55843"
-  integrity sha512-bsfd3au7/F9iQokkDJFWh2ZZYX75s8qeb+T0OAaZqZl7BMTKs2NerJU0IFjglwyK2GBxfqEs7Si+22M8Mng56g==
+"@yozora/html-paragraph@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-paragraph/-/html-paragraph-2.0.0-alpha.1.tgz#9863387aea43a101974910ae9d362dca48976afc"
+  integrity sha512-N5WysKej64thXaWflQradyiGWI4zPyjze92ihDWI0K/9ubbep9SfyZBCCGFDrVRZVpilAUEQB/PQ5DqPtDYTCw==
 
-"@yozora/html-strong@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-strong/-/html-strong-2.0.0-alpha.0.tgz#71e3a235522a039e2aa881c772c3ad5fa62c3ad2"
-  integrity sha512-uvFE9WoutcdUtb8+83WiHP5dJ8nLwP02wPtdOzowR7q5to7ljdPjgyis/gf1K4JbD8ID55+trf9QLjHXbyz2qQ==
+"@yozora/html-strong@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-strong/-/html-strong-2.0.0-alpha.1.tgz#626309b17d89b48296315ba0a15a926a733c8db4"
+  integrity sha512-MKOpIt1M/zR6vuJOBaAR1bBCuhr1yxGgjj+TlmuhGItO7XrUfsZckjznvyIuq/1tgaqipjSOhsZzt9+lVQngaQ==
 
-"@yozora/html-table@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-table/-/html-table-2.0.0-alpha.0.tgz#c5a23a802f38f18d7cbe657af0d2df6380919cbe"
-  integrity sha512-+8cXIapca3rYedZuzAsFoi5vcb2RT8qB5Umt6DqRRBeI3Tqo2nWU2C2BjhHDGxI0dB4P6Fmuk4opXsNBhfoB0Q==
+"@yozora/html-table@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-table/-/html-table-2.0.0-alpha.1.tgz#74658607cc70de3e660f6d1a6c36755ef35d8620"
+  integrity sha512-09mtSQDMtKh6b2KINSSiDGL6WndF98rWX8oDMQBbVvROljUXXDql86SJWMuKcIQgl4K6KpCItVpYHkOeotzlLw==
 
-"@yozora/html-text@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-text/-/html-text-2.0.0-alpha.0.tgz#275b526a3c17c7a93920daddb2cd77d13ef273a2"
-  integrity sha512-k6j5nLrREYjqt7RodqhbYSKwGxW7zJQNvcNzMpQTOmn08/1QGZw+8BxxirnCDDKjaVixAGe6bQj5ojAYhl9J6Q==
+"@yozora/html-text@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-text/-/html-text-2.0.0-alpha.1.tgz#0864213ad95a11988fd120b0fcf2dda49ba14cdc"
+  integrity sha512-c7tmNU9ki5VH6A5OdDcYoqsVEGlxZStCTKB9UNA0Zx9fgWHzwv0ieHe3jmcHqDMrAy0cT/MoaIseQElpLFxDqw==
 
-"@yozora/html-thematic-break@^2.0.0-alpha.0":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-2.0.0-alpha.0.tgz#10e5e3fbc58f28cc5f706e3f8099e61b376d456e"
-  integrity sha512-KdO7hoqgVC2fbBjdnv2oQaqwQZimQes8Oik4PxAKMgQ82nVTkHD5/5P3pK4sEcJEKG/GlR3bQzsiT3oVHiRFaA==
+"@yozora/html-thematic-break@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npmjs.org/@yozora/html-thematic-break/-/html-thematic-break-2.0.0-alpha.1.tgz#16b7bd0b084277a23c1d425caf85f67bc5ce6113"
+  integrity sha512-3inITsS7NJk20C4saBVogmh5wzCDMsFRSxWe7lu40Zad81PzqTsQXA3qqeofB+0NTEgRtutgUng5Tf/pNL8Cog==
 
 "@yozora/invariant@^2.0.0-alpha.3":
   version "2.0.0-alpha.3"
@@ -12828,10 +12828,10 @@ pretty-format@^27.0.0, pretty-format@^27.4.6:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
-prismjs@^1.25.0:
-  version "1.25.0"
-  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
-  integrity sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==
+prismjs@^1.26.0:
+  version "1.26.0"
+  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.26.0.tgz#16881b594828bb6b45296083a8cbab46b0accd47"
+  integrity sha512-HUoH9C5Z3jKkl3UunCyiD5jwk0+Hz0fIgQ2nbwU2Oo/ceuTAQAg+pPVnfdt2TJWRVLcxKh9iuoYDUSc8clb5UQ==
 
 probe-image-size@^6.0.0:
   version "6.0.0"
