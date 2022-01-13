@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="2.0.0-alpha.2"></a>
+## 2.0.0-alpha.2 (2022-01-13)
+
+### Changed
+
+- 👽 fix: fix type errors due to the upgrade of @yozora/ast [[af6f55d](https://github.com/yozorajs/gatsby-scaffolds/commit/af6f55d73c2838c0a84c962ba2ebeb8337615ac4)]
+- ⬆️ chore: upgrade @yozora/html-markdown [[063c07b](https://github.com/yozorajs/gatsby-scaffolds/commit/063c07b8d653c0b4ee22f2be580ecd201f9aa321)]
+- 👽 fix: fix type errors due to the upgrade of @yozora/ast [[f02fc78](https://github.com/yozorajs/gatsby-scaffolds/commit/f02fc78a951a6f2e0d3ab34c166d5d95c9c43f19)]
+- ⬆️ chore: upgrade dependencies [[8cb6b38](https://github.com/yozorajs/gatsby-scaffolds/commit/8cb6b38b3e653cfdf40237cf7ac3413d35f0e949)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[c069596](https://github.com/yozorajs/gatsby-scaffolds/commit/c069596489332493ae77a0f8e6c319f0d179a4d1)]
+
+
 <a name="2.0.0-alpha.1"></a>
 ## 2.0.0-alpha.1 (2022-01-10)
 
