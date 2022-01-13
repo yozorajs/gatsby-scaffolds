@@ -1,4 +1,8 @@
-import type { IDefinition, IFootnoteDefinition, IRoot } from '@yozora/ast'
+import type {
+  Definition as IDefinition,
+  FootnoteDefinition as IFootnoteDefinition,
+  Root as IRoot,
+} from '@yozora/ast'
 import type { IParser } from '@yozora/core-parser'
 import type { GatsbyCache, Node, Reporter } from 'gatsby'
 

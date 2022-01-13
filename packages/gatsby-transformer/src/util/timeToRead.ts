@@ -1,4 +1,4 @@
-import type { IRoot, IYastLiteral } from '@yozora/ast'
+import type { Literal as ILiteral, Root as IRoot } from '@yozora/ast'
 import { CodeType, InlineMathType, MathType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'
 
@@ -15,7 +15,7 @@ export function timeToRead(ast: IRoot, wordsPerMinute?: number): number {
 
   let wordCount = 0
   traverseAst(ast, null, o => {
-    const { value } = o as IYastLiteral
+    const { value } = o as ILiteral
     switch (o.type) {
       case InlineMathType:
         wordCount += value.length / 5

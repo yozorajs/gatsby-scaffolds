@@ -10,17 +10,17 @@ import {
   TextType,
 } from '@yozora/ast'
 import type {
-  ICode,
-  IDefinition,
-  IEcmaImport,
-  IFootnoteDefinition,
-  IHeadingToc,
-  IRoot,
-  IText,
-  IYastAssociation,
-  IYastLiteral,
-  IYastParent,
+  Association as IAssociation,
+  Code as ICode,
+  Definition as IDefinition,
+  EcmaImport as IEcmaImport,
+  FootnoteDefinition as IFootnoteDefinition,
+  Literal as ILiteral,
+  Parent as IParent,
+  Root as IRoot,
+  Text as IText,
 } from '@yozora/ast'
+import type { IHeadingToc } from '@yozora/ast-util'
 import {
   calcDefinitionMap,
   calcExcerptAst,
@@ -172,7 +172,7 @@ export async function setFieldsOnGraphQLNodeType(
         ast,
         [FootnoteReferenceType, FootnoteDefinitionType],
         (node): void => {
-          const o = node as unknown as IYastAssociation
+          const o = node as unknown as IAssociation
           if (/^\d+$/.test(o.identifier)) {
             o.identifier = footnoteIdentifierPrefix + o.identifier
           }
@@ -317,16 +317,16 @@ export async function setFieldsOnGraphQLNodeType(
       const separator = excerptSeparator.trim()
 
       const childIndexList: number[] | null = searchNode(fullAst, node => {
-        const { value } = node as IYastLiteral
+        const { value } = node as ILiteral
         return value != null && value.trim() === separator
       })
 
       if (childIndexList != null) {
         const excerptAst = { ...fullAst }
-        let node: IYastParent = excerptAst
+        let node: IParent = excerptAst
         for (const childIndex of childIndexList) {
           // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-          const nextNode = { ...node.children[childIndex] } as IYastParent
+          const nextNode = { ...node.children[childIndex] } as IParent
           node.children = node.children.slice(0, childIndex)
           node.children.push(nextNode)
           node = nextNode
