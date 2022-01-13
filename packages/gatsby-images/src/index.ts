@@ -1,4 +1,8 @@
-import type { IImage, IImageReference, IYastNode } from '@yozora/ast'
+import type {
+  Image as IImage,
+  ImageReference as IImageReference,
+  Node as IYastNode,
+} from '@yozora/ast'
 import { ImageReferenceType, ImageType } from '@yozora/ast'
 import { calcDefinitionMap, traverseAst } from '@yozora/ast-util'
 import type { AstMutateApi } from '@yozora/gatsby-transformer'
