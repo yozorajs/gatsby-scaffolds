@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="2.0.0-alpha.3"></a>
+## 2.0.0-alpha.3 (2022-01-15)
+
+### Changed
+
+- 🔧 chore: update peerDependencies [[b4b212c](https://github.com/yozorajs/gatsby-scaffolds/commit/b4b212cc651635ba488c1d49cdff38153eb46868)]
+- 🎨 improve: set print width to 100 (old is 80) [[75cd0a0](https://github.com/yozorajs/gatsby-scaffolds/commit/75cd0a05eaea0356bccc6fac0e177ec985a2060d)]
+- ⬆️ chore: upgrade dependencies [[5f64705](https://github.com/yozorajs/gatsby-scaffolds/commit/5f64705f9d9bd4251e92accf05c01ae97081adec)]
+
+### Miscellaneous
+
+- 📝 docs: update CHANGELOG [[7cefc5f](https://github.com/yozorajs/gatsby-scaffolds/commit/7cefc5f7eaed31de5e3adf8843ed404b5ecd3e43)]
+
+
 <a name="2.0.0-alpha.2"></a>
 ## 2.0.0-alpha.2 (2022-01-13)
 
