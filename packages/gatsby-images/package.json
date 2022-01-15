@@ -49,8 +49,8 @@
     "query-string": "^7.1.0"
   },
   "peerDependencies": {
-    "@yozora/ast": "^2.0.0-alpha.3",
-    "@yozora/ast-util": "^2.0.0-alpha.3",
+    "@yozora/ast": "^2.0.0",
+    "@yozora/ast-util": "^2.0.0",
     "gatsby": "^4.4.0",
     "gatsby-plugin-sharp": "^4.4.0"
   }
