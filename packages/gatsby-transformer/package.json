@@ -53,7 +53,7 @@
     "@yozora/ast": "^2.0.0",
     "@yozora/ast-util": "^2.0.0",
     "@yozora/character": "^2.0.0",
-    "@yozora/html-markdown": "^2.0.0-alpha.1",
+    "@yozora/html-markdown": "^2.0.0-alpha.2",
     "gatsby": "^4.4.0"
   }
 }
