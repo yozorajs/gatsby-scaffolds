@@ -89,8 +89,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @returns
    */
   async function _getAst(markdownNode: Node): Promise<IRoot> {
-    const cacheKey =
-      'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
+    const cacheKey = 'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
 
     // Check from cache.
     const cachedAST = await api.cache.get(cacheKey)
@@ -168,16 +167,12 @@ export async function setFieldsOnGraphQLNodeType(
       })
 
       // Resolve footnote definitions
-      traverseAst(
-        ast,
-        [FootnoteReferenceType, FootnoteDefinitionType],
-        (node): void => {
-          const o = node as unknown as IAssociation
-          if (/^\d+$/.test(o.identifier)) {
-            o.identifier = footnoteIdentifierPrefix + o.identifier
-          }
-        },
-      )
+      traverseAst(ast, [FootnoteReferenceType, FootnoteDefinitionType], (node): void => {
+        const o = node as unknown as IAssociation
+        if (/^\d+$/.test(o.identifier)) {
+          o.identifier = footnoteIdentifierPrefix + o.identifier
+        }
+      })
 
       // Remove line end between two chinese characters.
       if (shouldStripChineseCharacters) {
@@ -205,9 +200,7 @@ export async function setFieldsOnGraphQLNodeType(
 
             const sourcelineMatch = sourcelineRegex.exec(meta!)
             if (sourcelineMatch != null) {
-              const lineIntervals: Array<[number, number]> = collectIntervals(
-                sourcelineMatch[1],
-              )
+              const lineIntervals: Array<[number, number]> = collectIntervals(sourcelineMatch[1])
 
               let commonIndent = Number.MAX_SAFE_INTEGER
               const indentRegex = /^\s*/
@@ -229,13 +222,8 @@ export async function setFieldsOnGraphQLNodeType(
                 }
 
                 // Trim common indents.
-                if (
-                  commonIndent < Number.MAX_SAFE_INTEGER &&
-                  commonIndent > 0
-                ) {
-                  value = requiredLines
-                    .map(x => x.slice(commonIndent))
-                    .join('\n')
+                if (commonIndent < Number.MAX_SAFE_INTEGER && commonIndent > 0) {
+                  value = requiredLines.map(x => x.slice(commonIndent)).join('\n')
                 } else {
                   value = requiredLines.join('\n')
                 }
@@ -269,10 +257,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param preferReferences
    * @returns
    */
-  async function getAst(
-    markdownNode: Node,
-    preferReferences: boolean,
-  ): Promise<IRoot> {
+  async function getAst(markdownNode: Node, preferReferences: boolean): Promise<IRoot> {
     const ast = await _getAst(markdownNode)
     return preferReferences
       ? calcFootnoteDefinitionMap(
@@ -293,11 +278,7 @@ export async function setFieldsOnGraphQLNodeType(
    */
   function stripAst(ast: IRoot, shouldStrip: boolean): IRoot {
     return shouldStrip
-      ? shallowMutateAstInPreorder(
-          ast,
-          [DefinitionType, FootnoteDefinitionType],
-          () => null,
-        )
+      ? shallowMutateAstInPreorder(ast, [DefinitionType, FootnoteDefinitionType], () => null)
       : ast
   }
 
@@ -308,11 +289,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param excerptSeparator
    * @returns
    */
-  function getExcerptAst(
-    fullAst: IRoot,
-    pruneLength: number,
-    excerptSeparator?: string,
-  ): IRoot {
+  function getExcerptAst(fullAst: IRoot, pruneLength: number, excerptSeparator?: string): IRoot {
     if (excerptSeparator != null) {
       const separator = excerptSeparator.trim()
 
@@ -346,11 +323,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @returns
    */
   function astToHTML(_ast: IRoot): string {
-    const { root, definitionMap } = calcDefinitionMap(
-      _ast,
-      undefined,
-      presetDefinitions,
-    )
+    const { root, definitionMap } = calcDefinitionMap(_ast, undefined, presetDefinitions)
     const { root: ast, footnoteDefinitionMap } = calcFootnoteDefinitionMap(
       root,
       undefined,
@@ -359,22 +332,14 @@ export async function setFieldsOnGraphQLNodeType(
       footnoteIdentifierPrefix,
     )
 
-    return renderMarkdown(
-      ast,
-      definitionMap,
-      footnoteDefinitionMap,
-      htmlRendererMap,
-    )
+    return renderMarkdown(ast, definitionMap, footnoteDefinitionMap, htmlRendererMap)
   }
 
   const result = {
     title: {
       type: 'String',
       async resolve(markdownNode: Node): Promise<string> {
-        const { title } = (markdownNode.frontmatter ?? {}) as Record<
-          string,
-          string
-        >
+        const { title } = (markdownNode.frontmatter ?? {}) as Record<string, string>
         if (title != null) return title
 
         // Try to resolve the markdownNode relative filepath,
@@ -387,10 +352,7 @@ export async function setFieldsOnGraphQLNodeType(
     description: {
       type: 'String',
       async resolve(markdownNode: Node): Promise<string> {
-        const { description } = (markdownNode.frontmatter ?? {}) as Record<
-          string,
-          string
-        >
+        const { description } = (markdownNode.frontmatter ?? {}) as Record<string, string>
         if (description != null) return description
         return result.title.resolve(markdownNode)
       },
@@ -411,10 +373,7 @@ export async function setFieldsOnGraphQLNodeType(
           defaultValue: null,
         },
       },
-      async resolve(
-        markdownNode: Node,
-        { formatString }: GetCreateAtOptions,
-      ): Promise<string> {
+      async resolve(markdownNode: Node, { formatString }: GetCreateAtOptions): Promise<string> {
         const { createAt, date } = (markdownNode.frontmatter ?? {}) as any
         const d = createAt ?? date
         if (formatString == null) return dayjs(d).toJSON()
@@ -429,12 +388,8 @@ export async function setFieldsOnGraphQLNodeType(
           defaultValue: null,
         },
       },
-      async resolve(
-        markdownNode: Node,
-        { formatString }: GetUpdateAtOptions,
-      ): Promise<string> {
-        const { updateAt, createAt, date } = (markdownNode.frontmatter ??
-          {}) as any
+      async resolve(markdownNode: Node, { formatString }: GetUpdateAtOptions): Promise<string> {
+        const { updateAt, createAt, date } = (markdownNode.frontmatter ?? {}) as any
         const d = updateAt ?? createAt ?? date
         if (formatString == null) return dayjs(d).toJSON()
         return dayjs(d).format(formatString)
@@ -454,10 +409,7 @@ export async function setFieldsOnGraphQLNodeType(
       },
       async resolve(
         markdownNode: Node,
-        {
-          formatString,
-          wordsPerMinute = _defaultWordsPerMinute,
-        }: GetTimeToReadOptions,
+        { formatString, wordsPerMinute = _defaultWordsPerMinute }: GetTimeToReadOptions,
       ): Promise<string> {
         const { time2Read } = markdownNode.frontmatter as any
         if (time2Read != null) {
@@ -479,11 +431,8 @@ export async function setFieldsOnGraphQLNodeType(
     categories: {
       type: '[[String]]!',
       async resolve(markdownNode: Node): Promise<string[][]> {
-        const categories =
-          ((markdownNode.frontmatter ?? {}) as any).categories ?? []
-        return categories.map((category: string[]) =>
-          category.map(normalizeTagOrCategory),
-        )
+        const categories = ((markdownNode.frontmatter ?? {}) as any).categories ?? []
+        return categories.map((category: string[]) => category.map(normalizeTagOrCategory))
       },
     },
     toc: {
@@ -522,10 +471,7 @@ export async function setFieldsOnGraphQLNodeType(
           defaultValue: preferFootnoteReferences,
         },
       },
-      async resolve(
-        markdownNode: Node,
-        { preferReferences }: GetHtmlOptions,
-      ): Promise<string> {
+      async resolve(markdownNode: Node, { preferReferences }: GetHtmlOptions): Promise<string> {
         const fullAst = await getAst(markdownNode, preferReferences)
         return astToHTML(fullAst)
       },
@@ -552,11 +498,7 @@ export async function setFieldsOnGraphQLNodeType(
       ): Promise<IRoot> {
         const fullAst = await getAst(markdownNode, preferReferences)
         const ast = stripAst(fullAst, shouldStrip)
-        const excerptAst = getExcerptAst(
-          ast,
-          pruneLength,
-          frontmatter.excerpt_separator,
-        )
+        const excerptAst = getExcerptAst(ast, pruneLength, frontmatter.excerpt_separator)
         return excerptAst
       },
     },
@@ -577,11 +519,7 @@ export async function setFieldsOnGraphQLNodeType(
         { preferReferences, pruneLength }: GetExcerptOptions,
       ): Promise<string> {
         const fullAst = await getAst(markdownNode, preferReferences)
-        const excerptAst = getExcerptAst(
-          fullAst,
-          pruneLength,
-          frontmatter.excerpt_separator,
-        )
+        const excerptAst = getExcerptAst(fullAst, pruneLength, frontmatter.excerpt_separator)
         return astToHTML(excerptAst)
       },
     },
@@ -597,15 +535,9 @@ export async function setFieldsOnGraphQLNodeType(
     definitionMap: {
       type: 'JSON',
       args: {},
-      async resolve(
-        markdownNode: Node,
-      ): Promise<Record<string, Readonly<IDefinition>>> {
+      async resolve(markdownNode: Node): Promise<Record<string, Readonly<IDefinition>>> {
         const ast = await getAst(markdownNode, false)
-        const { definitionMap } = calcDefinitionMap(
-          ast,
-          undefined,
-          presetDefinitions,
-        )
+        const { definitionMap } = calcDefinitionMap(ast, undefined, presetDefinitions)
         return definitionMap
       },
     },
@@ -635,9 +567,7 @@ export async function setFieldsOnGraphQLNodeType(
     frontmatter2: {
       type: 'MarkdownYozoraFrontmatter2',
       async resolve(markdownNode: Node): Promise<MarkdownYozoraFrontmatter2> {
-        const absoluteDirPath = path.dirname(
-          markdownNode.absolutePath as string,
-        )
+        const absoluteDirPath = path.dirname(markdownNode.absolutePath as string)
         const serve = async (_url: string | null): Promise<string | null> => {
           if (_url == null) return _url
 
@@ -651,9 +581,7 @@ export async function setFieldsOnGraphQLNodeType(
         const result: MarkdownYozoraFrontmatter2 = {}
         const { aplayer, wechatThumbnail } = markdownNode.frontmatter as any
         if (aplayer != null && aplayer.audio != null) {
-          const audioList = Array.isArray(aplayer.audio)
-            ? aplayer.audio
-            : [aplayer.audio]
+          const audioList = Array.isArray(aplayer.audio) ? aplayer.audio : [aplayer.audio]
           for (const audio of audioList) {
             if (audio.cover != null) audio.cover = await serve(audio.cover)
             if (audio.url != null) audio.url = await serve(audio.url)
@@ -662,8 +590,7 @@ export async function setFieldsOnGraphQLNodeType(
           result.aplayer = aplayer
         }
 
-        if (wechatThumbnail)
-          result.wechatThumbnail = await serve(wechatThumbnail)
+        if (wechatThumbnail) result.wechatThumbnail = await serve(wechatThumbnail)
         return result
       },
     },

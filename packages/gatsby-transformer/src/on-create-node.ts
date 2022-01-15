@@ -10,8 +10,7 @@ import type { TransformerYozoraOptions } from './types'
  */
 export function unstable_shouldOnCreateNode({ node }: { node: Node }): boolean {
   return (
-    node.internal.mediaType === `text/markdown` ||
-    node.internal.mediaType === `text/x-markdown`
+    node.internal.mediaType === `text/markdown` || node.internal.mediaType === `text/x-markdown`
   )
 }
 
@@ -77,9 +76,7 @@ export async function onCreateNode(
   } catch (error: any) {
     reporter.panicOnBuild(
       'Error processing Markdown ' +
-        (node.absolutePath
-          ? `file ${node.absolutePath}`
-          : `in node ${node.id}`) +
+        (node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`) +
         ':\n\n' +
         error?.message ?? String(error),
     )

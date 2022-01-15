@@ -12,12 +12,7 @@
   "overrides": [
     {
       "files": ["**/*.ts", "**/*tsx"],
-      "extends": [
-        "@guanghechen",
-        "@guanghechen/jsx",
-        "@guanghechen/ts",
-        "prettier"
-      ]
+      "extends": ["@guanghechen", "@guanghechen/jsx", "@guanghechen/ts", "prettier"]
     },
     {
       "files": ["**/__test__/*.spec.ts", "**/__test__/*.spec.tsx"],

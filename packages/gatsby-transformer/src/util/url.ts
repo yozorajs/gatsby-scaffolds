@@ -1,9 +1,5 @@
 import { isNonBlankString } from '@guanghechen/option-helper'
-import type {
-  Resource as IResource,
-  Root as IRoot,
-  Node as IYastNode,
-} from '@yozora/ast'
+import type { Resource as IResource, Root as IRoot, Node as IYastNode } from '@yozora/ast'
 import { DefinitionType, ImageType, LinkType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'
 import crypto from 'crypto'
@@ -45,9 +41,7 @@ export async function resolveAstUrls(
  * @param path
  * @returns
  */
-export function resolveUrl(
-  ...pathPieces: Array<string | null | undefined>
-): string {
+export function resolveUrl(...pathPieces: Array<string | null | undefined>): string {
   const pieces: string[] = pathPieces.filter(isNonBlankString)
   if (pieces.length <= 0) return ''
 
@@ -67,9 +61,7 @@ export function resolveUrl(
  * Create a public URL for a static file.
  * @param absoluteFilepath
  */
-export async function serveStaticFile(
-  absoluteFilepath: string,
-): Promise<string | null> {
+export async function serveStaticFile(absoluteFilepath: string): Promise<string | null> {
   if (!fs.existsSync(absoluteFilepath)) {
     // The url maybe encoded...
     // eslint-disable-next-line no-param-reassign
@@ -98,19 +90,13 @@ export async function serveStaticFile(
  * @param filepath
  * @param algorithm
  */
-export function calcFingerOfFile(
-  filepath: string,
-  algorithm = 'sha1',
-): Promise<string> {
+export function calcFingerOfFile(filepath: string, algorithm = 'sha1'): Promise<string> {
   /**
    * In a production environment, only the absolute dir path of the file is
    * used to generate the the file's finger.
    */
   if (env.isEnvProduction) {
-    const finger = crypto
-      .createHash(algorithm)
-      .update(path.dirname(filepath))
-      .digest('hex')
+    const finger = crypto.createHash(algorithm).update(path.dirname(filepath)).digest('hex')
     return Promise.resolve(finger)
   }
 

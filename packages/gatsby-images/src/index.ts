@@ -42,15 +42,7 @@ const defaultFluidArgs = {
  * @returns
  */
 function mutateYozoraAst(
-  {
-    files,
-    pathPrefix,
-    cache,
-    markdownNode,
-    markdownAST,
-    reporter,
-    getNode,
-  }: AstMutateApi,
+  { files, pathPrefix, cache, markdownNode, markdownAST, reporter, getNode }: AstMutateApi,
   pluginOptions: GatsbyYozoraImagesOptions = {},
 ): Promise<void> {
   const options = { ...defaultFluidArgs, pathPrefix, ...pluginOptions }
@@ -73,12 +65,8 @@ function mutateYozoraAst(
     const parentNode = getNode(markdownNode.parent)
     if (parentNode == null || parentNode.dir == null) return null
 
-    const imagePath: string = slash(
-      path.join(parentNode.dir as string, getImageInfo(node.url).url),
-    )
-    const imageNode = files.find(
-      file => file != null && file.absolutePath === imagePath,
-    )
+    const imagePath: string = slash(path.join(parentNode.dir as string, getImageInfo(node.url).url))
+    const imageNode = files.find(file => file != null && file.absolutePath === imagePath)
     if (imageNode == null || imageNode.absolutePath == null) return null
 
     const fluidResult = await fluid({
