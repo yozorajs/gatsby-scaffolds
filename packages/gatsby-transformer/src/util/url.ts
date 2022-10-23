@@ -1,4 +1,4 @@
-import { isNonBlankString } from '@guanghechen/option-helper'
+import { isNonBlankString } from '@guanghechen/helper-is'
 import type { Resource as IResource, Root as IRoot, Node as IYastNode } from '@yozora/ast'
 import { DefinitionType, ImageType, LinkType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'

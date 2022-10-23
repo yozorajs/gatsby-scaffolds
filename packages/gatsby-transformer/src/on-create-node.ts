@@ -1,4 +1,4 @@
-import { isDate } from '@guanghechen/option-helper'
+import { isDate } from '@guanghechen/helper-is'
 import type { CreateNodeArgs, Node, NodeInput } from 'gatsby'
 import frontmatter from 'gray-matter'
 import type { TransformerYozoraOptions } from './types'
@@ -70,7 +70,7 @@ export async function onCreateNode(
     }
 
     markdownNode.internal.contentDigest = createContentDigest(markdownNode)
-    createNode(markdownNode)
+    await createNode(markdownNode)
     createParentChildLink({ parent: node, child: markdownNode })
     return markdownNode
   } catch (error: any) {

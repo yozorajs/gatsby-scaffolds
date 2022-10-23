@@ -1,4 +1,4 @@
-import { isFunction } from '@guanghechen/option-helper'
+import { isFunction } from '@guanghechen/helper-is'
 import { collectIntervals } from '@guanghechen/parse-lineno'
 import {
   CodeType,
@@ -50,9 +50,9 @@ let fileNodes: Node[] | null = null
 const astPromiseMap = new Map<string, Promise<IRoot>>()
 
 const htmlRendererMap = {
-  [HtmlType]: () => '',
-  [FootnoteReferenceType]: () => '',
   ...defaultRendererMap,
+  [HtmlType]: () => '',
+  [EcmaImportType]: () => '',
 }
 
 /**

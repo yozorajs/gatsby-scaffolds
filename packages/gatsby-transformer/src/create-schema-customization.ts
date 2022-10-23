@@ -1,4 +1,4 @@
-import { isFunction } from '@guanghechen/option-helper'
+import { isFunction } from '@guanghechen/helper-is'
 import type { CreateSchemaCustomizationArgs } from 'gatsby'
 import type { TransformerYozoraOptions } from './types'
 
