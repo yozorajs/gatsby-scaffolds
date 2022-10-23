@@ -1,0 +1,50 @@
+{
+  "name": "@yozora/gatsby-plugin-stylus",
+  "version": "2.0.0-alpha.3",
+  "description": "Provides drop-in support for Stylus & generate *.d.ts for Stylus",
+  "author": {
+    "name": "guanghechen",
+    "url": "https://github.com/guanghechen/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yozorajs/gatsby-scaffolds.git",
+    "directory": "packages/gatsby-plugin-stylus"
+  },
+  "homepage": "https://github.com/yozorajs/gatsby-scaffolds/tree/main/packages/gatsby-plugin-stylus#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby plugin",
+    "stylus",
+    "css typings",
+    "typescript"
+  ],
+  "main": "gatsby-node.js",
+  "types": "lib/types/index.d.ts",
+  "source": "src/index.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "files": [
+    "lib/",
+    "gatsby-node.js",
+    "package.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js",
+    "prebuild": "rimraf lib/",
+    "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build",
+    "test": "cross-env jest --config ../../jest.config.js --rootDir . --roots ."
+  },
+  "peerDependencies": {
+    "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
+    "gatsby": "^4.4.0",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^6.2.0"
+  }
+}

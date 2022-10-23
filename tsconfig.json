@@ -5,6 +5,7 @@
     "module": "CommonJS",
     "paths": {
       "@yozora/gatsby-images": ["./packages/gatsby-images"],
+      "@yozora/gatsby-plugin-stylus": ["./packages/gatsby-plugin-stylus"],
       "@yozora/gatsby-transformer": ["./packages/gatsby-transformer"]
     }
   },

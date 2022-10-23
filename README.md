@@ -3,19 +3,19 @@
     <a href="#license">
       <img
         alt="License"
-        src="https://img.shields.io/github/license/guanghechen/gatsby-scaffolds"
+        src="https://img.shields.io/github/license/yozorajs/gatsby-scaffolds"
       />
     </a>
     <a href="https://github.com/yozorajs/gatsby-scaffolds/tags">
       <img
         alt="Package Version"
-        src="https://img.shields.io/github/v/tag/guanghechen/gatsby-scaffolds?include_prereleases&sort=semver"
+        src="https://img.shields.io/github/v/tag/yozorajs/gatsby-scaffolds?include_prereleases&sort=semver"
       />
     </a>
     <a href="https://github.com/yozorajs/gatsby-scaffolds/search?l=typescript">
       <img
         alt="Github Top Language"
-        src="https://img.shields.io/github/languages/top/guanghechen/gatsby-scaffolds"
+        src="https://img.shields.io/github/languages/top/yozorajs/gatsby-scaffolds"
       />
     </a>
     <a href="https://github.com/nodejs/node">
