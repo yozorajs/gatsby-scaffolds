@@ -11,7 +11,7 @@ import { slash } from 'gatsby-core-utils'
 import { fluid } from 'gatsby-plugin-sharp'
 import path from 'path'
 import { EMPTY_ALT } from './constant'
-import type { GatsbyYozoraImagesOptions, ResolvedImageData } from './types'
+import type { IGatsbyYozoraImagesOptions, IResolvedImageData } from './types'
 import { getImageInfo, isRelativeUrl } from './util'
 
 type ImageNode = IYastNode &
@@ -43,7 +43,7 @@ const defaultFluidArgs = {
  */
 function mutateYozoraAst(
   { files, pathPrefix, cache, markdownNode, markdownAST, reporter, getNode }: AstMutateApi,
-  pluginOptions: GatsbyYozoraImagesOptions = {},
+  pluginOptions: IGatsbyYozoraImagesOptions = {},
 ): Promise<void> {
   const options = { ...defaultFluidArgs, pathPrefix, ...pluginOptions }
   const { definitionMap } = calcDefinitionMap(markdownAST)
@@ -58,7 +58,7 @@ function mutateYozoraAst(
   async function generateImagesAndUpdateNode(
     node: ImageNode,
     overWrites: Record<string, unknown> = {},
-  ): Promise<ResolvedImageData | null> {
+  ): Promise<IResolvedImageData | null> {
     // Check if this markdownNode has a File parent. This plugin
     // won't work if the image isn't hosted locally.
     if (markdownNode.parent == null) return null

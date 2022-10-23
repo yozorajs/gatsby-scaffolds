@@ -1,9 +1,7 @@
-import './gatsby-plugin-sharp'
-
 /**
  * Options for this plugin.
  */
-export interface GatsbyYozoraImagesOptions {
+export interface IGatsbyYozoraImagesOptions {
   /**
    * Set the browser's native lazy loading attribute.
    * @default 'lazy'
@@ -14,7 +12,7 @@ export interface GatsbyYozoraImagesOptions {
 /**
  * Result of generateImagesAndUpdateNode
  */
-export interface ResolvedImageData {
+export interface IResolvedImageData {
   alt: string
   title: string
   src: string
