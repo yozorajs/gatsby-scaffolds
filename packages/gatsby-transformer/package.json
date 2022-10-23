@@ -23,7 +23,7 @@
   "source": "src/index.ts",
   "license": "MIT",
   "engines": {
-    "node": ">= 14.15.0"
+    "node": ">= 16.0.0"
   },
   "files": [
     "lib/",
@@ -38,7 +38,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.js",
     "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js",
-    "prebuild": "rimraf lib/ gatsby-node.js && tsc -p tsconfig.src.json --emitDeclarationOnly",
+    "prebuild": "rimraf lib/ gatsby-node.js",
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
   },
   "dependencies": {
