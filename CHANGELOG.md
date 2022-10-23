@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="2.0.0-alpha.4"></a>
+## 2.0.0-alpha.4 (2022-10-23)
+
+### Added
+
+- ✨ feat: add @yozora/gatsby-plugin-stylus (migrated from @guanghechen/gatsby-plugin-stylus) [[3e624a9](https://github.com/yozorajs/gatsby-scaffolds/commit/3e624a9065b4fb34260d72682a3ae8c7583a1e80)]
+
+### Changed
+
+- 🔧 chore: fix build error [[493eaa5](https://github.com/yozorajs/gatsby-scaffolds/commit/493eaa5cfa5f024edc526e2712bffd02fc869bfa)]
+- 🔧 chore: update configs [[b98a56c](https://github.com/yozorajs/gatsby-scaffolds/commit/b98a56cb9078345774137cdb500513eabfbaaf8a)]
+- ⬆️ chore: upgrade dependencies [[40bd103](https://github.com/yozorajs/gatsby-scaffolds/commit/40bd103e07be66e3854629f024b9d972745787a3)]
+
+### Fixed
+
+- 💚 chore: fix test [[c499a97](https://github.com/yozorajs/gatsby-scaffolds/commit/c499a97cf679e46132a58642614a7c0ae08cfe75)]
+
+
 <a name="2.0.0-alpha.3"></a>
 ## 2.0.0-alpha.3 (2022-01-15)
 
@@ -8,10 +26,6 @@
 - 🔧 chore: update peerDependencies [[b4b212c](https://github.com/yozorajs/gatsby-scaffolds/commit/b4b212cc651635ba488c1d49cdff38153eb46868)]
 - 🎨 improve: set print width to 100 (old is 80) [[75cd0a0](https://github.com/yozorajs/gatsby-scaffolds/commit/75cd0a05eaea0356bccc6fac0e177ec985a2060d)]
 - ⬆️ chore: upgrade dependencies [[5f64705](https://github.com/yozorajs/gatsby-scaffolds/commit/5f64705f9d9bd4251e92accf05c01ae97081adec)]
-
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[7cefc5f](https://github.com/yozorajs/gatsby-scaffolds/commit/7cefc5f7eaed31de5e3adf8843ed404b5ecd3e43)]
 
 
 <a name="2.0.0-alpha.2"></a>
@@ -24,10 +38,6 @@
 - 👽 fix: fix type errors due to the upgrade of @yozora/ast [[f02fc78](https://github.com/yozorajs/gatsby-scaffolds/commit/f02fc78a951a6f2e0d3ab34c166d5d95c9c43f19)]
 - ⬆️ chore: upgrade dependencies [[8cb6b38](https://github.com/yozorajs/gatsby-scaffolds/commit/8cb6b38b3e653cfdf40237cf7ac3413d35f0e949)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[c069596](https://github.com/yozorajs/gatsby-scaffolds/commit/c069596489332493ae77a0f8e6c319f0d179a4d1)]
-
 
 <a name="2.0.0-alpha.1"></a>
 ## 2.0.0-alpha.1 (2022-01-10)
@@ -36,10 +46,6 @@
 
 - 🔧 chore: update ci config [[916cbcc](https://github.com/yozorajs/gatsby-scaffolds/commit/916cbccf96709e2ab998cf943da28ea465d14221)]
 - ⬆️ chore: upgrade dependencies [[907177a](https://github.com/yozorajs/gatsby-scaffolds/commit/907177a59649645f21f028363d12c40753da7a8b)]
-
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[2a8542d](https://github.com/yozorajs/gatsby-scaffolds/commit/2a8542db4310860cca79fb9f37b301cd1763b5c6)]
 
 
 <a name="2.0.0-alpha.0"></a>
@@ -50,10 +56,6 @@
 - 👽 fix: fix type errors [[bd5034c](https://github.com/yozorajs/gatsby-scaffolds/commit/bd5034c7605941147f62f585c3cadd66ed99f224)]
 - ⬆️ chore: upgrade dependencies [[746449b](https://github.com/yozorajs/gatsby-scaffolds/commit/746449b94a9f5cc3647c349aadf632a94bf4fe67)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[0920114](https://github.com/yozorajs/gatsby-scaffolds/commit/0920114904bfa4c2a245c77b6d6f9c0b32ce220a)]
-
 
 <a name="1.0.0-alpha.20"></a>
 ## 1.0.0-alpha.20 (2021-09-06)
@@ -62,10 +64,6 @@
 
 - ⬆️ chore: ugprade yozora [[d76a588](https://github.com/yozorajs/gatsby-scaffolds/commit/d76a5884a9e3b229eeb212a1ed2a724803e74678)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[e65b5b4](https://github.com/yozorajs/gatsby-scaffolds/commit/e65b5b473b3b6ce8069cc8dd468e71dc96b70c20)]
-
 
 <a name="1.0.0-alpha.19"></a>
 ## 1.0.0-alpha.19 (2021-09-04)
@@ -73,10 +71,6 @@
 ### Changed
 
 - ⬆️ chore: upgrade yozora [[14a5d8f](https://github.com/yozorajs/gatsby-scaffolds/commit/14a5d8f00bb15f60be5668b60ac475a77c59d059)]
-
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[0b037a5](https://github.com/yozorajs/gatsby-scaffolds/commit/0b037a53783001677ca4e9f8816e553a66d0fab8)]
 
 
 <a name="1.0.0-alpha.18"></a>
@@ -90,10 +84,6 @@
 
 - 🐛 fix: replace footnote to footnoteReference if the preferReference (or preferFootnoteReference) specified [[28faad8](https://github.com/yozorajs/gatsby-scaffolds/commit/28faad8df941e206b7805018b2114af41a570872)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[3e7782c](https://github.com/yozorajs/gatsby-scaffolds/commit/3e7782cf9fa53acafbb73add13636a6b66e0159a)]
-
 
 <a name="1.0.0-alpha.17"></a>
 ## 1.0.0-alpha.17 (2021-08-16)
@@ -106,7 +96,6 @@
 ### Miscellaneous
 
 - 🚧 improve(gatsby-transformer): support &#x60;strip&#x60; options to getting the ast [[fde7977](https://github.com/yozorajs/gatsby-scaffolds/commit/fde79779e2b91ac3ec19184b12dda219102835b1)]
-- 📝 docs: update CHANGELOG [[761b198](https://github.com/yozorajs/gatsby-scaffolds/commit/761b198b20033d53c33496f762ff08040af1f13e)]
 
 
 <a name="1.0.0-alpha.16"></a>
@@ -116,10 +105,6 @@
 
 - 👽 feat: update due to the ugprade of yozora [[d3c5340](https://github.com/yozorajs/gatsby-scaffolds/commit/d3c5340a1c68fc909892a3b01277f36c28e4b3ee)]
 - ⬆️ chore: ugprade dependencies [[4037565](https://github.com/yozorajs/gatsby-scaffolds/commit/4037565b3c63f38a11a030fadbb4b00f7bb3999b)]
-
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[45c79b3](https://github.com/yozorajs/gatsby-scaffolds/commit/45c79b38752daed8743761d50297d3c875b02188)]
 
 
 <a name="1.0.0-alpha.15"></a>
@@ -132,7 +117,6 @@
 ### Miscellaneous
 
 -  feat: support new field &#x27;ecmaImports&#x27; [[69675e5](https://github.com/yozorajs/gatsby-scaffolds/commit/69675e596a6d4ad2c624c0d872a536772f6d3da4)]
-- 📝 docs: update CHANGELOG [[789a6ac](https://github.com/yozorajs/gatsby-scaffolds/commit/789a6ac66d6dd014af2edf295f6a3fbdbcfee10c)]
 
 
 <a name="1.0.0-alpha.14"></a>
@@ -145,7 +129,6 @@
 ### Miscellaneous
 
 -  improve(gatsby-transformer): tweak the algorithm used to calculate the time required to read [[895a6a2](https://github.com/yozorajs/gatsby-scaffolds/commit/895a6a212d0f533aac6d32270301bb253b79d695)]
-- 📝 docs: update CHANGELOG [[58cc50a](https://github.com/yozorajs/gatsby-scaffolds/commit/58cc50aca49dd2c1e6e2b6c6babe61bb6163640f)]
 
 
 <a name="1.0.0-alpha.13"></a>
@@ -162,7 +145,6 @@
 ### Miscellaneous
 
 -  improve(gatsby-transformer): change the default wordsPerMinute from 80 to 140 &amp; support custom wordsPerMinute and readToTime [[5bea04b](https://github.com/yozorajs/gatsby-scaffolds/commit/5bea04b1b91da4b3734a5648158ad83f2b068dd5)]
-- 📝 docs: update CHANGELOG [[be6349a](https://github.com/yozorajs/gatsby-scaffolds/commit/be6349aa35223bf82123e4b975d91598b2f8def2)]
 
 
 <a name="1.0.0-alpha.11"></a>
@@ -176,7 +158,6 @@
 
 -  improve(gatsby-transformer): resolve aplayer urls [[d697c6e](https://github.com/yozorajs/gatsby-scaffolds/commit/d697c6e1b3ef3aeaf8896902ce95a5d499f79d1b)]
 -  feat(@yozora/gatsby-transformer): supply new graphql field &#x27;frontmatter2&#x27; [[c644c29](https://github.com/yozorajs/gatsby-scaffolds/commit/c644c29af298d67b1f96d226bc7e28f27c275017)]
-- 📝 docs: update CHANGELOG [[8480438](https://github.com/yozorajs/gatsby-scaffolds/commit/8480438f78174451f1dd185cde80a0cca458b79f)]
 
 
 <a name="1.0.0-alpha.10"></a>
@@ -190,10 +171,6 @@
 
 - 🐛 fix(gatsby-transformer): the value of tags and categories may be null [[fc512f8](https://github.com/yozorajs/gatsby-scaffolds/commit/fc512f8305778fdfc96cd32435baa5a1fbdd0686)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[cf9f1d5](https://github.com/yozorajs/gatsby-scaffolds/commit/cf9f1d512765c89020fccadf626c096de8b7998d)]
-
 
 <a name="1.0.0-alpha.9"></a>
 ## 1.0.0-alpha.9 (2021-06-30)
@@ -206,10 +183,6 @@
 
 - 🐛 fix(gatsby-transformer): fix error &#x27;[Error: EISDIR: illegal operation on a directory, read]&#x27; [[4ac48b4](https://github.com/yozorajs/gatsby-scaffolds/commit/4ac48b491b1639192c780e0ec35607cb451a5c2a)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[89987ac](https://github.com/yozorajs/gatsby-scaffolds/commit/89987ac41abac5b0db73d3e2c75686d49ebb4960)]
-
 
 <a name="1.0.0-alpha.8"></a>
 ## 1.0.0-alpha.8 (2021-06-29)
@@ -221,7 +194,6 @@
 ### Miscellaneous
 
 -  improve(gatsby-transformer): trim common indent when load value of YastCode from local sourcefiles [[9393f31](https://github.com/yozorajs/gatsby-scaffolds/commit/9393f31bf1780325355ac96d2127afae16a0a1bb)]
-- 📝 docs: update CHANGELOG [[2c4580e](https://github.com/yozorajs/gatsby-scaffolds/commit/2c4580e2284bebc95178a8ab5f3237d206460767)]
 
 
 <a name="1.0.0-alpha.7"></a>
@@ -241,10 +213,6 @@
 
 - ⬆️ chore: upgrade dependencies [[d3759e5](https://github.com/yozorajs/gatsby-scaffolds/commit/d3759e521dd0852c4ac2acf92e90723b560e41ed)]
 
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[dcecd9c](https://github.com/yozorajs/gatsby-scaffolds/commit/dcecd9cde42e7dde2a578c5856bcafb2d22b197b)]
-
 
 <a name="1.0.0-alpha.5"></a>
 ## 1.0.0-alpha.5 (2021-06-21)
@@ -257,7 +225,6 @@
 
 - 🚧 improve: [breaking] change graphql schema of categories and tags [[7cb2c7f](https://github.com/yozorajs/gatsby-scaffolds/commit/7cb2c7fce7a2cb9c68f27d3b5756514efabc69ca)]
 - ⚰️ improve(gatsby-transformer): remove unused field &#x27;access&#x27; [[9943cef](https://github.com/yozorajs/gatsby-scaffolds/commit/9943cef082161dbd47bd8e00e3b2f896f045822d)]
-- 📝 docs: update CHANGELOG [[c4a28dc](https://github.com/yozorajs/gatsby-scaffolds/commit/c4a28dcfc1e95411b4f96f6718e22fcb0970fb10)]
 
 
 <a name="1.0.0-alpha.4"></a>
@@ -271,10 +238,6 @@
 
 - ⬆️ chore: upgrade dependencies [[5141e7f](https://github.com/yozorajs/gatsby-scaffolds/commit/5141e7ff03cb2b289f79202c4b3dcfe65f7aea8e)]
 - 🔧 chore: don&#x27;t run &#x27;yarn-deduplicate&#x27; in ci environment [[2815329](https://github.com/yozorajs/gatsby-scaffolds/commit/28153298fb9513e3b1e7745458797db6ed4a69d7)]
-
-### Miscellaneous
-
-- 📝 docs: update CHANGELOG [[8f894e2](https://github.com/yozorajs/gatsby-scaffolds/commit/8f894e2e3ea5cc484786e868108bb85430f7986b)]
 
 
 <a name="1.0.0-alpha.3"></a>
@@ -303,10 +266,6 @@
 ### Fixed
 
 - 🐛 fix: auto trunc contents for excerptAST when the separator not found [[580419e](https://github.com/yozorajs/gatsby-scaffolds/commit/580419e3c822ef03b0a780c339e617634110953e)]
-
-### Miscellaneous
-
-- 📝 docs: add CHANGELOG [[a93eec3](https://github.com/yozorajs/gatsby-scaffolds/commit/a93eec3c0b724a03ee78ef4a0194333689ae1da6)]
 
 
 <a name="1.0.0-alpha.1"></a>
