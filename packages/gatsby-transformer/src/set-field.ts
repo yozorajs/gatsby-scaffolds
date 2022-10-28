@@ -258,8 +258,8 @@ export async function setFieldsOnGraphQLNodeType(
    * @returns
    */
   async function getAst(markdownNode: Node, preferReferences: boolean): Promise<IRoot> {
-    const ast = await _getAst(markdownNode)
-    return preferReferences
+    let ast = await _getAst(markdownNode)
+    ast = preferReferences
       ? calcFootnoteDefinitionMap(
           ast,
           undefined,
@@ -268,6 +268,8 @@ export async function setFieldsOnGraphQLNodeType(
           footnoteIdentifierPrefix,
         ).root
       : ast
+    calcHeadingToc(ast, headingIdentifierPrefix)
+    return ast
   }
 
   /**
