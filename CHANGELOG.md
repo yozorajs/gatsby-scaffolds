@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="2.0.0-alpha.5"></a>
+## 2.0.0-alpha.5 (2022-10-28)
+
+### Fixed
+
+- 🐛 fix: add missing identifier for heading nodes [[ed50d29](https://github.com/yozorajs/gatsby-scaffolds/commit/ed50d29e7b627d710d801914997484bd2b085f5f)]
+
+### Miscellaneous
+
+- 📝 docs: update LICESE [[13a8244](https://github.com/yozorajs/gatsby-scaffolds/commit/13a8244938acfe2e70ddce33bfcd129d3d97b3ab)]
+
+
 <a name="2.0.0-alpha.4"></a>
 ## 2.0.0-alpha.4 (2022-10-23)
 
