@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.1.0-alpha.0"></a>
+## 2.1.0-alpha.0 (2023-01-01)
+
+### Changed
+
+- 🔧 chore: update node engine to ^18.0.0 [[8043ce6](https://github.com/yozorajs/gatsby-scaffolds/commit/8043ce64bd46abe7e0a14180a8dd3062ff92e236)]
+- ⬆️ [BREAKING] chore: upgrade dependencies &amp; support ESM only [[07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da)]
+
+
 <a name="2.0.0-alpha.5"></a>
 ## 2.0.0-alpha.5 (2022-10-28)
 
