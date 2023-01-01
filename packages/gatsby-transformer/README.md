@@ -71,11 +71,11 @@ This plugin depends on Yozora Parser, as of now, you can choose
 
 ## Usage
 
-Add configs in `gatsby-config.js`:
+Add configs in `gatsby-config.mjs`:
 
 ```javascript
-// gatsby-config.js
-const { YozoraParser } = require('@yozora/parser')
+// gatsby-config.mjs
+import { YozoraParser } = from '@yozora/parser'
 
 module.exports = {
   plugins: [
