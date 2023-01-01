@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="2.1.0-alpha.1"></a>
+## 2.1.0-alpha.1 (2023-01-01)
+
+### Changed
+
+- 🎨 improve: remove unstable api [[48787ab](https://github.com/yozorajs/gatsby-scaffolds/commit/48787ab21b72db6390d0766be71e6d445c813d08)]
+
+### Fixed
+
+- 🐛 fix: incompatible format [[f40bf2e](https://github.com/yozorajs/gatsby-scaffolds/commit/f40bf2ec2cf90dc4968150681a2eef922ed83619)]
+
+
 <a name="2.1.0-alpha.0"></a>
 ## 2.1.0-alpha.0 (2023-01-01)
 
