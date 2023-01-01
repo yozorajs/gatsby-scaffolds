@@ -10,15 +10,15 @@ import {
   TextType,
 } from '@yozora/ast'
 import type {
-  Association as IAssociation,
-  Code as ICode,
-  Definition as IDefinition,
-  EcmaImport as IEcmaImport,
-  FootnoteDefinition as IFootnoteDefinition,
-  Literal as ILiteral,
-  Parent as IParent,
-  Root as IRoot,
-  Text as IText,
+  Association,
+  Code,
+  Definition,
+  EcmaImport,
+  FootnoteDefinition,
+  Literal,
+  Parent,
+  Root,
+  Text,
 } from '@yozora/ast'
 import type { IHeadingToc } from '@yozora/ast-util'
 import {
@@ -47,7 +47,7 @@ import { resolveAstUrls, resolveUrl, serveStaticFile } from './util/url'
 dayjs.extend(duration)
 
 let fileNodes: Node[] | null = null
-const astPromiseMap = new Map<string, Promise<IRoot>>()
+const astPromiseMap = new Map<string, Promise<Root>>()
 
 const htmlRendererMap = {
   ...defaultRendererMap,
@@ -88,7 +88,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param markdownNode
    * @returns
    */
-  async function _getAst(markdownNode: Node): Promise<IRoot> {
+  async function _getAst(markdownNode: Node): Promise<Root> {
     const cacheKey = 'transformer-yozora-markdown-ast:' + markdownNode.internal.contentDigest
 
     // Check from cache.
@@ -123,9 +123,9 @@ export async function setFieldsOnGraphQLNodeType(
     }
 
     const slug: string = (markdownNode as any).frontmatter[slugField] ?? ''
-    const astPromise: Promise<IRoot> = (async function (): Promise<IRoot> {
+    const astPromise: Promise<Root> = (async function (): Promise<Root> {
       const absoluteDirPath = path.dirname(markdownNode.absolutePath as string)
-      const ast: IRoot = parser.parse(markdownNode.internal.content || '', {
+      const ast: Root = parser.parse(markdownNode.internal.content || '', {
         presetDefinitions,
         presetFootnoteDefinitions,
       })
@@ -168,7 +168,7 @@ export async function setFieldsOnGraphQLNodeType(
 
       // Resolve footnote definitions
       traverseAst(ast, [FootnoteReferenceType, FootnoteDefinitionType], (node): void => {
-        const o = node as unknown as IAssociation
+        const o = node as unknown as Association
         if (/^\d+$/.test(o.identifier)) {
           o.identifier = footnoteIdentifierPrefix + o.identifier
         }
@@ -177,7 +177,7 @@ export async function setFieldsOnGraphQLNodeType(
       // Remove line end between two chinese characters.
       if (shouldStripChineseCharacters) {
         traverseAst(ast, [TextType], node => {
-          const text = node as IText
+          const text = node as Text
           text.value = stripChineseCharacters(text.value)
         })
       }
@@ -186,7 +186,7 @@ export async function setFieldsOnGraphQLNodeType(
       const sourcefileRegex = /(?:^|\b)sourcefile="([^"]+)"/
       const sourcelineRegex = /(?:^|\b)sourceline="([^"]+)"/
       traverseAst(ast, [CodeType], (node): void => {
-        const { meta } = node as ICode
+        const { meta } = node as Code
         if (meta == null) return
 
         const sourcefileMatch = sourcefileRegex.exec(meta!)
@@ -230,7 +230,7 @@ export async function setFieldsOnGraphQLNodeType(
               }
             }
             // eslint-disable-next-line no-param-reassign
-            ;(node as ICode).value = value
+            ;(node as Code).value = value
           }
         } catch (error) {
           console.warn('[Try to resolve source code file]:', filepath, error)
@@ -257,7 +257,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param preferReferences
    * @returns
    */
-  async function getAst(markdownNode: Node, preferReferences: boolean): Promise<IRoot> {
+  async function getAst(markdownNode: Node, preferReferences: boolean): Promise<Root> {
     let ast = await _getAst(markdownNode)
     ast = preferReferences
       ? calcFootnoteDefinitionMap(
@@ -278,7 +278,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param shouldStrip
    * @returns
    */
-  function stripAst(ast: IRoot, shouldStrip: boolean): IRoot {
+  function stripAst(ast: Root, shouldStrip: boolean): Root {
     return shouldStrip
       ? shallowMutateAstInPreorder(ast, [DefinitionType, FootnoteDefinitionType], () => null)
       : ast
@@ -291,21 +291,21 @@ export async function setFieldsOnGraphQLNodeType(
    * @param excerptSeparator
    * @returns
    */
-  function getExcerptAst(fullAst: IRoot, pruneLength: number, excerptSeparator?: string): IRoot {
+  function getExcerptAst(fullAst: Root, pruneLength: number, excerptSeparator?: string): Root {
     if (excerptSeparator != null) {
       const separator = excerptSeparator.trim()
 
       const childIndexList: number[] | null = searchNode(fullAst, node => {
-        const { value } = node as ILiteral
+        const { value } = node as Literal
         return value != null && value.trim() === separator
       })
 
       if (childIndexList != null) {
         const excerptAst = { ...fullAst }
-        let node: IParent = excerptAst
+        let node: Parent = excerptAst
         for (const childIndex of childIndexList) {
           // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-          const nextNode = { ...node.children[childIndex] } as IParent
+          const nextNode = { ...node.children[childIndex] } as Parent
           node.children = node.children.slice(0, childIndex)
           node.children.push(nextNode)
           node = nextNode
@@ -324,7 +324,7 @@ export async function setFieldsOnGraphQLNodeType(
    * @param ast
    * @returns
    */
-  function astToHTML(_ast: IRoot): string {
+  function astToHTML(_ast: Root): string {
     const { root, definitionMap } = calcDefinitionMap(_ast, undefined, presetDefinitions)
     const { root: ast, footnoteDefinitionMap } = calcFootnoteDefinitionMap(
       root,
@@ -460,7 +460,7 @@ export async function setFieldsOnGraphQLNodeType(
       async resolve(
         markdownNode: Node,
         { shouldStrip, preferReferences }: GetAstOptions,
-      ): Promise<IRoot> {
+      ): Promise<Root> {
         const ast = await getAst(markdownNode, preferReferences)
         return stripAst(ast, shouldStrip)
       },
@@ -497,7 +497,7 @@ export async function setFieldsOnGraphQLNodeType(
       async resolve(
         markdownNode: Node,
         { pruneLength, shouldStrip, preferReferences }: GetExcerptAstOptions,
-      ): Promise<IRoot> {
+      ): Promise<Root> {
         const fullAst = await getAst(markdownNode, preferReferences)
         const ast = stripAst(fullAst, shouldStrip)
         const excerptAst = getExcerptAst(ast, pruneLength, frontmatter.excerpt_separator)
@@ -528,16 +528,16 @@ export async function setFieldsOnGraphQLNodeType(
     ecmaImports: {
       type: 'JSON',
       args: {},
-      async resolve(markdownNode: Node): Promise<IEcmaImport[]> {
+      async resolve(markdownNode: Node): Promise<EcmaImport[]> {
         const ast = await getAst(markdownNode, false)
         const ecmaImports = collectNodes(ast, [EcmaImportType])
-        return ecmaImports as IEcmaImport[]
+        return ecmaImports as EcmaImport[]
       },
     },
     definitionMap: {
       type: 'JSON',
       args: {},
-      async resolve(markdownNode: Node): Promise<Record<string, Readonly<IDefinition>>> {
+      async resolve(markdownNode: Node): Promise<Record<string, Readonly<Definition>>> {
         const ast = await getAst(markdownNode, false)
         const { definitionMap } = calcDefinitionMap(ast, undefined, presetDefinitions)
         return definitionMap
@@ -554,7 +554,7 @@ export async function setFieldsOnGraphQLNodeType(
       async resolve(
         markdownNode: Node,
         { preferReferences }: GetFootnoteDefinitionsOptions,
-      ): Promise<Record<string, IFootnoteDefinition>> {
+      ): Promise<Record<string, FootnoteDefinition>> {
         const ast = await getAst(markdownNode, preferReferences)
         const { footnoteDefinitionMap } = calcFootnoteDefinitionMap(
           ast,

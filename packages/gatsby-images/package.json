@@ -19,12 +19,13 @@
     "yozora",
     "images"
   ],
-  "main": "lib/cjs/index.js",
+  "type": "module",
+  "exports": "./lib/esm/index.js",
   "types": "lib/types/index.d.ts",
   "source": "src/index.ts",
   "license": "MIT",
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 18.0.0"
   },
   "files": [
     "lib/",
@@ -37,21 +38,21 @@
     "README.md"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.js",
-    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js",
+    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.mjs",
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
     "prebuild": "rimraf lib/",
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
   },
   "dependencies": {
     "@yozora/gatsby-transformer": "^2.0.0-alpha.5",
-    "chalk": "^4.1.2",
-    "gatsby-core-utils": "^3.24.0",
-    "query-string": "^7.1.1"
+    "chalk": "^5.2.0",
+    "gatsby-core-utils": "^4.3.1",
+    "query-string": "^8.1.0"
   },
   "peerDependencies": {
     "@yozora/ast": "^2.0.0",
     "@yozora/ast-util": "^2.0.0",
-    "gatsby": "^4.4.0",
-    "gatsby-plugin-sharp": "^4.24.0"
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-sharp": "^5.0.0"
   }
 }

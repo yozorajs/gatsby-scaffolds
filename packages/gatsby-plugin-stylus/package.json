@@ -19,12 +19,13 @@
     "css typings",
     "typescript"
   ],
-  "main": "gatsby-node.js",
+  "type": "module",
+  "exports": "./gatsby-node.js",
   "types": "lib/types/index.d.ts",
   "source": "src/index.ts",
   "license": "MIT",
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 18.0.0"
   },
   "files": [
     "lib/",
@@ -35,15 +36,15 @@
     "README.md"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.js",
-    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js",
+    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.mjs",
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
     "prebuild": "rimraf lib/",
     "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build",
     "test": "cross-env jest --config ../../jest.config.js --rootDir . --roots ."
   },
   "peerDependencies": {
     "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
-    "gatsby": "^4.4.0",
+    "gatsby": "^5.0.0",
     "stylus": "^0.56.0",
     "stylus-loader": "^6.2.0"
   }

@@ -1,8 +1,4 @@
-import type {
-  Definition as IDefinition,
-  FootnoteDefinition as IFootnoteDefinition,
-  Root as IRoot,
-} from '@yozora/ast'
+import type { Definition, FootnoteDefinition, Root } from '@yozora/ast'
 import type { IParser } from '@yozora/core-parser'
 import type { GatsbyCache, Node, Reporter } from 'gatsby'
 
@@ -12,7 +8,7 @@ import type { GatsbyCache, Node, Reporter } from 'gatsby'
 export interface AstMutateApi {
   files: Node[]
   markdownNode: Node
-  markdownAST: IRoot
+  markdownAST: Root
   pathPrefix: string
   getNode(id: string): Node
   reporter: Reporter
@@ -31,11 +27,11 @@ export interface TransformerYozoraOptions {
   /**
    * Preset footnote reference definitions
    */
-  presetFootnoteDefinitions?: IFootnoteDefinition[]
+  presetFootnoteDefinitions?: FootnoteDefinition[]
   /**
    * Preset link reference definitions
    */
-  presetDefinitions?: IDefinition[]
+  presetDefinitions?: Definition[]
   /**
    * Replace footnotes into reference footnotes and footnote reference definitions.
    * @default false
