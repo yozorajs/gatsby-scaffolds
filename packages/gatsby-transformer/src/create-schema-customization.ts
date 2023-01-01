@@ -77,3 +77,5 @@ export async function createSchemaCustomization(
     }
   }
 }
+
+createSchemaCustomization.typeDefs = typeDefs

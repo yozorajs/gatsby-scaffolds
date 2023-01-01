@@ -3,12 +3,7 @@ import type { CreateNodeArgs, Node, NodeInput } from 'gatsby'
 import frontmatter from 'gray-matter'
 import type { TransformerYozoraOptions } from './types'
 
-/**
- *
- * @param {*} param0
- * @returns
- */
-export function unstable_shouldOnCreateNode({ node }: { node: Node }): boolean {
+export function shouldOnCreateNode({ node }: { node: Node }): boolean {
   return (
     node.internal.mediaType === `text/markdown` || node.internal.mediaType === `text/x-markdown`
   )
@@ -25,7 +20,7 @@ export async function onCreateNode(
   options: TransformerYozoraOptions,
 ): Promise<NodeInput | undefined> {
   const { node } = api
-  if (!unstable_shouldOnCreateNode({ node })) return
+  if (!shouldOnCreateNode({ node })) return
 
   const {
     actions: { createNode, createParentChildLink },
