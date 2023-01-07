@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.1.0-alpha.2"></a>
+## 2.1.0-alpha.2 (2023-01-07)
+
+### Changed
+
+- 🔧 chore: upgrade devDependencies [[7e8e9d2](https://github.com/yozorajs/gatsby-scaffolds/commit/7e8e9d28ccee1bca9316a6bf3c481ed5ba26ec98)]
+- 🔧 chore: use yarn@3 [[317066f](https://github.com/yozorajs/gatsby-scaffolds/commit/317066f823fc6b63bfc2ff81fd20c1d41229280a)]
+
+
 <a name="2.1.0-alpha.1"></a>
 ## 2.1.0-alpha.1 (2023-01-01)
 
