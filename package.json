@@ -19,25 +19,23 @@
     ":publish-recover": "git stash && lerna publish from-package",
     ":workspace:link": "lerna exec 'yarn link' --concurrency 1",
     ":workspace:unlink": "lerna exec 'yarn unlink' --concurrency 1",
-    ":upgrade": "yarn upgrade-interactive --latest && run-s clean format build test",
+    ":upgrade": "yarn upgrade-interactive && run-s clean format build test",
     "build": "lerna run build --concurrency 1",
     "clean": "lerna clean --yes && yarn install",
-    "format": "run-s format:lint:fix format:prettier",
+    "format": "run-s format:lintfix format:prettier",
     "format:prettier": "prettier . --write",
-    "format:lint:fix": "eslint . --fix",
+    "format:lintfix": "eslint . --fix",
     "new:ts-package": "node ./packages/template-ts-package/cli.js",
     "new:tsx-package": "node ./packages/template-tsx-package/cli.js",
     "prepublishOnly": "pinst --disable",
-    "postinstall": "run-s postinstall:**",
-    "postinstall:main": "is-ci || yarn update:lock",
+    "postinstall": "run-s postinstall:dev",
     "postinstall:dev": "is-ci || husky install",
     "postpublish": "pinst --enable",
     "rebuild": "run-s clean build",
     "test": "lerna run test --concurrency 1",
     "test:coverage": "lerna run test --concurrency 1 -- --coverage",
     "test:update": "lerna run test --concurrency 1 -- -u",
-    "update:changelog": "gitmoji-changelog update",
-    "update:lock": "yarn-deduplicate"
+    "update:changelog": "gitmoji-changelog update"
   },
   "workspaces": [
     "packages/*"
@@ -103,5 +101,6 @@
     "*.{json,eslintrc}": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }
