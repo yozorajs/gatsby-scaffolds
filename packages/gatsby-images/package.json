@@ -20,9 +20,13 @@
     "images"
   ],
   "type": "module",
-  "exports": "./lib/esm/index.js",
-  "types": "lib/types/index.d.ts",
-  "source": "src/index.ts",
+  "exports": {
+    "types": "./lib/types/index.d.ts",
+    "import": "./gatsby-node.js"
+  },
+  "module": "./gatsby-node.js",
+  "types": "./lib/types/index.d.ts",
+  "source": "./src/index.ts",
   "license": "MIT",
   "engines": {
     "node": ">= 18.0.0"
@@ -38,10 +42,8 @@
     "README.md"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.mjs",
-    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
-    "prebuild": "rimraf lib/",
-    "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
+    "build": "rimraf lib/ && cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@yozora/gatsby-transformer": "^2.1.0-alpha.1",

@@ -19,9 +19,13 @@
     "yozora"
   ],
   "type": "module",
-  "exports": "./gatsby-node.js",
-  "types": "lib/types/index.d.ts",
-  "source": "src/index.ts",
+  "exports": {
+    "types": "./lib/types/index.d.ts",
+    "import": "./gatsby-node.js"
+  },
+  "module": "./gatsby-node.js",
+  "types": "./lib/types/index.d.ts",
+  "source": "./src/index.ts",
   "license": "MIT",
   "engines": {
     "node": ">= 18.0.0"
@@ -37,14 +41,12 @@
     "README.md"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development rollup -c -w ../../rollup.config.mjs",
-    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
-    "prebuild": "rimraf lib/ gatsby-node.js",
-    "prepublishOnly": "cross-env ROLLUP_SHOULD_SOURCEMAP=false yarn build"
+    "build": "rimraf lib/ gatsby-node.js && cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@guanghechen/helper-is": "^3.0.0-alpha.0",
-    "@guanghechen/parse-lineno": "^2.1.4",
+    "@guanghechen/helper-is": "^3.0.0-alpha.5",
+    "@guanghechen/parse-lineno": "^2.2.0",
     "dayjs": "^1.11.7",
     "fs-extra": "^11.1.0",
     "gray-matter": "^4.0.3"
