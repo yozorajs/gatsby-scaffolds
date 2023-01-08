@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.1.0-alpha.6"></a>
+## 2.1.0-alpha.6 (2023-01-08)
+
+### Fixed
+
+- 🐛 fix undefined path [[8740c65](https://github.com/yozorajs/gatsby-scaffolds/commit/8740c65944d21409c667f9e8c4b63f7ed3480c94)]
+- 🐛 fix esm within dayjs [[bde93a1](https://github.com/yozorajs/gatsby-scaffolds/commit/bde93a16459aa03baa547f445e807373d6bb6c13)]
+
+
 <a name="2.1.0-alpha.5"></a>
 ## 2.1.0-alpha.5 (2023-01-08)
 
