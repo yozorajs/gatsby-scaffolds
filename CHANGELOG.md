@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="2.1.0-alpha.4"></a>
+## 2.1.0-alpha.4 (2023-01-08)
+
+### Fixed
+
+- 🐛 fix esm [[b045d9d](https://github.com/yozorajs/gatsby-scaffolds/commit/b045d9d07a360b9d7527469b9d001e6335f1b11c)]
+
+
 <a name="2.1.0-alpha.3"></a>
 ## 2.1.0-alpha.3 (2023-01-08)
 
