@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="2.1.0-alpha.5"></a>
+## 2.1.0-alpha.5 (2023-01-08)
+
+### Fixed
+
+- 🐛 fix esm wihtin dayjs [[8478979](https://github.com/yozorajs/gatsby-scaffolds/commit/8478979038e24636a95fa65d237320f725c9977e)]
+
+
 <a name="2.1.0-alpha.4"></a>
 ## 2.1.0-alpha.4 (2023-01-08)
 
