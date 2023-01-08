@@ -33,3 +33,13 @@ export function isRelativeUrl(url: string): boolean {
   // Absolute URL: https://tools.ietf.org/html/rfc3986#section-4.3
   return !/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(url)
 }
+
+export function slash(urlPath: string): string {
+  const isExtendedLengthPath = /^\\\\\?\\/.test(urlPath)
+
+  if (isExtendedLengthPath) {
+    return urlPath
+  }
+
+  return urlPath.replace(/\\/g, `/`)
+}

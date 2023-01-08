@@ -55,7 +55,6 @@
   "dependencies": {
     "@yozora/gatsby-transformer": "^2.1.0-alpha.3",
     "chalk": "^5.2.0",
-    "gatsby-core-utils": "^4.3.1",
     "query-string": "^8.1.0"
   },
   "peerDependencies": {

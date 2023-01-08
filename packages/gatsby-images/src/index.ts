@@ -3,12 +3,11 @@ import { ImageReferenceType, ImageType } from '@yozora/ast'
 import { calcDefinitionMap, traverseAst } from '@yozora/ast-util'
 import type { AstMutateApi } from '@yozora/gatsby-transformer'
 import chalk from 'chalk'
-import { slash } from 'gatsby-core-utils'
 import { fluid } from 'gatsby-plugin-sharp'
-import path from 'path'
+import path from 'node:path'
 import { DEFAULT_OPTIONS, EMPTY_ALT, supportedImgExts } from './constant'
 import type { IGatsbyYozoraImagesOptions, IResolvedImageData } from './types'
-import { getImageInfo, isRelativeUrl } from './util'
+import { getImageInfo, isRelativeUrl, slash } from './util'
 
 type ImageNode = Node & Omit<Image, 'type'> & Omit<ImageReference, 'type'> & Record<string, string>
 

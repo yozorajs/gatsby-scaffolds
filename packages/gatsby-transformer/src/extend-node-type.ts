@@ -67,6 +67,8 @@ export async function setFieldsOnGraphQLNodeType(
   api: SetFieldsOnGraphQLNodeTypeArgs,
   options: TransformerYozoraOptions,
 ): Promise<any> {
+  if (api.type.name !== 'MarkdownYozora') return {}
+
   const { slugField = 'slug' } = options.frontmatter || {}
   const urlPrefix: string = resolveUrl(api.pathPrefix, api.basePath as string)
   const {

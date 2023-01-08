@@ -5289,10 +5289,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@yozora/gatsby-images@workspace:packages/gatsby-images"
   dependencies:
-    "@yozora/gatsby-transformer": ^2.1.0-alpha.2
+    "@yozora/gatsby-transformer": ^2.1.0-alpha.3
     chalk: ^5.2.0
     cross-env: ^7.0.3
-    gatsby-core-utils: ^4.3.1
     query-string: ^8.1.0
     rimraf: ^3.0.2
     rollup: ^3.9.1
@@ -5367,7 +5366,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@yozora/gatsby-transformer@^2.1.0-alpha.2, @yozora/gatsby-transformer@workspace:packages/gatsby-transformer":
+"@yozora/gatsby-transformer@^2.1.0-alpha.3, @yozora/gatsby-transformer@workspace:packages/gatsby-transformer":
   version: 0.0.0-use.local
   resolution: "@yozora/gatsby-transformer@workspace:packages/gatsby-transformer"
   dependencies:
