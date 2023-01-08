@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="2.1.0-alpha.7"></a>
+## 2.1.0-alpha.7 (2023-01-08)
+
+### Fixed
+
+- 🐛 fix esm within dayjs [[52b4a6b](https://github.com/yozorajs/gatsby-scaffolds/commit/52b4a6b621c8225fa735fccc577fcac84816df9e)]
+
+
 <a name="2.1.0-alpha.6"></a>
 ## 2.1.0-alpha.6 (2023-01-08)
 
