@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="2.1.0-alpha.3"></a>
+## 2.1.0-alpha.3 (2023-01-08)
+
+### Changed
+
+- 🎨 refactor gatsby-transformer [[8b82f96](https://github.com/yozorajs/gatsby-scaffolds/commit/8b82f9651b4b7f3aee752373dc97ee3edbffe0a7)]
+- 🎨 refactor gatsby-images [[9719f24](https://github.com/yozorajs/gatsby-scaffolds/commit/9719f245f9ab74141c1f112563a1a92b2ac9154b)]
+
+
 <a name="2.1.0-alpha.2"></a>
 ## 2.1.0-alpha.2 (2023-01-07)
 
