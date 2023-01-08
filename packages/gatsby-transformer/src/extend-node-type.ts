@@ -33,7 +33,7 @@ import {
 } from '@yozora/ast-util'
 import { stripChineseCharacters } from '@yozora/character'
 import renderMarkdown, { defaultRendererMap } from '@yozora/html-markdown'
-import dayjs from 'dayjs/esm'
+import dayjs from 'dayjs/esm/index.js'
 import duration from 'dayjs/esm/plugin/duration/index.js'
 import type { Node, SetFieldsOnGraphQLNodeTypeArgs } from 'gatsby'
 import fs from 'node:fs'
