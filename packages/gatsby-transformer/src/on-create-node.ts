@@ -60,7 +60,7 @@ export async function onCreateNode(
 
     // Add path to the markdown file path
     if (node.internal.type === 'File') {
-      markdownNode.fileAbsolutePath = node.absolutePath
+      markdownNode.absolutePath = node.absolutePath
     }
 
     markdownNode.internal.contentDigest = createContentDigest(markdownNode)
