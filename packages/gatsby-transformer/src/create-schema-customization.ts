@@ -63,14 +63,12 @@ export async function createSchemaCustomization(
   api.actions.createTypes(typeDefs)
 
   /**
-   * This allows sub-plugins to use Node APIs bound to
-   * `@guanghechen/gatsby-transformer-yozora` to customize the GraphQL schema.
-   * This makes it possible for sub-plugins to modify types owned by
-   * `@guanghechen/gatsby-transformer-remark`.
+   * This allows sub-plugins to use Node APIs bound to `@guanghechen/gatsby-transformer-yozora`
+   * to customize the GraphQL schema. This makes it possible for sub-plugins to modify types
+   * owned by `@guanghechen/gatsby-transformer-remark`.
    */
   const plugins = options.plugins ?? []
   for (const plugin of plugins) {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { createSchemaCustomization } = await import(plugin.resolve)
     if (isFunction(createSchemaCustomization)) {
       createSchemaCustomization(api, plugin.options)

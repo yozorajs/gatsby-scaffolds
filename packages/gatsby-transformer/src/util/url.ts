@@ -3,9 +3,9 @@ import type { Node, Resource, Root } from '@yozora/ast'
 import { DefinitionType, ImageType, LinkType } from '@yozora/ast'
 import { traverseAst } from '@yozora/ast-util'
 import crypto from 'crypto'
-import fs from 'fs-extra'
-import path from 'path'
-import env from './env'
+import fs from 'node:fs'
+import path from 'node:path'
+import * as env from './env'
 
 /**
  * Resolve ast urls.
@@ -79,7 +79,9 @@ export async function serveStaticFile(absoluteFilepath: string): Promise<string 
 
   // Static file not exist yet.
   if (!fs.existsSync(staticFilepath)) {
-    fs.copySync(absoluteFilepath, staticFilepath)
+    const dir = path.dirname(staticFilepath)
+    fs.mkdirSync(dir, { recursive: true })
+    fs.copyFileSync(absoluteFilepath, staticFilepath)
   }
 
   return urlPath

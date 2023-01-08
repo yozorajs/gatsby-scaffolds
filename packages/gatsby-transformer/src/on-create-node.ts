@@ -11,18 +11,16 @@ export function shouldOnCreateNode({ node }: { node: Node }): boolean {
 
 /**
  *
- * @param {*} api
- * @param {*} options
+ * @param api
+ * @param options
  * @returns
  */
 export async function onCreateNode(
   api: CreateNodeArgs,
   options: TransformerYozoraOptions,
-): Promise<NodeInput | undefined> {
-  const { node } = api
-  if (!shouldOnCreateNode({ node })) return
-
+): Promise<NodeInput | object> {
   const {
+    node,
     actions: { createNode, createParentChildLink },
     reporter,
     createContentDigest,
@@ -30,8 +28,8 @@ export async function onCreateNode(
     loadNodeContent,
   } = api
 
+  const content = await loadNodeContent(node)
   try {
-    const content = await loadNodeContent(node)
     const { slugField, ...grayMatterOptions } = options.frontmatter ?? {}
     const data = frontmatter(content, grayMatterOptions)
 
@@ -56,12 +54,13 @@ export async function onCreateNode(
         content: rawMarkdownBody,
       } as Partial<Node['internal']> as Node['internal'],
       excerpt: data.excerpt,
-      frontmatter: { ...data.data },
+      frontmatter: { title: '', ...data.data },
+      rawMarkdownBody: rawMarkdownBody,
     }
 
     // Add path to the markdown file path
     if (node.internal.type === 'File') {
-      markdownNode.absolutePath = node.absolutePath
+      markdownNode.fileAbsolutePath = node.absolutePath
     }
 
     markdownNode.internal.contentDigest = createContentDigest(markdownNode)
@@ -75,5 +74,6 @@ export async function onCreateNode(
         ':\n\n' +
         error?.message ?? String(error),
     )
+    return {}
   }
 }

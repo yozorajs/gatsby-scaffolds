@@ -20,10 +20,15 @@
   ],
   "type": "module",
   "exports": {
-    "types": "./lib/types/index.d.ts",
-    "import": "./gatsby-node.js"
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "import": "./lib/esm/index.mjs"
+    },
+    "./gatsby-node.js": {
+      "import": "./gatsby-node.js"
+    }
   },
-  "module": "./gatsby-node.js",
+  "module": "./lib/esm/index.mjs",
   "types": "./lib/types/index.d.ts",
   "source": "./src/index.ts",
   "license": "MIT",
@@ -41,7 +46,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf lib/ gatsby-node.js && cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
+    "build": "rimraf lib/ gatsby-node.js && cross-env NODE_ENV=production rollup -c ./rollup.config.mjs",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
@@ -57,5 +62,10 @@
     "@yozora/character": "^2.0.0",
     "@yozora/html-markdown": "^2.0.0-alpha.3",
     "gatsby": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.9.1"
   }
 }

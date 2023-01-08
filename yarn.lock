@@ -5373,9 +5373,12 @@ __metadata:
   dependencies:
     "@guanghechen/helper-is": ^3.0.0-alpha.5
     "@guanghechen/parse-lineno": ^2.2.0
+    cross-env: ^7.0.3
     dayjs: ^1.11.7
     fs-extra: ^11.1.0
     gray-matter: ^4.0.3
+    rimraf: ^3.0.2
+    rollup: ^3.9.1
   peerDependencies:
     "@yozora/ast": ^2.0.0
     "@yozora/ast-util": ^2.0.0
