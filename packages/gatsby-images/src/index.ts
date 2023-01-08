@@ -1,8 +1,4 @@
-import type {
-  Image as IImage,
-  ImageReference as IImageReference,
-  Node as IYastNode,
-} from '@yozora/ast'
+import type { Image, ImageReference, Node } from '@yozora/ast'
 import { ImageReferenceType, ImageType } from '@yozora/ast'
 import { calcDefinitionMap, traverseAst } from '@yozora/ast-util'
 import type { AstMutateApi } from '@yozora/gatsby-transformer'
@@ -10,43 +6,27 @@ import chalk from 'chalk'
 import { slash } from 'gatsby-core-utils'
 import { fluid } from 'gatsby-plugin-sharp'
 import path from 'path'
-import { EMPTY_ALT } from './constant'
+import { DEFAULT_OPTIONS, EMPTY_ALT, supportedImgExts } from './constant'
 import type { IGatsbyYozoraImagesOptions, IResolvedImageData } from './types'
 import { getImageInfo, isRelativeUrl } from './util'
 
-type ImageNode = IYastNode &
-  Omit<IImage, 'type'> &
-  Omit<IImageReference, 'type'> &
-  Record<string, string>
-
-const defaultFluidArgs = {
-  maxWidth: 650,
-  wrapperStyle: '',
-  backgroundColor: 'white',
-  linkImagesToOriginal: true,
-  showCaptions: false,
-  markdownCaptions: false,
-  withWebp: false,
-  withAvif: false,
-  tracedSVG: false,
-  loading: 'lazy',
-  disableBgImageOnAlpha: false,
-  disableBgImage: false,
-}
+type ImageNode = Node & Omit<Image, 'type'> & Omit<ImageReference, 'type'> & Record<string, string>
 
 /**
- * Return a promise, so provide a chance to waiting for the task finished
- * before moving forward.
- * @param param0
+ * Return a promise, so provide a chance to waiting for the task finished before moving forward.
+ *
+ * @param api
  * @param pluginOptions
  * @returns
  */
-function mutateYozoraAst(
-  { files, pathPrefix, cache, markdownNode, markdownAST, reporter, getNode }: AstMutateApi,
+export default async function mutateYozoraAst(
+  api: AstMutateApi,
   pluginOptions: IGatsbyYozoraImagesOptions = {},
-): Promise<void> {
-  const options = { ...defaultFluidArgs, pathPrefix, ...pluginOptions }
-  const { definitionMap } = calcDefinitionMap(markdownAST)
+): Promise<Node[]> {
+  const { files, markdownNode, markdownAST, pathPrefix, reporter, cache, getNode } = api
+  const options = { ...DEFAULT_OPTIONS, pathPrefix, ...pluginOptions }
+
+  const { definitionMap } = calcDefinitionMap(markdownAST, undefined, options.presetDefinitions)
   const markdownImageNodes: ImageNode[] = []
 
   traverseAst(markdownAST, [ImageReferenceType, ImageType], node =>
@@ -87,7 +67,7 @@ function mutateYozoraAst(
     const alt = isEmptyAlt ? '' : overWrites.alt ?? node.alt ?? defaultAlt
     const title = node.title ?? alt
 
-    const loading = options.loading ?? 'lazy'
+    const loading = options.loading
     if (![`lazy`, `eager`, `auto`].includes(loading)) {
       reporter.warn(
         reporter.stripIndent(`
@@ -98,6 +78,17 @@ function mutateYozoraAst(
       )
     }
 
+    const decoding = options.decoding
+    if (![`async`, `sync`, `auto`].includes(decoding)) {
+      reporter.warn(
+        reporter.stripIndent(`
+        ${chalk.bold(decoding)} is an invalid value for the ${chalk.bold(
+          `decoding`,
+        )} option. Please pass one of "async", "sync" or "auto".
+      `),
+      )
+    }
+
     return {
       alt: alt as string,
       title: title as string,
@@ -105,6 +96,7 @@ function mutateYozoraAst(
       srcSet: fluidResult.srcSet,
       sizes: fluidResult.sizes,
       loading: loading as 'lazy' | 'eager' | 'auto',
+      decoding: decoding as 'sync' | 'async' | 'auto',
     }
   }
 
@@ -113,7 +105,7 @@ function mutateYozoraAst(
     const overWrites: Record<string, unknown> = {}
 
     // consider as imageReference node
-    if (node.url == null && node.identifier != null) {
+    if (!node.url && node.identifier) {
       originalNode = node
       // eslint-disable-next-line no-param-reassign
       node = definitionMap[originalNode.identifier] as unknown as ImageNode
@@ -130,7 +122,7 @@ function mutateYozoraAst(
 
     // Ignore gifs as we can't process them,
     // svgs as they are already responsive by definition
-    if (isRelativeUrl(node.url) && fileType !== `gif` && fileType !== `svg`) {
+    if (isRelativeUrl(node.url) && supportedImgExts.has(fileType)) {
       const imageData = await generateImagesAndUpdateNode(node, overWrites)
       if (imageData == null) return null
 
@@ -141,16 +133,15 @@ function mutateYozoraAst(
       originalNode.src = imageData.src
       originalNode.srcSet = imageData.srcSet
       originalNode.sizes = imageData.sizes
-      originalNode.loading = imageData.loading
+      if (imageData.loading) originalNode.loading = imageData.loading
+      if (imageData.decoding) originalNode.decoding = imageData.decoding
       return originalNode
     }
 
     return null
   }
 
-  return Promise.all(markdownImageNodes.map(process))
-    .then(nodes => nodes.filter((node): node is ImageNode => node != null))
-    .then((nodes: IYastNode[]) => void nodes)
+  return Promise.all(markdownImageNodes.map(process)).then(nodes =>
+    nodes.filter((node): node is ImageNode => node != null),
+  )
 }
-
-export default mutateYozoraAst

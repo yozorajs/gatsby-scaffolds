@@ -21,10 +21,18 @@
   ],
   "type": "module",
   "exports": {
-    "types": "./lib/types/index.d.ts",
-    "import": "./gatsby-node.js"
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "import": "./lib/esm/index.mjs"
+    },
+    "./gatsby-browser.js": {
+      "import": "./gatsby-browser.js"
+    },
+    "./gatsby-node.js": {
+      "import": "./gatsby-node.js"
+    }
   },
-  "module": "./gatsby-node.js",
+  "module": "./lib/esm/index.mjs",
   "types": "./lib/types/index.d.ts",
   "source": "./src/index.ts",
   "license": "MIT",
@@ -33,16 +41,15 @@
   },
   "files": [
     "lib/",
-    "!lib/**/*.js.map",
-    "!lib/**/*.d.ts.map",
     "gatsby-node.js",
+    "gatsby-browser.js",
     "package.json",
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf lib/ && cross-env NODE_ENV=production rollup -c ../../rollup.config.mjs",
+    "build": "rimraf lib/ gatsby-* && cross-env NODE_ENV=production rollup -c ./rollup.config.mjs",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
@@ -56,5 +63,10 @@
     "@yozora/ast-util": "^2.0.0",
     "gatsby": "^5.0.0",
     "gatsby-plugin-sharp": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.9.1"
   }
 }

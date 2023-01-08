@@ -14,11 +14,8 @@ export interface ImageInfo {
  */
 export function getImageInfo(uri: string): ImageInfo {
   const { url, query } = queryString.parseUrl(uri)
-  return {
-    ext: path.extname(url).split(`.`).pop() ?? '',
-    url,
-    query,
-  }
+  const ext: string = path.extname(url).split(`.`).pop() ?? ''
+  return { ext, url, query }
 }
 
 /**
