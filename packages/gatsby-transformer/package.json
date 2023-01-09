@@ -50,10 +50,9 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@guanghechen/helper-is": "^3.0.0-alpha.5",
-    "@guanghechen/parse-lineno": "^2.2.0",
+    "@guanghechen/helper-is": "^3.0.0",
+    "@guanghechen/parse-lineno": "^2.2.2",
     "dayjs": "^1.11.7",
-    "fs-extra": "^11.1.0",
     "gray-matter": "^4.0.3"
   },
   "peerDependencies": {

@@ -1875,13 +1875,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@guanghechen/eslint-config-jsx@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/eslint-config-jsx@npm:3.0.0-alpha.5"
+"@guanghechen/eslint-config-jsx@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/eslint-config-jsx@npm:3.0.0"
   dependencies:
     "@babel/eslint-parser": ^7.19.1
     "@babel/plugin-syntax-import-assertions": ^7.20.0
-    "@guanghechen/eslint-config": ^3.0.0-alpha.5
+    "@guanghechen/eslint-config": ^3.0.0
     confusing-browser-globals: ^1.0.11
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jsx-a11y: ^6.6.1
@@ -1890,58 +1890,58 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
     eslint: ^8.0.0
-  checksum: 1e10d1354feb41cddbdded7820706ef0926a5377aafe3472f1c61e31de8ce1c4658b855a57afeabb7303a2839a76992525e218528631f9d2deee1cd8bb2e675b
+  checksum: 6a8d57e78b831a29493722ede8a79d1f2b847c2d69b12454c2bf920ac94b3d98946f8d651d6c1169e752ef58be1fbcb82f3320fdbd5650d8b4325c73c0748249
   languageName: node
   linkType: hard
 
-"@guanghechen/eslint-config-ts@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/eslint-config-ts@npm:3.0.0-alpha.5"
+"@guanghechen/eslint-config-ts@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/eslint-config-ts@npm:3.0.0"
   dependencies:
-    "@guanghechen/eslint-config": ^3.0.0-alpha.5
+    "@guanghechen/eslint-config": ^3.0.0
     "@typescript-eslint/eslint-plugin": ^5.47.1
     "@typescript-eslint/parser": ^5.47.1
   peerDependencies:
     eslint: ^8.0.0
-  checksum: dda28d0cb1f7a39d9177cb6262996d679522e832c64ecc4df31b494f09e560b825df6fe9036e27472bf07578dae1f88d50bf1bcb63011549a34d7f526e55a873
+  checksum: ae6439226024e27ce55e9519a290cd49e228e66e2c7185502897598813e0a14238251e4f02af7f993f77d6d54d625591c1385ea7dcdf6c03a49622c9de114cb4
   languageName: node
   linkType: hard
 
-"@guanghechen/eslint-config@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/eslint-config@npm:3.0.0-alpha.5"
+"@guanghechen/eslint-config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/eslint-config@npm:3.0.0"
   dependencies:
     eslint-plugin-import: ^2.26.0
   peerDependencies:
     eslint: ^8.0.0
-  checksum: 6d29b61fdf7985393333d91807cc2e3621b3ae37568a57b116dd2266c7c09bc20b5dcffa58f79ab4064e9af273546df7724ba3ddcdeb6db7f0f788a8db672e52
+  checksum: 70a0a90983aa8292dfcca6a9f695e7a13839dfb679f766af1f0dbbcc3c5aefabb3c42f1e19b4bffaf58fe86e0d363895fe8418497c67b2ed4c96ff3f7ba66b33
   languageName: node
   linkType: hard
 
-"@guanghechen/helper-is@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/helper-is@npm:3.0.0-alpha.5"
-  checksum: 1a826ab6fac70685198748175dccc9f3dd1e9a7254ff9d0ee58e1e82d6ed2b144b7609ea9890cb69de9cb097ddc59b57c38a7039aae3c1732f4c1757eaefbe3c
+"@guanghechen/helper-is@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/helper-is@npm:3.0.0"
+  checksum: 8aa466887e1bcd4219b18dec5722ed4043efee233dc6b688acbf97037e0627b19dcca0980ef82da7aad5d95965f023c838bf5b5c73b07e314e0dff6c9abac1bc
   languageName: node
   linkType: hard
 
-"@guanghechen/jest-config@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/jest-config@npm:3.0.0-alpha.5"
-  checksum: cedee845827580b734aa1a71eebe677f1d4554aad516597c4a21017a434fe620866754eab0668b2fc32c4a3de6b14a4f36e7b6a4ad3d6144d82ded69c4afd973
+"@guanghechen/jest-config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/jest-config@npm:3.0.0"
+  checksum: f9618751434eaee543bc1a9622b38f9c108858a16e6104a1b73ac1022b09c3e3bfd26044075035f2e0c59337df735983b853164946ec0edaa51dd1f90f3138dc
   languageName: node
   linkType: hard
 
-"@guanghechen/parse-lineno@npm:^2.2.0":
+"@guanghechen/parse-lineno@npm:^2.2.2":
   version: 2.2.2
   resolution: "@guanghechen/parse-lineno@npm:2.2.2"
   checksum: 6766d8189ba3ab7ab0c857197c078dcf5b98453c03e8fd0ecafe850af295c616a9e998a9467ff820556ba74ae95373f9221d70fb8672047ece2995a4bf32ee82
   languageName: node
   linkType: hard
 
-"@guanghechen/rollup-config@npm:^3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@guanghechen/rollup-config@npm:3.0.0-alpha.5"
+"@guanghechen/rollup-config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@guanghechen/rollup-config@npm:3.0.0"
   dependencies:
     "@rollup/plugin-commonjs": 24.0.0
     "@rollup/plugin-json": 6.0.0
@@ -1951,7 +1951,7 @@ __metadata:
     rollup-plugin-dts: ^5.1.0
   peerDependencies:
     rollup: ^3.0.0
-  checksum: 404fadb74e0ce5eb30b497518d7894b64a98a3ed38e7c0cfd7b4987a0057b962c46139f20ab39edcb24904b4bbbaceebde10d40696da69adfc68ff8177098c09
+  checksum: 0618dfef670b2623ba22b56684703503c2ea621b0e897ed1e676007533debcd4d998e31d8a8a6374927f2f5b03f5b74ab3e3c397a9ecdcf8940e18e501382514
   languageName: node
   linkType: hard
 
@@ -4554,15 +4554,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fs-extra@npm:^9.0.13":
-  version: 9.0.13
-  resolution: "@types/fs-extra@npm:9.0.13"
-  dependencies:
-    "@types/node": "*"
-  checksum: add79e212acd5ac76b97b9045834e03a7996aef60a814185e0459088fd290519a3c1620865d588fa36c4498bf614210d2a703af5cf80aa1dbc125db78f6edac3
-  languageName: node
-  linkType: hard
-
 "@types/get-port@npm:^3.2.0":
   version: 3.2.0
   resolution: "@types/get-port@npm:3.2.0"
@@ -5188,62 +5179,62 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yozora/ast-util@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/ast-util@npm:2.0.5-alpha.0"
+"@yozora/ast-util@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/ast-util@npm:2.0.5"
   dependencies:
-    "@yozora/ast": ^2.0.5-alpha.0
-    "@yozora/character": ^2.0.5-alpha.0
-  checksum: 6004e1fe1bb25f6254bb6169ea383257b8133d20bda96b01c9133dd82aec0a2160e9fcd548e311fb9d1c8d0e9c5fb7e0680d9ef02087dd3e75dcaf4a3bfb1b2e
+    "@yozora/ast": ^2.0.5
+    "@yozora/character": ^2.0.5
+  checksum: 88b925b347f2694ddd7f74e5850952275e95601a744a62777556c105548319eb2f37313e9407a345bcaf8a2b5c3ff1df159b6f7af97b71bde743bc3f5bc4ce4b
   languageName: node
   linkType: hard
 
-"@yozora/ast@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/ast@npm:2.0.5-alpha.0"
-  checksum: 0d94d2d9469b51c31d3a0b6edccae93c16853978f460cb055b28bbee0ae48aac3488d0eec7248a26b64e410fbf215ab362a5051786bc6519a3c58ba9ae065556
+"@yozora/ast@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/ast@npm:2.0.5"
+  checksum: d9cd4a1f61e0ef79ed4a20c9d885e8c1dcb55882604ad14b756c267a233776091cd7259db4b1f0e48104c991899c0030c21da1877f722b02a3d214c319ada7db
   languageName: node
   linkType: hard
 
-"@yozora/character@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/character@npm:2.0.5-alpha.0"
-  checksum: 17c5aec1375e0e8020cf30a03bba4cc481217c7acf8740d4f7066762c35fcebeafb4ec9c759828597a23bec8d3ffa25cc164c1eb070800e3f11458982798cfea
+"@yozora/character@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/character@npm:2.0.5"
+  checksum: 2b5098b153f7b4d3267b822896ee082f428ba96fb4235b0db70672c1d8c446a23c7c6c1c81de7e6e37b034297aeaf6a87b65c7aae60255e67bcdca47f9ee9f2f
   languageName: node
   linkType: hard
 
-"@yozora/core-html-renderer@npm:^2.0.0-alpha.4":
-  version: 2.0.0-alpha.4
-  resolution: "@yozora/core-html-renderer@npm:2.0.0-alpha.4"
+"@yozora/core-html-renderer@npm:^2.0.0-alpha.5":
+  version: 2.0.0-alpha.5
+  resolution: "@yozora/core-html-renderer@npm:2.0.0-alpha.5"
   dependencies:
     prismjs: ^1.29.0
     sanitize-html: ^2.8.1
   peerDependencies:
     "@yozora/ast": ^2.0.0
-  checksum: ba80f3409cc3a7336f587df914eea80446c3fb192b71f250a289932053a9771c499c2e90617670b3263f7a446bc056077d34fd1bae664840e385c9334874b414
+  checksum: 0ea6abc872010e3ee70deaf16e7f345b6a859fb86d8ada24710d06eaf8eb2e6603756463927750c84dc34c71931f53d6ec0c6189d50de240312a6270acf542dc
   languageName: node
   linkType: hard
 
-"@yozora/core-parser@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/core-parser@npm:2.0.5-alpha.0"
+"@yozora/core-parser@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/core-parser@npm:2.0.5"
   dependencies:
-    "@yozora/ast": ^2.0.5-alpha.0
-    "@yozora/ast-util": ^2.0.5-alpha.0
-    "@yozora/character": ^2.0.5-alpha.0
-    "@yozora/core-tokenizer": ^2.0.5-alpha.0
-    "@yozora/invariant": ^2.0.5-alpha.0
-  checksum: 0c226d0739658a025b613e1e1201fa14f14f5e7c6f5b190a4acd71001b09a9206913c44234588f78d12bcd51322de379e6bc39e07b69a4d4b52eb97861be4b85
+    "@yozora/ast": ^2.0.5
+    "@yozora/ast-util": ^2.0.5
+    "@yozora/character": ^2.0.5
+    "@yozora/core-tokenizer": ^2.0.5
+    "@yozora/invariant": ^2.0.5
+  checksum: 977fb51929a35f3a3cf3099decf0225eb76e93fdbb3a4207e1635bc04720e3bf5e761ccb910a7f067c94ad74ec8e78a84b532be59f5f5a3b5938c6d1f3e4afe1
   languageName: node
   linkType: hard
 
-"@yozora/core-tokenizer@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/core-tokenizer@npm:2.0.5-alpha.0"
+"@yozora/core-tokenizer@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/core-tokenizer@npm:2.0.5"
   dependencies:
-    "@yozora/ast": ^2.0.5-alpha.0
-    "@yozora/character": ^2.0.5-alpha.0
-  checksum: cbbe138b3d3bf724cfccb70d98dde7a6d20dff238f23dae6ddc98ee9ac9b201be95449edc106b91806ba56106f961f80d125703b0df52dc1cf8cb257a53600d8
+    "@yozora/ast": ^2.0.5
+    "@yozora/character": ^2.0.5
+  checksum: 67ff900c406a76872eb743fed94e11c1da61dd37d01efe30c70e511339b22f2a4d1bd2a905d39291725c867c1cd4333352427514fecc1d01b99e04a233231d4c
   languageName: node
   linkType: hard
 
@@ -5281,28 +5272,26 @@ __metadata:
   resolution: "@yozora/gatsby-scaffolds@workspace:."
   dependencies:
     "@babel/core": 7.20.12
-    "@guanghechen/eslint-config": ^3.0.0-alpha.5
-    "@guanghechen/eslint-config-jsx": ^3.0.0-alpha.5
-    "@guanghechen/eslint-config-ts": ^3.0.0-alpha.5
-    "@guanghechen/jest-config": ^3.0.0-alpha.5
-    "@guanghechen/rollup-config": ^3.0.0-alpha.5
+    "@guanghechen/eslint-config": ^3.0.0
+    "@guanghechen/eslint-config-jsx": ^3.0.0
+    "@guanghechen/eslint-config-ts": ^3.0.0
+    "@guanghechen/jest-config": ^3.0.0
+    "@guanghechen/rollup-config": ^3.0.0
     "@teamsupercell/typings-for-css-modules-loader": ^2.5.1
-    "@types/fs-extra": ^9.0.13
     "@types/jest": 29.2.5
     "@types/node": 18.11.18
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.10
-    "@yozora/ast": ^2.0.5-alpha.0
-    "@yozora/ast-util": ^2.0.5-alpha.0
-    "@yozora/character": ^2.0.5-alpha.0
-    "@yozora/core-parser": ^2.0.5-alpha.0
-    "@yozora/html-markdown": ^2.0.0-alpha.4
+    "@yozora/ast": ^2.0.5
+    "@yozora/ast-util": ^2.0.5
+    "@yozora/character": ^2.0.5
+    "@yozora/core-parser": ^2.0.5
+    "@yozora/html-markdown": ^2.0.0-alpha.5
     cross-env: ^7.0.3
     eslint: 8.31.0
     eslint-config-prettier: 8.6.0
     eslint-plugin-jest: 27.2.1
     eslint-plugin-prettier: 4.2.1
-    fs-extra: ^11.1.0
     gatsby: ^5.3.3
     gatsby-plugin-sharp: ^5.3.2
     gitmoji-changelog: 2.3.0
@@ -5315,7 +5304,7 @@ __metadata:
     npm-run-all: 4.1.5
     pinst: 3.0.0
     postcss: 8.4.21
-    prettier: 2.8.1
+    prettier: 2.8.2
     react: ^18.2.0
     react-dom: ^18.2.0
     rimraf: ^3.0.2
@@ -5332,11 +5321,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@yozora/gatsby-transformer@workspace:packages/gatsby-transformer"
   dependencies:
-    "@guanghechen/helper-is": ^3.0.0-alpha.5
-    "@guanghechen/parse-lineno": ^2.2.0
+    "@guanghechen/helper-is": ^3.0.0
+    "@guanghechen/parse-lineno": ^2.2.2
     cross-env: ^7.0.3
     dayjs: ^1.11.7
-    fs-extra: ^11.1.0
     gray-matter: ^4.0.3
     rimraf: ^3.0.2
     rollup: ^3.9.1
@@ -5349,31 +5337,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@yozora/html-admonition@npm:^2.0.0-alpha.4":
-  version: 2.0.0-alpha.4
-  resolution: "@yozora/html-admonition@npm:2.0.0-alpha.4"
+"@yozora/html-admonition@npm:^2.0.0-alpha.5":
+  version: 2.0.0-alpha.5
+  resolution: "@yozora/html-admonition@npm:2.0.0-alpha.5"
   peerDependencies:
     "@yozora/ast": ^2.0.0
-  checksum: a2343bf013776f5b84236a39d3b81d4b8c0cb8b0f8c1ef8c3f6db25a1123a64fc69074ef77d3c277c39313a294b9deb0f9dfc60dfbf1f62e61a6c4b58f869dac
+  checksum: 0e9afa252e35bafd610ce59adc145bc29dfc9c6f5c6ab8a66d364ff865100aa63079dc6bc82655166c3542c61db2fc6d825aaa1122a22adc9715ba58a3cfad76
   languageName: node
   linkType: hard
 
-"@yozora/html-markdown@npm:^2.0.0-alpha.4":
-  version: 2.0.0-alpha.4
-  resolution: "@yozora/html-markdown@npm:2.0.0-alpha.4"
+"@yozora/html-markdown@npm:^2.0.0-alpha.5":
+  version: 2.0.0-alpha.5
+  resolution: "@yozora/html-markdown@npm:2.0.0-alpha.5"
   dependencies:
-    "@yozora/core-html-renderer": ^2.0.0-alpha.4
-    "@yozora/html-admonition": ^2.0.0-alpha.4
+    "@yozora/core-html-renderer": ^2.0.0-alpha.5
+    "@yozora/html-admonition": ^2.0.0-alpha.5
   peerDependencies:
     "@yozora/ast": ^2.0.0
-  checksum: b8dd9fa780e1351a9fd9e87adb86e5d2056b573f738a5ae83f982d1cbc2a3f9c36b4f13b45f79b1ea545dc4c39253a60dbc71658af6901230016c54b26be0116
+  checksum: c8f335a7d7cd821231c32218740fd973f05e7bbaf0b4af04dc9e3a059883aba6aaad1315713b0ba54136901a45e1e812bcc6785302ed4d56250aaf1a6344d477
   languageName: node
   linkType: hard
 
-"@yozora/invariant@npm:^2.0.5-alpha.0":
-  version: 2.0.5-alpha.0
-  resolution: "@yozora/invariant@npm:2.0.5-alpha.0"
-  checksum: 280498c4290ed6c25d88e73a5d4b783c1883394ff682a35d136432cd5f3d47ef474a69feee1f106813d25f621c441cbc48f90833334e5a0420ecb87a91a96794
+"@yozora/invariant@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@yozora/invariant@npm:2.0.5"
+  checksum: 8bc754116b7c6bc95ca5714080517052de5365de5436ec4df8de0c13fccab61ee65f9c6f13a94f1ab5bea6ca74f7e392524674f8db704a42062fa36c30da63b0
   languageName: node
   linkType: hard
 
@@ -10130,17 +10118,6 @@ __metadata:
     jsonfile: ^6.0.1
     universalify: ^2.0.0
   checksum: dc94ab37096f813cc3ca12f0f1b5ad6744dfed9ed21e953d72530d103cea193c2f81584a39e9dee1bea36de5ee66805678c0dddc048e8af1427ac19c00fffc50
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "fs-extra@npm:11.1.0"
-  dependencies:
-    graceful-fs: ^4.2.0
-    jsonfile: ^6.0.1
-    universalify: ^2.0.0
-  checksum: 5ca476103fa1f5ff4a9b3c4f331548f8a3c1881edaae323a4415d3153b5dc11dc6a981c8d1dd93eec8367ceee27b53f8bd27eecbbf66ffcdd04927510c171e7f
   languageName: node
   linkType: hard
 
@@ -16683,21 +16660,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:*":
+"prettier@npm:*, prettier@npm:2.8.2":
   version: 2.8.2
   resolution: "prettier@npm:2.8.2"
   bin:
     prettier: bin-prettier.js
   checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
-  languageName: node
-  linkType: hard
-
-"prettier@npm:2.8.1":
-  version: 2.8.1
-  resolution: "prettier@npm:2.8.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 4f21a0f1269f76fb36f54e9a8a1ea4c11e27478958bf860661fb4b6d7ac69aac1581f8724fa98ea3585e56d42a2ea317a17ff6e3324f40cb11ff9e20b73785cc
   languageName: node
   linkType: hard
 
