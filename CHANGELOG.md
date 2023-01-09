@@ -1,5 +1,15 @@
 # Changelog
 
+<a name="2.1.0"></a>
+## 2.1.0 (2023-01-09)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[12912dc](https://github.com/yozorajs/gatsby-scaffolds/commit/12912dc4d8270588281067c42f41fc6f6ca63539)]
+- 🔧 chore: update yarn.lock when publish new release [[be55b18](https://github.com/yozorajs/gatsby-scaffolds/commit/be55b1864a769c1f896947e91ae125caa8a99ccf)]
+- 🔧 chore: update yarn.lock [[e24e164](https://github.com/yozorajs/gatsby-scaffolds/commit/e24e16473ed86f4a33ef40e5fdec5417faeeef0f)]
+
+
 <a name="2.1.0-alpha.7"></a>
 ## 2.1.0-alpha.7 (2023-01-08)
 
