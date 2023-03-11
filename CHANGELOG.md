@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="2.1.1"></a>
+## 2.1.1 (2023-03-11)
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[906f51e](https://github.com/yozorajs/gatsby-scaffolds/commit/906f51e14e7ad9a4d02c286fbc1de0a2c2db7a03)]
+
+### Miscellaneous
+
+- 📄 docs: update LICENSE [[7307c20](https://github.com/yozorajs/gatsby-scaffolds/commit/7307c2023a45e56df764de9182e295533d15c1eb)]
+
+
 <a name="2.1.0"></a>
 ## 2.1.0 (2023-01-09)
 
