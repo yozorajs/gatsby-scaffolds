@@ -1,6 +1,6 @@
 {
   "name": "@yozora/gatsby-images",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Transform markdown files to Yozora AST",
   "author": {
     "name": "guanghechen",
@@ -53,7 +53,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@yozora/gatsby-transformer": "^2.1.0",
+    "@yozora/gatsby-transformer": "^2.1.1",
     "chalk": "^5.2.0",
     "query-string": "^8.1.0"
   },
