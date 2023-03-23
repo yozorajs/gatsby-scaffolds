@@ -35,7 +35,7 @@ export async function onCreateNode(
 
     // format data
     if (data.data) {
-      const formattedData = {}
+      const formattedData: Record<string, unknown> = {}
       for (const [key, val] of Object.entries(data.data)) {
         if (isDate(val)) formattedData[key] = val.toJSON()
         else formattedData[key] = val
