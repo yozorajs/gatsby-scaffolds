@@ -108,7 +108,7 @@ exports[`gatsby-plugin-stylus Stage: build-html / PostCss plugins 1`] = `
               "test": /\\\\\\.styl\\$/,
               "use": [
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":false})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -121,7 +121,7 @@ exports[`gatsby-plugin-stylus Stage: build-html / PostCss plugins 1`] = `
               "test": /\\\\\\.module\\\\\\.styl\\$/,
               "use": [
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":{"namedExport":false,"exportLocalsConvention":"camelCaseOnly"}})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -408,7 +408,7 @@ exports[`gatsby-plugin-stylus Stage: build-javascript / PostCss plugins 1`] = `
               "use": [
                 "miniCssExtract",
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":false})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -422,7 +422,7 @@ exports[`gatsby-plugin-stylus Stage: build-javascript / PostCss plugins 1`] = `
               "use": [
                 "miniCssExtract",
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":{"namedExport":false,"exportLocalsConvention":"camelCaseOnly"}})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -715,7 +715,7 @@ exports[`gatsby-plugin-stylus Stage: develop / PostCss plugins 1`] = `
               "use": [
                 "miniCssExtract",
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":false})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -729,7 +729,7 @@ exports[`gatsby-plugin-stylus Stage: develop / PostCss plugins 1`] = `
               "use": [
                 "miniCssExtract",
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":{"namedExport":false,"exportLocalsConvention":"camelCaseOnly"}})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -1017,7 +1017,7 @@ exports[`gatsby-plugin-stylus Stage: develop-html / PostCss plugins 1`] = `
               "test": /\\\\\\.styl\\$/,
               "use": [
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":false})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {
@@ -1030,7 +1030,7 @@ exports[`gatsby-plugin-stylus Stage: develop-html / PostCss plugins 1`] = `
               "test": /\\\\\\.module\\\\\\.styl\\$/,
               "use": [
                 "css({"esModule":true,"import":true,"importLoaders":1,"sourceMap":false,"modules":{"namedExport":false,"exportLocalsConvention":"camelCaseOnly"}})",
-                "postcss({})",
+                "postcss(["test1"])",
                 {
                   "loader": "stylus-loader",
                   "options": {

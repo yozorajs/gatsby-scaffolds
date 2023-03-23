@@ -1,4 +1,5 @@
 import { jest } from '@jest/globals'
+import type { GatsbyPluginStylusOptions } from '../src'
 import { onCreateWebpackConfig } from '../src'
 
 describe(`gatsby-plugin-stylus`, () => {
@@ -20,7 +21,10 @@ describe(`gatsby-plugin-stylus`, () => {
 
   const stylusPlugin = jest.fn().mockReturnValue(`foo`)
 
-  const tests = {
+  const tests: {
+    stages: string[]
+    options: Record<string, Partial<GatsbyPluginStylusOptions> | undefined>
+  } = {
     stages: [`develop`, `build-javascript`, `develop-html`, `build-html`],
     options: {
       'Empty options': {},
@@ -40,7 +44,7 @@ describe(`gatsby-plugin-stylus`, () => {
         shouldUseSourceMap: true,
       },
       'PostCss plugins': {
-        postCssPlugins: [`test1`],
+        postcssLoaderOptions: [`test1`],
       },
       'css-loader use commonjs': {
         cssLoaderOptions: {
