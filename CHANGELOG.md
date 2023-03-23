@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="2.1.2"></a>
+## 2.1.2 (2023-03-23)
+
+### Added
+
+- ✅ test: fix tests [[749a2ac](https://github.com/yozorajs/gatsby-scaffolds/commit/749a2ac59bc48f6e7fc635861dc2f78e4b96b7e5)]
+
+### Changed
+
+- ⬆️ chore: upgrade dependencies [[50a814b](https://github.com/yozorajs/gatsby-scaffolds/commit/50a814b49ccf56e49cb49854c4b9200b2d01c8c5)]
+
+
 <a name="2.1.1"></a>
 ## 2.1.1 (2023-03-11)
 
