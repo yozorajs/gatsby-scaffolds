@@ -1,6 +1,6 @@
 {
   "name": "@yozora/gatsby-transformer",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Transform markdown files to Yozora AST",
   "author": {
     "name": "guanghechen",
