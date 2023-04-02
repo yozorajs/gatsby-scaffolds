@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="2.1.3"></a>
+## 2.1.3 (2023-04-02)
+
+### Changed
+
+- ⬆️ chore: upgrade devDependencies [[3e0b51d](https://github.com/yozorajs/gatsby-scaffolds/commit/3e0b51dc9c73c77ba833154ddcb25ba11c1f6558)]
+
+
 <a name="2.1.2"></a>
 ## 2.1.2 (2023-03-23)
 
