@@ -50,8 +50,8 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@guanghechen/helper-is": "^5.0.0-alpha.0",
-    "@guanghechen/parse-lineno": "^2.2.7",
+    "@guanghechen/helper-is": "^5.0.0",
+    "@guanghechen/parse-lineno": "^2.3.0",
     "dayjs": "^1.11.7",
     "gray-matter": "^4.0.3"
   },
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "rimraf": "^4.4.1",
-    "rollup": "^3.20.2"
+    "rimraf": "^5.0.1",
+    "rollup": "^3.22.0"
   }
 }
