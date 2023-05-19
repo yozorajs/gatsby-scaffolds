@@ -32,8 +32,11 @@ const typeDefs = `
     id: ID!
     title: String!
     description: String!
+    createdAtISO: String!
     createAtISO: String!
+    createdAt: String!
     createAt: String!
+    updatedAt: String!
     updateAt: String!
     timeToRead: String!
     tags: [String]!

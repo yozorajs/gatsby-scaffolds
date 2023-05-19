@@ -339,6 +339,33 @@ export async function setFieldsOnGraphQLNodeType(
     return renderMarkdown(ast, definitionMap, footnoteDefinitionMap, htmlRendererMap)
   }
 
+  const getCreatedAtISO = async (markdownNode: Node): Promise<string> => {
+    const { createdAt, createAt, date } = (markdownNode.frontmatter ?? {}) as any
+    const d = createdAt ?? createAt ?? date
+    return dayjs(d).toISOString()
+  }
+
+  const getCreatedAt = async (
+    markdownNode: Node,
+    { formatString }: GetUpdateAtOptions,
+  ): Promise<string> => {
+    const { createdAt, createAt, date } = (markdownNode.frontmatter ?? {}) as any
+    const d = createdAt ?? createAt ?? date
+    if (formatString == null) return dayjs(d).toJSON()
+    return dayjs(d).format(formatString)
+  }
+
+  const getUpdatedAt = async (
+    markdownNode: Node,
+    { formatString }: GetUpdateAtOptions,
+  ): Promise<string> => {
+    const { updatedAt, updateAt, createdAt, createAt, date } = (markdownNode.frontmatter ??
+      {}) as any
+    const d = updatedAt ?? updateAt ?? createdAt ?? createAt ?? date
+    if (formatString == null) return dayjs(d).toJSON()
+    return dayjs(d).format(formatString)
+  }
+
   const result = {
     title: {
       type: 'String',
@@ -361,13 +388,23 @@ export async function setFieldsOnGraphQLNodeType(
         return result.title.resolve(markdownNode)
       },
     },
+    createdAtISO: {
+      type: 'String',
+      resolve: getCreatedAtISO,
+    },
     createAtISO: {
       type: 'String',
-      async resolve(markdownNode: Node): Promise<string> {
-        const { createAt, date } = (markdownNode.frontmatter ?? {}) as any
-        const d = createAt ?? date
-        return dayjs(d).toISOString()
+      resolve: getCreatedAtISO,
+    },
+    createdAt: {
+      type: 'String',
+      args: {
+        formatString: {
+          type: 'String',
+          defaultValue: null,
+        },
       },
+      resolve: getCreatedAt,
     },
     createAt: {
       type: 'String',
@@ -377,12 +414,17 @@ export async function setFieldsOnGraphQLNodeType(
           defaultValue: null,
         },
       },
-      async resolve(markdownNode: Node, { formatString }: GetCreateAtOptions): Promise<string> {
-        const { createAt, date } = (markdownNode.frontmatter ?? {}) as any
-        const d = createAt ?? date
-        if (formatString == null) return dayjs(d).toJSON()
-        return dayjs(d).format(formatString)
+      resolve: getCreatedAt,
+    },
+    updatedAt: {
+      type: 'String',
+      args: {
+        formatString: {
+          type: 'String',
+          defaultValue: null,
+        },
       },
+      getUpdatedAt,
     },
     updateAt: {
       type: 'String',
@@ -392,12 +434,7 @@ export async function setFieldsOnGraphQLNodeType(
           defaultValue: null,
         },
       },
-      async resolve(markdownNode: Node, { formatString }: GetUpdateAtOptions): Promise<string> {
-        const { updateAt, createAt, date } = (markdownNode.frontmatter ?? {}) as any
-        const d = updateAt ?? createAt ?? date
-        if (formatString == null) return dayjs(d).toJSON()
-        return dayjs(d).format(formatString)
-      },
+      getUpdatedAt,
     },
     timeToRead: {
       type: 'String',
