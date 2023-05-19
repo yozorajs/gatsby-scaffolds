@@ -113,7 +113,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :arrow_up:  [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
+* ⬆️ [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
 * 🔖 publish v2.1.0-alpha.0 ([e845ec6](https://github.com/yozorajs/gatsby-scaffolds/commit/e845ec619604d2018e6400eb7fc8146184b1c2c8))
 
 

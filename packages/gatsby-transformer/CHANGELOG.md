@@ -58,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :bug:  fix esm within dayjs ([52b4a6b](https://github.com/yozorajs/gatsby-scaffolds/commit/52b4a6b621c8225fa735fccc577fcac84816df9e))
+* 🐛 fix esm within dayjs ([52b4a6b](https://github.com/yozorajs/gatsby-scaffolds/commit/52b4a6b621c8225fa735fccc577fcac84816df9e))
 * 🔖 publish v2.1.0-alpha.7 ([b15e6d6](https://github.com/yozorajs/gatsby-scaffolds/commit/b15e6d66536ce7f8aadb13e5aa5f469c2a1b48c2))
 
 
@@ -68,8 +68,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :bug:  fix undefined path ([8740c65](https://github.com/yozorajs/gatsby-scaffolds/commit/8740c65944d21409c667f9e8c4b63f7ed3480c94))
-* :bug:  fix esm within dayjs ([bde93a1](https://github.com/yozorajs/gatsby-scaffolds/commit/bde93a16459aa03baa547f445e807373d6bb6c13))
+* 🐛 fix undefined path ([8740c65](https://github.com/yozorajs/gatsby-scaffolds/commit/8740c65944d21409c667f9e8c4b63f7ed3480c94))
+* 🐛 fix esm within dayjs ([bde93a1](https://github.com/yozorajs/gatsby-scaffolds/commit/bde93a16459aa03baa547f445e807373d6bb6c13))
 * 🔖 publish v2.1.0-alpha.6 ([b1ff47e](https://github.com/yozorajs/gatsby-scaffolds/commit/b1ff47e201aa16424d3aaa210fe5b5c2708924ba))
 
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :bug: fix esm wihtin dayjs ([8478979](https://github.com/yozorajs/gatsby-scaffolds/commit/8478979038e24636a95fa65d237320f725c9977e))
+* 🐛 fix esm wihtin dayjs ([8478979](https://github.com/yozorajs/gatsby-scaffolds/commit/8478979038e24636a95fa65d237320f725c9977e))
 * 🔖 publish v2.1.0-alpha.5 ([51d0f9f](https://github.com/yozorajs/gatsby-scaffolds/commit/51d0f9f311f6b942b166b52867d1215c473a13aa))
 
 
@@ -89,7 +89,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :bug:  fix esm ([b045d9d](https://github.com/yozorajs/gatsby-scaffolds/commit/b045d9d07a360b9d7527469b9d001e6335f1b11c))
+* 🐛 fix esm ([b045d9d](https://github.com/yozorajs/gatsby-scaffolds/commit/b045d9d07a360b9d7527469b9d001e6335f1b11c))
 * 🔖 publish v2.1.0-alpha.4 ([86b400b](https://github.com/yozorajs/gatsby-scaffolds/commit/86b400bd156597f85fbd1dc5cfd9cbd45519d278))
 
 
@@ -99,7 +99,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :art:  refactor gatsby-transformer ([8b82f96](https://github.com/yozorajs/gatsby-scaffolds/commit/8b82f9651b4b7f3aee752373dc97ee3edbffe0a7))
+* 🎨 refactor gatsby-transformer ([8b82f96](https://github.com/yozorajs/gatsby-scaffolds/commit/8b82f9651b4b7f3aee752373dc97ee3edbffe0a7))
 * 🔖 publish v2.1.0-alpha.3 ([8597a72](https://github.com/yozorajs/gatsby-scaffolds/commit/8597a728b1f2dad7a4de24dd6b871adc03ce1469))
 
 
@@ -134,7 +134,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :arrow_up:  [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
+* ⬆️ [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
 * 🔖 publish v2.1.0-alpha.0 ([e845ec6](https://github.com/yozorajs/gatsby-scaffolds/commit/e845ec619604d2018e6400eb7fc8146184b1c2c8))
 
 

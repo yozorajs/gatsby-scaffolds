@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :bug:  fix esm ([b045d9d](https://github.com/yozorajs/gatsby-scaffolds/commit/b045d9d07a360b9d7527469b9d001e6335f1b11c))
+* 🐛 fix esm ([b045d9d](https://github.com/yozorajs/gatsby-scaffolds/commit/b045d9d07a360b9d7527469b9d001e6335f1b11c))
 * 🔖 publish v2.1.0-alpha.4 ([86b400b](https://github.com/yozorajs/gatsby-scaffolds/commit/86b400bd156597f85fbd1dc5cfd9cbd45519d278))
 
 
@@ -93,8 +93,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :art:  refactor gatsby-transformer ([8b82f96](https://github.com/yozorajs/gatsby-scaffolds/commit/8b82f9651b4b7f3aee752373dc97ee3edbffe0a7))
-* :art:  refactor gatsby-images ([9719f24](https://github.com/yozorajs/gatsby-scaffolds/commit/9719f245f9ab74141c1f112563a1a92b2ac9154b))
+* 🎨 refactor gatsby-transformer ([8b82f96](https://github.com/yozorajs/gatsby-scaffolds/commit/8b82f9651b4b7f3aee752373dc97ee3edbffe0a7))
+* 🎨 refactor gatsby-images ([9719f24](https://github.com/yozorajs/gatsby-scaffolds/commit/9719f245f9ab74141c1f112563a1a92b2ac9154b))
 * 🔖 publish v2.1.0-alpha.3 ([8597a72](https://github.com/yozorajs/gatsby-scaffolds/commit/8597a728b1f2dad7a4de24dd6b871adc03ce1469))
 
 
@@ -123,7 +123,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Performance Improvements
 
-* :arrow_up:  [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
+* ⬆️ [BREAKING] chore: upgrade dependencies & support ESM only ([07fd8ee](https://github.com/yozorajs/gatsby-scaffolds/commit/07fd8ee8ecbe981769565ecece7a578674a6d6da))
 * 🔖 publish v2.1.0-alpha.0 ([e845ec6](https://github.com/yozorajs/gatsby-scaffolds/commit/e845ec619604d2018e6400eb7fc8146184b1c2c8))
 
 
